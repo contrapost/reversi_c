@@ -1,0 +1,8 @@
+# exclude compiled files
+
+*
+!/**/
+!*.*
+.DS_Store
+*.out
+*.zip
