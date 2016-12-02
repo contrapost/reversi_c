@@ -30,12 +30,5 @@ void printBoard(const Board* board){
 	printf("    a   b   c   d   e   f   g   h  \n");
 }
 
-//Demonstrates board functionality
-/*
-int main(void)
-{
-	Board currentBoard;
-	initBoard(&currentBoard);
-	printBoard(&currentBoard);
-}
-*/
+
+
