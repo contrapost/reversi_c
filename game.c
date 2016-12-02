@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-#include "board.h"
 #include "util.h"
+#include "logging.h"
 
 int main() {
 
@@ -27,8 +27,11 @@ int main() {
 	initBoard(&currentBoard);
 	
 	// Starting game
+	startGameLog(black, white);
+	
 	bool isntFinished = true;
 	bool blackMove = true;
+	int rowIndex = -1, columnIndex = -1;
 	
 	while(isntFinished) {
 		
@@ -40,8 +43,26 @@ int main() {
 			printf("Make your move, %s: ", white);
 		}
 		
-		getMove(&blackMove);
 		
+		bool wrongMove = false;
+		
+		getMove(&rowIndex, &columnIndex);
+		
+		while (!makeMove(&currentBoard, blackMove, rowIndex, columnIndex)) {
+			wrongMove = true;
+			printf("Your move isn't valid, try again: ");
+			saveMoveToLog(blackMove, black, white, 
+											rowIndex, columnIndex, wrongMove);
+			getMove(&rowIndex, &columnIndex);
+			wrongMove = false;
+		}
+		
+		saveMoveToLog(blackMove, black, white, 
+											rowIndex, columnIndex, wrongMove);
+		
+		printf("\n%d %d\n", rowIndex, columnIndex);
+		
+		blackMove = !blackMove;
 	}
 	
 	

@@ -46,19 +46,17 @@ int getLine (char *prmpt, char *buff, size_t sz) {
     return OK;
 }
 
-void getMove(bool* isBlackMove) {
+void getMove(int* rowIndex, int* columnIndex) {
 	
 	char move[30] = "";
-	
-	int rowIndex, columnIndex;
     
     int firstChar = 0;
     int firstNumber = 0;
     
     bool firstInput = true;
     
-    while(firstChar != 1 || firstNumber != 1 || rowIndex < 0 || rowIndex > 8
-    		|| columnIndex > 7) {
+    while(firstChar != 1 || firstNumber != 1 || *rowIndex < 0 || *rowIndex > 8
+    		|| *columnIndex > 7) {
     		
     	if(!firstInput)	
     		printf("%s %s", "Your input was invalid,",
@@ -71,18 +69,26 @@ void getMove(bool* isBlackMove) {
     
 		for(int i = 0; i < 30; i++) {
 			if(isdigit(move[i])) {
-				rowIndex = (int)move[i] - 49;
+				*rowIndex = (int)move[i] - 49;
 				firstNumber++;
 			}
 			if(isalpha(move[i])) {
-				columnIndex = (int)(tolower(move[i])) - 'a';
+				*columnIndex = (int)(tolower(move[i])) - 'a';
 				firstChar++;
 			}
 		}
 		firstInput = false;
     } 
-    
-   	printf("\n%d %d\n", rowIndex, columnIndex);
+}
+
+bool makeMove(Board* board, bool blackMove, int rowIndex, int columnIndex) {
+
+	if(board->fields[rowIndex][columnIndex] != EMPTY) return false;
 	
-	*isBlackMove = !*isBlackMove;
+	/*for(int i = 1; i < 9; i++) {
+		if(board->fields[rowIndex][columnIndex] != EMPTY) break;
+		else return false;
+	}*/
+	
+	return true;
 }
