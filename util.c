@@ -48,44 +48,38 @@ int getLine (char *prmpt, char *buff, size_t sz) {
 
 void getMove(bool* isBlackMove) {
 	
-	char move[10];
-	
-	fgets(move, sizeof(move), stdin);
+	char move[30] = "";
 	
 	int rowIndex, columnIndex;
     
     int firstChar = 0;
     int firstNumber = 0;
     
-    for(int i = 0; i < 10; i++) {
-    	if(isdigit(move[i])) {
-    		rowIndex = (int)move[i] - 48;
-    		firstNumber++;
-    	}
-    	if(isalpha(move[i])) {
-    		columnIndex = (int)(tolower(move[i])) - 'a';
-    		firstChar++;
-    	}
-    }
+    bool firstInput = true;
     
-    while(firstChar != 1 || firstNumber != 1 || rowIndex < 1 || rowIndex > 8
-    			|| columnIndex > 7) {
-    			
+    while(firstChar != 1 || firstNumber != 1 || rowIndex < 0 || rowIndex > 8
+    		|| columnIndex > 7) {
+    		
+    	if(!firstInput)	
+    		printf("%s %s", "Your input was invalid,",
+    		 "please enter the difit for row and the letter for column: ");
+    	
     	fgets(move, sizeof(move), stdin);
     	
-    	 int firstChar = 0;
-   		 int firstNumber = 0;
+    	firstChar = 0;
+   		firstNumber = 0;
     
-    for(int i = 0; i < 10; i++) {
-    	if(isdigit(move[i])) {
-    		rowIndex = (int)move[i] - 48;
-    		firstNumber++;
-    	}
-    	if(isalpha(move[i])) {
-    		columnIndex = (int)(tolower(move[i])) - 'a';
-    		firstChar++;
-    	}
-    }
+		for(int i = 0; i < 30; i++) {
+			if(isdigit(move[i])) {
+				rowIndex = (int)move[i] - 49;
+				firstNumber++;
+			}
+			if(isalpha(move[i])) {
+				columnIndex = (int)(tolower(move[i])) - 'a';
+				firstChar++;
+			}
+		}
+		firstInput = false;
     } 
     
    	printf("\n%d %d\n", rowIndex, columnIndex);
