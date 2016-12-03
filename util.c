@@ -54,16 +54,11 @@ void getMove(int* rowIndex, int* columnIndex) {
     
     bool firstInput = true;
     
-    while(!(firstChar == 1 && firstNumber == 1) || *rowIndex < 0 
-    		|| *rowIndex > 7 || *columnIndex > 7) {
-    		
-    	
+    while(!(firstChar == 1 && firstNumber == 1)) {
     		
     	if(!firstInput) {
     		printf("%s %s", "Your input was invalid,",
     			"please enter the digit for row and the letter for column: ");
-    		*rowIndex = -1;
-    		*columnIndex = -1;
     		firstChar = 0;
     		firstNumber = 0;
     		for(int i = 0; i < 30; i++) move[i] = ' ';
@@ -87,10 +82,13 @@ void getMove(int* rowIndex, int* columnIndex) {
 
 bool makeMove(Board* board, bool blackMove, int rowIndex, int columnIndex) {
 
-	// 1. Check if position is already occupied
+	// 1. Check if move is outside the board
+	if(rowIndex < 0 || rowIndex > 7 || columnIndex > 7) return false;
+	
+	// 2. Check if position is already occupied
 	if(board->fields[rowIndex][columnIndex] != EMPTY) return false;
 	
-	// 2. check if the field has no occupied neighbors
+	// 3. check if the field has no occupied neighbors
 	bool isAlone = true;
 		
 	for(int dy = -1; dy <= 1; dy++) {

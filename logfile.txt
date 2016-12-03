@@ -92,3 +92,18 @@ Pshtuto made move: 1-A at 14:53:10 Saturday, December 03 2016, the move was wron
 Pshtuto made move: 1-B at 14:53:20 Saturday, December 03 2016, the move was wrong.
 Pshtuto made move: 3-D at 14:53:26 Saturday, December 03 2016, the move was correct.
 Batutot made move: 1-D at 14:53:41 Saturday, December 03 2016, the move was wrong.
+
+=========================================================================================
+Match between Pshtutito(BLACK) and Brkatutus(WHITE) /started at 14:59:24 Saturday, December 03 2016/
+=========================================================================================
+Pshtutito made move: 1-A at 14:59:29 Saturday, December 03 2016, the move was wrong.
+Pshtutito made move: 0-A at 14:59:33 Saturday, December 03 2016, the move was wrong.
+Pshtutito made move: 1-I at 14:59:49 Saturday, December 03 2016, the move was wrong.
+Pshtutito made move: 1-A at 14:59:58 Saturday, December 03 2016, the move was wrong.
+Pshtutito made move: 5-G at 15:00:23 Saturday, December 03 2016, the move was wrong.
+Pshtutito made move: 3-D at 15:00:39 Saturday, December 03 2016, the move was correct.
+Brkatutus made move: 9-A at 15:00:52 Saturday, December 03 2016, the move was wrong.
+Brkatutus made move: 7-Z at 15:01:00 Saturday, December 03 2016, the move was wrong.
+Brkatutus made move: 7-A at 15:01:06 Saturday, December 03 2016, the move was wrong.
+Brkatutus made move: 1-C at 15:01:19 Saturday, December 03 2016, the move was wrong.
+Brkatutus made move: 4-C at 15:01:30 Saturday, December 03 2016, the move was correct.
