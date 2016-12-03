@@ -80,12 +80,6 @@ void getMove(int* columnIndex, int* rowIndex) {
     } 
 }
 
-void findDirection(int* dX, int* dY, int neiborColumn, int neighborRow, 
-								 			int moveColumn, int moveRow) {
-	*dX = neiborColumn - moveColumn;
-	*dY = neighborRow - moveRow;
-}
-
 bool makeMove(Board* board, bool blackMove, int columnIndex, int rowIndex) {
 	
 	// Set piece
@@ -139,14 +133,18 @@ bool makeMove(Board* board, bool blackMove, int columnIndex, int rowIndex) {
 	// 4. check lines
 	
 	for(int i = 0; i < counter; i++) {
-		int dX = 0, dY = 0;
-		findDirection(&dX, &dY, neighborsWithOtherColor[i][0], 
-						neighborsWithOtherColor[i][1], columnIndex, rowIndex);
+	
+		bool lineWithOnlySameColor = true;
+		
+		int dX = neighborsWithOtherColor[i][0] - columnIndex, 
+								dY = neighborsWithOtherColor[i][1] - rowIndex;
+								
 		if(dY == 0) {
 			for(int x = neighborsWithOtherColor[i][0] + dX; x < BOARD_SIZE &&
 															x > 0; x += dX) {
 				if(board->fields[x][rowIndex] == piece) {
 					board->fields[columnIndex][rowIndex] = piece;
+					lineWithOnlySameColor = false;
 					// makeLine(&board, rowIndex, columnIndex, y, x) // TODO
 					printf("DEBUGGING DY=0: COL %d ROW %d\n", x, rowIndex);
 				}
@@ -156,6 +154,7 @@ bool makeMove(Board* board, bool blackMove, int columnIndex, int rowIndex) {
 															y > 0; y += dY) {
 				if(board->fields[columnIndex][y] == piece) {
 					board->fields[columnIndex][rowIndex] = piece;
+					lineWithOnlySameColor = false;
 					// makeLine(&board, rowIndex, columnIndex, y, x) // TODO
 					printf("DEBUGGING dx = 0: COL %d ROW %d\n", columnIndex, y);
 				}
@@ -166,6 +165,7 @@ bool makeMove(Board* board, bool blackMove, int columnIndex, int rowIndex) {
 			while((y < BOARD_SIZE && y > 0) && (x < BOARD_SIZE && x > 0)) {
 				if(board->fields[x][y] == piece) {
 						board->fields[columnIndex][rowIndex] = piece;
+						lineWithOnlySameColor = false;
 						// makeLine(&board, rowIndex, columnIndex, y, x) // TODO
 						printf("DEBUGGING: COL %d ROW %d\n", x, y);
 				}
@@ -173,7 +173,7 @@ bool makeMove(Board* board, bool blackMove, int columnIndex, int rowIndex) {
 				x += dX;
 			}
 		}
-		
+		if(lineWithOnlySameColor) return false;
 	}
 	
 	return true;

@@ -47,11 +47,11 @@ void saveMoveToLog(bool blackMove, char* black, char* white, int columnIndex,
     
     if(blackMove) {
     	fprintf(log, "%s made move: %d-%c at %s, the move was %s.\n", black, 
-    	columnIndex + 65, rowIndex + 1, stringTime, 
+    	rowIndex + 1, columnIndex + 65, stringTime, 
     										wrongMove ? "wrong" : "correct");
     } else {
     	fprintf(log, "%s made move: %d-%c at %s, the move was %s.\n", white, 
-    	columnIndex + 65, rowIndex + 1, stringTime, 
+    	rowIndex + 1, columnIndex + 65, stringTime, 
     										wrongMove ? "wrong" : "correct");
     }
 
