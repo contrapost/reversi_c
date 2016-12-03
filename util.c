@@ -50,22 +50,26 @@ void getMove(int* rowIndex, int* columnIndex) {
 	
 	char move[30] = "";
     
-    int firstChar = 0;
-    int firstNumber = 0;
+    int firstChar = 0, firstNumber = 0;
     
     bool firstInput = true;
     
-    while(firstChar != 1 || firstNumber != 1 || *rowIndex < 0 || *rowIndex > 8
-    		|| *columnIndex > 7) {
+    while(!(firstChar == 1 && firstNumber == 1) || *rowIndex < 0 
+    		|| *rowIndex > 7 || *columnIndex > 7) {
     		
-    	if(!firstInput)	
+    	
+    		
+    	if(!firstInput) {
     		printf("%s %s", "Your input was invalid,",
-    		 "please enter the difit for row and the letter for column: ");
+    			"please enter the digit for row and the letter for column: ");
+    		*rowIndex = -1;
+    		*columnIndex = -1;
+    		firstChar = 0;
+    		firstNumber = 0;
+    		for(int i = 0; i < 30; i++) move[i] = ' ';
+    	}
     	
     	fgets(move, sizeof(move), stdin);
-    	
-    	firstChar = 0;
-   		firstNumber = 0;
     
 		for(int i = 0; i < 30; i++) {
 			if(isdigit(move[i])) {
@@ -85,10 +89,22 @@ bool makeMove(Board* board, bool blackMove, int rowIndex, int columnIndex) {
 
 	if(board->fields[rowIndex][columnIndex] != EMPTY) return false;
 	
-	/*for(int i = 1; i < 9; i++) {
-		if(board->fields[rowIndex][columnIndex] != EMPTY) break;
-		else return false;
-	}*/
+	if(rowIndex == 0 || rowIndex == 7 || columnIndex == 0 || columnIndex == 7) {
+		return false;
+	}
+	
+	bool isAlone = true;
+
+	for(int dy = -1; dy <= 1; dy++) {
+		for(int dx = -1; dx <= 1; dx++) {
+			if(dy == 0 && dy == dx) continue;
+			if(board->fields[rowIndex + dy][columnIndex + dx] != EMPTY) 
+				isAlone = false;
+		}
+	}
+	
+	if(isAlone) return false;
+
 	
 	return true;
 }

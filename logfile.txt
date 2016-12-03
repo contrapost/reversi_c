@@ -1,0 +1,10 @@
+
+=========================================================================================
+Match between asd(BLACK) and dsa(WHITE) /started at 12:53:43 Saturday, December 03 2016/
+=========================================================================================
+asd made move: 1-A at 12:53:46 Saturday, December 03 2016, the move was wrong.
+asd made move: 1-A at 12:53:52 Saturday, December 03 2016, the move was wrong.
+asd made move: 1-A at 12:54:05 Saturday, December 03 2016, the move was wrong.
+asd made move: 3-B at 12:54:12 Saturday, December 03 2016, the move was wrong.
+asd made move: 1-A at 12:54:16 Saturday, December 03 2016, the move was wrong.
+asd made move: 1-A at 12:54:24 Saturday, December 03 2016, the move was wrong.

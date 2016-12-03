@@ -3,14 +3,16 @@
 #include <time.h>
 #include <ctype.h>
 
+void setTime(char* timeString) {
+	time_t t = time(NULL);
+	struct tm * p = localtime(&t);
+	strftime(timeString, 1000, "%X %A, %B %d %Y", p);
+}
+
 void startGameLog(char* black, char* white) {
 
 	char stringTime[100];
-
-	time_t t = time(NULL);
-	struct tm * p = localtime(&t);
-
-	strftime(stringTime, 1000, "%X %A, %B %d %Y", p);
+	setTime(stringTime);
 	
 	FILE *log = fopen("logfile.txt", "at");
     if (!log) 
@@ -20,10 +22,10 @@ void startGameLog(char* black, char* white) {
         return;   
     }
 	
-	fprintf(log, "\n===================================================================\n");
+	fprintf(log, "\n=========================================================================================\n");
 	fprintf(log, "Match between %s(BLACK) and %s(WHITE) /started at %s/", 
 							black, white,  stringTime);
-	fprintf(log, "\n===================================================================\n");
+	fprintf(log, "\n=========================================================================================\n");
 	
 	fclose(log);
 }
@@ -32,11 +34,7 @@ void saveMoveToLog(bool blackMove, char* black, char* white,
 							int rowIndex, int columnIndex, bool wrongMove){
 							
 	char stringTime[100];
-
-	time_t t = time(NULL);
-	struct tm * p = localtime(&t);
-
-	strftime(stringTime, 1000, "%X %A, %B %d %Y", p);
+	setTime(stringTime);
 	
 	FILE *log = fopen("logfile.txt", "at");
     if (!log) 
