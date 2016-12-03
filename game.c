@@ -8,16 +8,17 @@ int main() {
 
 	// Getting players' names
     char black[10], white[10];
+    char namePromptBlack[] =
+    			"Enter the name of player who will play with BLACK pieces: ";
+    char namePromptWhite[] = 
+    			"Enter the name of player who will play with WHITE pieces: ";
     
-    getName("Enter the name of player who will play with black pieces: ", 
-    													black, sizeof(black));
-    getName("Enter the name of player who will play with white pieces: ", 
-    													white, sizeof(white));
+    getName(namePromptBlack, black, sizeof(black));
+    getName(namePromptWhite, white, sizeof(white));
     													
     while (strcmp(black, white) == 0) {
     	printf("Names of the player should be different!");
-    	getName(" Enter the name of player who will play with white pieces: ", 
-    													white, sizeof(white));
+    	getName(namePromptWhite, white, sizeof(white));
     }
     
     printf("\nReversi match between %s and %s.\n\n", black, white);

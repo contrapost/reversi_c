@@ -107,3 +107,51 @@ Brkatutus made move: 7-Z at 15:01:00 Saturday, December 03 2016, the move was wr
 Brkatutus made move: 7-A at 15:01:06 Saturday, December 03 2016, the move was wrong.
 Brkatutus made move: 1-C at 15:01:19 Saturday, December 03 2016, the move was wrong.
 Brkatutus made move: 4-C at 15:01:30 Saturday, December 03 2016, the move was correct.
+
+=========================================================================================
+Match between Rtatutya(BLACK) and Rubatron(WHITE) /started at 15:21:55 Saturday, December 03 2016/
+=========================================================================================
+Rtatutya made move: 0-A at 15:22:00 Saturday, December 03 2016, the move was wrong.
+Rtatutya made move: 1-A at 15:22:12 Saturday, December 03 2016, the move was wrong.
+Rtatutya made move: 8-A at 15:22:19 Saturday, December 03 2016, the move was wrong.
+
+=========================================================================================
+Match between asd(BLACK) and dsa(WHITE) /started at 15:26:45 Saturday, December 03 2016/
+=========================================================================================
+asd made move: 9-S at 15:26:50 Saturday, December 03 2016, the move was wrong.
+asd made move: 0-A at 15:26:57 Saturday, December 03 2016, the move was wrong.
+asd made move: 1-A at 15:27:03 Saturday, December 03 2016, the move was wrong.
+
+=========================================================================================
+Match between pktroto(BLACK) and rtopoto(WHITE) /started at 15:42:37 Saturday, December 03 2016/
+=========================================================================================
+pktroto made move: 3-F at 15:43:00 Saturday, December 03 2016, the move was wrong.
+pktroto made move: 6-C at 15:43:06 Saturday, December 03 2016, the move was wrong.
+pktroto made move: 6-D at 15:43:16 Saturday, December 03 2016, the move was correct.
+rtopoto made move: 3-C at 15:43:33 Saturday, December 03 2016, the move was wrong.
+rtopoto made move: 6-F at 15:43:39 Saturday, December 03 2016, the move was wrong.
+rtopoto made move: 4-F at 15:43:53 Saturday, December 03 2016, the move was correct.
+pktroto made move: 2-B at 15:44:00 Saturday, December 03 2016, the move was wrong.
+pktroto made move: 3-F at 15:44:13 Saturday, December 03 2016, the move was wrong.
+pktroto made move: 6-C at 15:44:20 Saturday, December 03 2016, the move was wrong.
+
+=========================================================================================
+Match between BLACK(BLACK) and WHITE(WHITE) /started at 15:45:45 Saturday, December 03 2016/
+=========================================================================================
+BLACK made move: 4-A at 15:45:51 Saturday, December 03 2016, the move was wrong.
+BLACK made move: 5-C at 15:45:57 Saturday, December 03 2016, the move was correct.
+
+=========================================================================================
+Match between 123(BLACK) and 321(WHITE) /started at 15:48:37 Saturday, December 03 2016/
+=========================================================================================
+123 made move: 6-C at 15:48:41 Saturday, December 03 2016, the move was wrong.
+123 made move: 6-E at 15:48:56 Saturday, December 03 2016, the move was correct.
+
+=========================================================================================
+Match between asd(BLACK) and dsa(WHITE) /started at 16:16:45 Saturday, December 03 2016/
+=========================================================================================
+asd made move: 1-A at 16:16:47 Saturday, December 03 2016, the move was wrong.
+asd made move: 1-A at 16:16:49 Saturday, December 03 2016, the move was wrong.
+asd made move: 3-C at 16:16:57 Saturday, December 03 2016, the move was correct.
+dsa made move: 6-C at 16:19:27 Saturday, December 03 2016, the move was correct.
+asd made move: 6-E at 16:19:54 Saturday, December 03 2016, the move was correct.

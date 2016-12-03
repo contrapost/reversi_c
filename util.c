@@ -81,33 +81,62 @@ void getMove(int* rowIndex, int* columnIndex) {
 }
 
 bool makeMove(Board* board, bool blackMove, int rowIndex, int columnIndex) {
+	
+	// Set piece
+	char piece;
+	int neighborsWithOtherColor[BOARD_SIZE][2];
+	int counter = 0;
+	
+	if(blackMove)
+		piece = BLACK;
+	else
+		piece = WHITE;
 
 	// 1. Check if move is outside the board
-	if(rowIndex < 0 || rowIndex > 7 || columnIndex > 7) return false;
+	if(rowIndex > BOARD_SIZE - 1 || columnIndex > BOARD_SIZE - 1) return false;
 	
 	// 2. Check if position is already occupied
 	if(board->fields[rowIndex][columnIndex] != EMPTY) return false;
 	
-	// 3. check if the field has no occupied neighbors
+	// 3. check if the field has no occupied neighbors or all neighbors have
+	// same color
 	bool isAlone = true;
+	bool onlySameColorNeighbors = true;
 		
 	for(int dy = -1; dy <= 1; dy++) {
-			for(int dx = -1; dx <= 1; dx++) {
+		for(int dx = -1; dx <= 1; dx++) {
+		
+			if(dy == 0 && dy == dx) continue; // Already been checked in 1.
 			
-				if(dy == 0 && dy == dx) continue; // Already been checked in 1.
-				
-				int newY = rowIndex + dy, newX = columnIndex + dx;
-				// ignoring positions beyond the edges
-				if(newY < 0 || newY > 7 || newX < 0 || newX > 7) continue; 
-				
-				if(board->fields[newY][newX] != EMPTY) 
-					isAlone = false;
+			int newY = rowIndex + dy, newX = columnIndex + dx;
+			// ignoring positions beyond the edges
+			if(newY < 0 || newY > BOARD_SIZE - 1 
+						|| newX < 0 || newX > BOARD_SIZE - 1) continue; 
+			
+			// check for existing neighbors
+			if(board->fields[newY][newX] != EMPTY) 
+				isAlone = false;
+			
+			// check for neighbors' color
+			if(blackMove && board->fields[newY][newX] == WHITE) {
+				onlySameColorNeighbors = false;
+				neighborsWithOtherColor[counter][0] = newY;
+				neighborsWithOtherColor[counter++][1] = newX;
+			}
+			if(!blackMove && board->fields[newY][newX] == BLACK) {
+				onlySameColorNeighbors = false;
 			}
 		}
+	}
 		
 	if(isAlone) return false;
+	if(onlySameColorNeighbors) return false;
 
-	// 3. All invalid moves were excluded
+	// 4. check lines
+		
+	for(int i = 0; i < counter; i++) {
+		printf("DEBUGGING: Y = %d, X = %d", neighborsWithOtherColor[i][0], neighborsWithOtherColor[i][1]);
+	}
 	
 	return true;
 }
