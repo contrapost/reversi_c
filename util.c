@@ -87,24 +87,29 @@ void getMove(int* rowIndex, int* columnIndex) {
 
 bool makeMove(Board* board, bool blackMove, int rowIndex, int columnIndex) {
 
+	// 1. Check if position is already occupied
 	if(board->fields[rowIndex][columnIndex] != EMPTY) return false;
 	
-	if(rowIndex == 0 || rowIndex == 7 || columnIndex == 0 || columnIndex == 7) {
-		return false;
-	}
-	
+	// 2. check if the field has no occupied neighbors
 	bool isAlone = true;
-
+		
 	for(int dy = -1; dy <= 1; dy++) {
-		for(int dx = -1; dx <= 1; dx++) {
-			if(dy == 0 && dy == dx) continue;
-			if(board->fields[rowIndex + dy][columnIndex + dx] != EMPTY) 
-				isAlone = false;
+			for(int dx = -1; dx <= 1; dx++) {
+			
+				if(dy == 0 && dy == dx) continue; // Already been checked in 1.
+				
+				int newY = rowIndex + dy, newX = columnIndex + dx;
+				// ignoring positions beyond the edges
+				if(newY < 0 || newY > 7 || newX < 0 || newX > 7) continue; 
+				
+				if(board->fields[newY][newX] != EMPTY) 
+					isAlone = false;
+			}
 		}
-	}
-	
+		
 	if(isAlone) return false;
 
+	// 3. All invalid moves were excluded
 	
 	return true;
 }
