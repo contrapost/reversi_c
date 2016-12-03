@@ -46,7 +46,7 @@ int getLine (char *prmpt, char *buff, size_t sz) {
     return OK;
 }
 
-void getMove(int* rowIndex, int* columnIndex) {
+void getMove(int* columnIndex, int* rowIndex) {
 	
 	char move[30] = "";
     
@@ -80,10 +80,16 @@ void getMove(int* rowIndex, int* columnIndex) {
     } 
 }
 
-bool makeMove(Board* board, bool blackMove, int rowIndex, int columnIndex) {
+void findDirection(int* dX, int* dY, int neiborColumn, int neighborRow, 
+								 			int moveColumn, int moveRow) {
+	*dX = neiborColumn - moveColumn;
+	*dY = neighborRow - moveRow;
+}
+
+bool makeMove(Board* board, bool blackMove, int columnIndex, int rowIndex) {
 	
 	// Set piece
-	char piece;
+	Field piece;
 	int neighborsWithOtherColor[BOARD_SIZE][2];
 	int counter = 0;
 	
@@ -96,7 +102,7 @@ bool makeMove(Board* board, bool blackMove, int rowIndex, int columnIndex) {
 	if(rowIndex > BOARD_SIZE - 1 || columnIndex > BOARD_SIZE - 1) return false;
 	
 	// 2. Check if position is already occupied
-	if(board->fields[rowIndex][columnIndex] != EMPTY) return false;
+	if(board->fields[columnIndex][rowIndex] != EMPTY) return false;
 	
 	// 3. check if the field has no occupied neighbors or all neighbors have
 	// same color
@@ -108,23 +114,21 @@ bool makeMove(Board* board, bool blackMove, int rowIndex, int columnIndex) {
 		
 			if(dy == 0 && dy == dx) continue; // Already been checked in 1.
 			
-			int newY = rowIndex + dy, newX = columnIndex + dx;
+			int newX = columnIndex + dx, newY = rowIndex + dy;
 			// ignoring positions beyond the edges
 			if(newY < 0 || newY > BOARD_SIZE - 1 
 						|| newX < 0 || newX > BOARD_SIZE - 1) continue; 
 			
 			// check for existing neighbors
-			if(board->fields[newY][newX] != EMPTY) 
+			if(board->fields[newX][newY] != EMPTY) 
 				isAlone = false;
 			
 			// check for neighbors' color
-			if(blackMove && board->fields[newY][newX] == WHITE) {
+			if((blackMove && board->fields[newX][newY] == WHITE) || 
+				(!blackMove && board->fields[newX][newY] == BLACK)) {
 				onlySameColorNeighbors = false;
-				neighborsWithOtherColor[counter][0] = newY;
-				neighborsWithOtherColor[counter++][1] = newX;
-			}
-			if(!blackMove && board->fields[newY][newX] == BLACK) {
-				onlySameColorNeighbors = false;
+				neighborsWithOtherColor[counter][0] = newX;
+				neighborsWithOtherColor[counter++][1] = newY;
 			}
 		}
 	}
@@ -133,9 +137,43 @@ bool makeMove(Board* board, bool blackMove, int rowIndex, int columnIndex) {
 	if(onlySameColorNeighbors) return false;
 
 	// 4. check lines
-		
+	
 	for(int i = 0; i < counter; i++) {
-		printf("DEBUGGING: Y = %d, X = %d", neighborsWithOtherColor[i][0], neighborsWithOtherColor[i][1]);
+		int dX = 0, dY = 0;
+		findDirection(&dX, &dY, neighborsWithOtherColor[i][0], 
+						neighborsWithOtherColor[i][1], columnIndex, rowIndex);
+		if(dY == 0) {
+			for(int x = neighborsWithOtherColor[i][0] + dX; x < BOARD_SIZE &&
+															x > 0; x += dX) {
+				if(board->fields[x][rowIndex] == piece) {
+					board->fields[columnIndex][rowIndex] = piece;
+					// makeLine(&board, rowIndex, columnIndex, y, x) // TODO
+					printf("DEBUGGING DY=0: COL %d ROW %d\n", x, rowIndex);
+				}
+			}
+		} else if (dX == 0) {
+			for(int y = neighborsWithOtherColor[i][1] + dY; y < BOARD_SIZE &&
+															y > 0; y += dY) {
+				if(board->fields[columnIndex][y] == piece) {
+					board->fields[columnIndex][rowIndex] = piece;
+					// makeLine(&board, rowIndex, columnIndex, y, x) // TODO
+					printf("DEBUGGING dx = 0: COL %d ROW %d\n", columnIndex, y);
+				}
+			}
+		} else {
+			int x = neighborsWithOtherColor[i][0] + dX, 
+					y = neighborsWithOtherColor[i][1] + dY;
+			while((y < BOARD_SIZE && y > 0) && (x < BOARD_SIZE && x > 0)) {
+				if(board->fields[x][y] == piece) {
+						board->fields[columnIndex][rowIndex] = piece;
+						// makeLine(&board, rowIndex, columnIndex, y, x) // TODO
+						printf("DEBUGGING: COL %d ROW %d\n", x, y);
+				}
+				y += dY;
+				x += dX;
+			}
+		}
+		
 	}
 	
 	return true;

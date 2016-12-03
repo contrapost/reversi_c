@@ -30,8 +30,8 @@ void startGameLog(char* black, char* white) {
 	fclose(log);
 }
 
-void saveMoveToLog(bool blackMove, char* black, char* white, 
-							int rowIndex, int columnIndex, bool wrongMove){
+void saveMoveToLog(bool blackMove, char* black, char* white, int columnIndex,  
+												int rowIndex, bool wrongMove) {
 							
 	char stringTime[100];
 	setTime(stringTime);
@@ -47,11 +47,11 @@ void saveMoveToLog(bool blackMove, char* black, char* white,
     
     if(blackMove) {
     	fprintf(log, "%s made move: %d-%c at %s, the move was %s.\n", black, 
-    	rowIndex + 1, columnIndex + 65, stringTime, 
+    	columnIndex + 65, rowIndex + 1, stringTime, 
     										wrongMove ? "wrong" : "correct");
     } else {
     	fprintf(log, "%s made move: %d-%c at %s, the move was %s.\n", white, 
-    	rowIndex + 1, columnIndex + 65, stringTime, 
+    	columnIndex + 65, rowIndex + 1, stringTime, 
     										wrongMove ? "wrong" : "correct");
     }
 

@@ -47,21 +47,21 @@ int main() {
 		
 		bool wrongMove = false;
 		
-		getMove(&rowIndex, &columnIndex);
+		getMove(&columnIndex, &rowIndex);
 		
-		while (!makeMove(&currentBoard, blackMove, rowIndex, columnIndex)) {
+		while (!makeMove(&currentBoard, blackMove, columnIndex, rowIndex)) {
 			wrongMove = true;
 			printf("Your move isn't valid, try again: ");
 			saveMoveToLog(blackMove, black, white, 
-											rowIndex, columnIndex, wrongMove);
-			getMove(&rowIndex, &columnIndex);
+											columnIndex, rowIndex, wrongMove);
+			getMove(&columnIndex, &rowIndex);
 			wrongMove = false;
 		}
 		
 		saveMoveToLog(blackMove, black, white, 
-											rowIndex, columnIndex, wrongMove);
+											columnIndex, rowIndex, wrongMove);
 		
-		printf("\n%d %d\n", rowIndex, columnIndex);
+		printf("\n%d %d\n", columnIndex, rowIndex);
 		
 		blackMove = !blackMove;
 	}

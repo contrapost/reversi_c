@@ -9,7 +9,7 @@
 
 int getLine (char* prmpt, char* buff, size_t sz);
 void getName(char* prmpt, char* name, size_t sz);
-void getMove(int* rowIndex, int* columnIndex);
+void getMove(int* columnIndex, int* rowIndex);
 bool makeMove(Board* board, bool blackMove, int rowIndex, int columnIndex);
 
 #endif // MAGICSORT_H_INCLUDED 
