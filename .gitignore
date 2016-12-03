@@ -3,7 +3,7 @@
 *
 !/**/
 !*.*
-.o
+*.o
 .DS_Store
 *.out
 *.zip
