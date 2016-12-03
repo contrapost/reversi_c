@@ -140,37 +140,52 @@ bool makeMove(Board* board, bool blackMove, int columnIndex, int rowIndex) {
 								dY = neighborsWithOtherColor[i][1] - rowIndex;
 								
 		if(dY == 0) {
-			for(int x = neighborsWithOtherColor[i][0] + dX; x < BOARD_SIZE &&
-															x > 0; x += dX) {
+			int x = neighborsWithOtherColor[i][0] + dX;
+			while(x < BOARD_SIZE && x > 0){
 				if(board->fields[x][rowIndex] == piece) {
-					board->fields[columnIndex][rowIndex] = piece;
 					lineWithOnlySameColor = false;
-					// makeLine(&board, rowIndex, columnIndex, y, x) // TODO
-					printf("DEBUGGING DY=0: COL %d ROW %d\n", x, rowIndex);
+					break;
 				}
+				x += dX;
 			}
+			if(!lineWithOnlySameColor) {
+				board->fields[columnIndex][rowIndex] = piece;
+				lineWithOnlySameColor = false;
+				// makeLine(&board, rowIndex, columnIndex, y, x) // TODO
+				printf("DEBUGGING DY=0: COL %d ROW %d\n", x, rowIndex);
+			}
+			
 		} else if (dX == 0) {
-			for(int y = neighborsWithOtherColor[i][1] + dY; y < BOARD_SIZE &&
-															y > 0; y += dY) {
+			int y = neighborsWithOtherColor[i][1] + dY;
+			while(y < BOARD_SIZE && y > 0) {
 				if(board->fields[columnIndex][y] == piece) {
-					board->fields[columnIndex][rowIndex] = piece;
 					lineWithOnlySameColor = false;
-					// makeLine(&board, rowIndex, columnIndex, y, x) // TODO
-					printf("DEBUGGING dx = 0: COL %d ROW %d\n", columnIndex, y);
+					break;
 				}
+				y += dY;
+			}
+			if(!lineWithOnlySameColor) {
+				board->fields[columnIndex][rowIndex] = piece;
+				lineWithOnlySameColor = false;
+				// makeLine(&board, rowIndex, columnIndex, y, x) // TODO
+				printf("DEBUGGING dx = 0: COL %d ROW %d\n", columnIndex, y);
 			}
 		} else {
 			int x = neighborsWithOtherColor[i][0] + dX, 
 					y = neighborsWithOtherColor[i][1] + dY;
 			while((y < BOARD_SIZE && y > 0) && (x < BOARD_SIZE && x > 0)) {
 				if(board->fields[x][y] == piece) {
-						board->fields[columnIndex][rowIndex] = piece;
-						lineWithOnlySameColor = false;
-						// makeLine(&board, rowIndex, columnIndex, y, x) // TODO
-						printf("DEBUGGING: COL %d ROW %d\n", x, y);
+					lineWithOnlySameColor = false;
+					break;
 				}
 				y += dY;
 				x += dX;
+			}
+			if(!lineWithOnlySameColor) {
+				board->fields[columnIndex][rowIndex] = piece;
+				lineWithOnlySameColor = false;
+				// makeLine(&board, rowIndex, columnIndex, y, x) // TODO
+				printf("DEBUGGING: COL %d ROW %d\n", x, y);
 			}
 		}
 		if(lineWithOnlySameColor) return false;
