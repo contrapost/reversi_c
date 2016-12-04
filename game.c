@@ -38,32 +38,29 @@ int main() {
 		
 		printBoard(&currentBoard);
 		
-		if(blackMove) {
-			printf("Make your move, %s: ", black);
-		} else {
-			printf("Make your move, %s: ", white);
-		}
+		if(possibleToProceed(currentBoard, blackMove)) {
+			printf("Make your move, %s: ", blackMove ? black : white);
 		
+			bool wrongMove = false;
 		
-		bool wrongMove = false;
+			getMove(&columnIndex, &rowIndex);
 		
-		getMove(&columnIndex, &rowIndex);
+			while(!makeMove(&currentBoard, &blackMove, columnIndex, rowIndex)) {
+				wrongMove = true;
+				printf("Your move isn't valid, try again: ");
+				saveMoveToLog(blackMove, black, white, 
+											columnIndex, rowIndex, wrongMove);
+				getMove(&columnIndex, &rowIndex);
+				wrongMove = false;
+			}
 		
-		while (!makeMove(&currentBoard, blackMove, columnIndex, rowIndex)) {
-			wrongMove = true;
-			printf("Your move isn't valid, try again: ");
 			saveMoveToLog(blackMove, black, white, 
 											columnIndex, rowIndex, wrongMove);
-			getMove(&columnIndex, &rowIndex);
-			wrongMove = false;
+		
+			printf("\n%d %d\n", columnIndex, rowIndex);
+		} else {
+			isntFinished = false;
 		}
-		
-		saveMoveToLog(blackMove, black, white, 
-											columnIndex, rowIndex, wrongMove);
-		
-		printf("\n%d %d\n", columnIndex, rowIndex);
-		
-		blackMove = !blackMove;
 	}
 	
 	

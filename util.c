@@ -80,17 +80,12 @@ void getMove(int* columnIndex, int* rowIndex) {
     } 
 }
 
-bool makeMove(Board* board, bool blackMove, int columnIndex, int rowIndex) {
+bool makeMove(Board* board, bool* blackMove, int columnIndex, int rowIndex) {
 	
-	// Set piece
-	Field piece;
+	Field piece = (*blackMove ? BLACK : WHITE);
+
 	int neighborsWithOtherColor[BOARD_SIZE][2];
 	int counter = 0;
-	
-	if(blackMove)
-		piece = BLACK;
-	else
-		piece = WHITE;
 
 	// 1. Check if move is outside the board
 	if(rowIndex > BOARD_SIZE - 1 || columnIndex > BOARD_SIZE - 1) return false;
@@ -118,8 +113,8 @@ bool makeMove(Board* board, bool blackMove, int columnIndex, int rowIndex) {
 				isAlone = false;
 			
 			// check for neighbors' color
-			if((blackMove && board->fields[newX][newY] == WHITE) || 
-				(!blackMove && board->fields[newX][newY] == BLACK)) {
+			if((*blackMove && board->fields[newX][newY] == WHITE) || 
+				(!*blackMove && board->fields[newX][newY] == BLACK)) {
 				onlySameColorNeighbors = false;
 				neighborsWithOtherColor[counter][0] = newX;
 				neighborsWithOtherColor[counter++][1] = newY;
@@ -131,6 +126,8 @@ bool makeMove(Board* board, bool blackMove, int columnIndex, int rowIndex) {
 	if(onlySameColorNeighbors) return false;
 
 	// 4. check lines
+	
+	bool canDrawLine = false;
 	
 	for(int i = 0; i < counter; i++){
 	
@@ -154,13 +151,42 @@ bool makeMove(Board* board, bool blackMove, int columnIndex, int rowIndex) {
 		int lastY = potentialTrophies[trophyCounter - 1][1];
 		
 		if(board->fields[lastX][lastY] == piece) {
+			board->fields[columnIndex][rowIndex] = piece;
 			for(int i = 0; i < trophyCounter; i++) {
-				printf(" %c%d ", potentialTrophies[i][0] + 65, potentialTrophies[i][1] + 1);
+				board->fields[potentialTrophies[i][0]][potentialTrophies[i][1]] 
+																		= piece;
+				printf(" %c%d ", potentialTrophies[i][0] + 65, 
+												potentialTrophies[i][1] + 1);
+				canDrawLine = true;
 			}
-		}
+		} 
 		
 		printf("\n"); 		
 	}
+	
+	if(!canDrawLine) return false; 
+	
+	*blackMove = !*blackMove;
+	return true;
+}
+
+bool possibleToProceed(Board board, bool blackMove) {
+
+	bool onlySameColor = true;
+	bool noEmpty = true;
+	
+	// check if there are no empty fields or pieces with same color
+	for(int y = 0; y < BOARD_SIZE; y++) {
+		for(int x = 0; x < BOARD_SIZE; x++) {
+			if(board.fields[x][y] == EMPTY) noEmpty = false;
+			if(board.fields[x][y] == (blackMove ? BLACK : WHITE)) 
+														onlySameColor = false;
+			
+		}
+	}
+	
+	if(onlySameColor) return false;
+	if(noEmpty) return false;
 	
 	return true;
 }
