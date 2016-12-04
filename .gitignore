@@ -1,6 +1,7 @@
 # exclude compiled files
 
 *
+!Makefile
 !/**/
 !*.*
 *.o

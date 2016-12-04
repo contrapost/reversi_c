@@ -1,5 +1,5 @@
-#ifndef _BOARD_H_
-#define _BOARD_H_
+#ifndef _UTIL_H_
+#define _UTIL_H_
 
 #include "board.h"
 
@@ -21,4 +21,4 @@ void getMove(Point* move);
 bool makeMove(Board* board, bool* blackMove, Point move);
 bool possibleToMakeMove(Board board, bool blackMove);
 
-#endif // _BOARD_H_
+#endif // _UTIL_H_

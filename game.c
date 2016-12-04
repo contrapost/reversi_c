@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-#include "util.h"
 #include "logging.h"
+#include "input.h"
 
 int main() {
 

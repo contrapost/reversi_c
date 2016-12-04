@@ -3,6 +3,7 @@
 #include <time.h>
 #include <ctype.h>
 #include "util.h"
+#include "logging.h"
 
 void setTime(char* timeString) {
 	time_t t = time(NULL);
