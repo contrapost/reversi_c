@@ -360,3 +360,199 @@ asd made move: 4-C at 21:41:58 Saturday, December 03 2016, the move was correct.
 das made move: 4-F at 21:42:10 Saturday, December 03 2016, the move was correct.
 asd made move: 4-G at 21:42:21 Saturday, December 03 2016, the move was correct.
 das made move: 4-B at 21:43:04 Saturday, December 03 2016, the move was correct.
+
+=========================================================================================
+Match between Alejo(BLACK) and Jaleo(WHITE) /started at 22:40:04 Saturday, December 03 2016/
+=========================================================================================
+Alejo made move: 6-E at 22:40:17 Saturday, December 03 2016, the move was correct.
+Jaleo made move: 5-C at 22:40:24 Saturday, December 03 2016, the move was correct.
+Alejo made move: 3-D at 22:40:42 Saturday, December 03 2016, the move was correct.
+Jaleo made move: 6-E at 22:40:47 Saturday, December 03 2016, the move was wrong.
+Jaleo made move: 7-E at 22:40:50 Saturday, December 03 2016, the move was correct.
+Alejo made move: 8-E at 22:41:01 Saturday, December 03 2016, the move was correct.
+Jaleo made move: 3-E at 22:41:25 Saturday, December 03 2016, the move was wrong.
+Jaleo made move: 4-F at 22:41:46 Saturday, December 03 2016, the move was correct.
+Alejo made move: 4-C at 22:42:10 Saturday, December 03 2016, the move was wrong.
+
+=========================================================================================
+Match between asd(BLACK) and dsa(WHITE) /started at 22:48:24 Saturday, December 03 2016/
+=========================================================================================
+asd made move: 4-F at 22:48:30 Saturday, December 03 2016, the move was wrong.
+asd made move: 4-C at 22:48:42 Saturday, December 03 2016, the move was correct.
+dsa made move: 4-F at 22:49:00 Saturday, December 03 2016, the move was correct.
+asd made move: 4-D at 22:49:08 Saturday, December 03 2016, the move was wrong.
+asd made move: 3-D at 22:49:15 Saturday, December 03 2016, the move was correct.
+dsa made move: 3-E at 22:49:25 Saturday, December 03 2016, the move was wrong.
+
+=========================================================================================
+Match between asd(BLACK) and dsa(WHITE) /started at 22:51:09 Saturday, December 03 2016/
+=========================================================================================
+asd made move: 4-C at 22:51:12 Saturday, December 03 2016, the move was wrong.
+asd made move: 6-E at 22:51:38 Saturday, December 03 2016, the move was wrong.
+
+=========================================================================================
+Match between asd(BLACK) and dsa(WHITE) /started at 22:53:35 Saturday, December 03 2016/
+=========================================================================================
+asd made move: 4-C at 22:53:36 Saturday, December 03 2016, the move was correct.
+dsa made move: 4-F at 22:53:43 Saturday, December 03 2016, the move was correct.
+asd made move: 3-D at 22:53:50 Saturday, December 03 2016, the move was correct.
+dsa made move: 3-E at 22:54:01 Saturday, December 03 2016, the move was wrong.
+
+=========================================================================================
+Match between ads(BLACK) and dsa(WHITE) /started at 00:58:32 Sunday, December 04 2016/
+=========================================================================================
+ads made move: 4-C at 00:58:39 Sunday, December 04 2016, the move was correct.
+dsa made move: 3-E at 00:58:47 Sunday, December 04 2016, the move was correct.
+ads made move: 3-D at 00:59:06 Sunday, December 04 2016, the move was wrong.
+ads made move: 3-E at 00:59:24 Sunday, December 04 2016, the move was wrong.
+ads made move: 2-E at 00:59:29 Sunday, December 04 2016, the move was correct.
+dsa made move: 5-C at 00:59:42 Sunday, December 04 2016, the move was wrong.
+dsa made move: 6-D at 00:59:49 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between asd(BLACK) and dsa(WHITE) /started at 01:03:19 Sunday, December 04 2016/
+=========================================================================================
+asd made move: 3-C at 01:03:29 Sunday, December 04 2016, the move was correct.
+dsa made move: 6-C at 01:04:09 Sunday, December 04 2016, the move was correct.
+asd made move: 6-C at 01:04:19 Sunday, December 04 2016, the move was wrong.
+asd made move: 3-F at 01:04:32 Sunday, December 04 2016, the move was wrong.
+
+=========================================================================================
+Match between asd(BLACK) and dsa(WHITE) /started at 10:08:23 Sunday, December 04 2016/
+=========================================================================================
+asd made move: 3-C at 10:08:37 Sunday, December 04 2016, the move was correct.
+dsa made move: 4-F at 10:09:26 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between asd(BLACK) and dsa(WHITE) /started at 10:13:16 Sunday, December 04 2016/
+=========================================================================================
+asd made move: 6-E at 10:13:32 Sunday, December 04 2016, the move was correct.
+dsa made move: 2-E at 10:13:44 Sunday, December 04 2016, the move was correct.
+asd made move: 4-C at 10:14:14 Sunday, December 04 2016, the move was correct.
+dsa made move: 4-F at 10:14:23 Sunday, December 04 2016, the move was correct.
+asd made move: 5-F at 10:14:31 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between asd(BLACK) and dsa(WHITE) /started at 10:16:34 Sunday, December 04 2016/
+=========================================================================================
+asd made move: 4-C at 10:16:41 Sunday, December 04 2016, the move was correct.
+dsa made move: 2-D at 10:17:03 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between asd(BLACK) and dsa(WHITE) /started at 10:17:31 Sunday, December 04 2016/
+=========================================================================================
+asd made move: 4-C at 10:17:38 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between asd(BLACK) and dsa(WHITE) /started at 10:52:16 Sunday, December 04 2016/
+=========================================================================================
+asd made move: 4-C at 10:52:22 Sunday, December 04 2016, the move was correct.
+dsa made move: 4-F at 10:52:54 Sunday, December 04 2016, the move was correct.
+asd made move: 2-C at 10:53:20 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between dsa(BLACK) and asd(WHITE) /started at 11:17:08 Sunday, December 04 2016/
+=========================================================================================
+dsa made move: 3-C at 11:17:12 Sunday, December 04 2016, the move was wrong.
+dsa made move: 4-C at 11:17:17 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between asd(BLACK) and dsa(WHITE) /started at 11:18:23 Sunday, December 04 2016/
+=========================================================================================
+asd made move: 4-C at 11:18:25 Sunday, December 04 2016, the move was correct.
+dsa made move: 6-E at 11:20:02 Sunday, December 04 2016, the move was correct.
+asd made move: 2-F at 11:20:42 Sunday, December 04 2016, the move was wrong.
+asd made move: 5-F at 11:20:56 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between asd(BLACK) and das(WHITE) /started at 11:24:11 Sunday, December 04 2016/
+=========================================================================================
+asd made move: 4-C at 11:24:15 Sunday, December 04 2016, the move was correct.
+das made move: 3-F at 11:25:20 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between asd(BLACK) and dsa(WHITE) /started at 11:26:35 Sunday, December 04 2016/
+=========================================================================================
+asd made move: 4-C at 11:26:41 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between asd(BLACK) and dsa(WHITE) /started at 11:27:50 Sunday, December 04 2016/
+=========================================================================================
+asd made move: 4-C at 11:27:55 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between sad(BLACK) and dsa(WHITE) /started at 11:28:34 Sunday, December 04 2016/
+=========================================================================================
+sad made move: 4-C at 11:28:37 Sunday, December 04 2016, the move was correct.
+dsa made move: 4-F at 11:29:17 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between asd(BLACK) and dsa(WHITE) /started at 11:31:35 Sunday, December 04 2016/
+=========================================================================================
+asd made move: 4-C at 11:31:40 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between BLACK(BLACK) and WHITE(WHITE) /started at 11:34:03 Sunday, December 04 2016/
+=========================================================================================
+BLACK made move: 5-B at 11:34:13 Sunday, December 04 2016, the move was correct.
+WHITE made move: 3-F at 11:34:51 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between BLACK(BLACK) and WHITE(WHITE) /started at 11:37:31 Sunday, December 04 2016/
+=========================================================================================
+BLACK made move: 5-B at 11:37:39 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between BLACK(BLACK) and WHITE(WHITE) /started at 11:40:21 Sunday, December 04 2016/
+=========================================================================================
+BLACK made move: 5-B at 11:40:28 Sunday, December 04 2016, the move was correct.
+WHITE made move: 4-F at 11:40:45 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between BLACK(BLACK) and WHITE(WHITE) /started at 11:41:53 Sunday, December 04 2016/
+=========================================================================================
+BLACK made move: 5-B at 11:41:59 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between BLACK(BLACK) and WHITE(WHITE) /started at 11:43:20 Sunday, December 04 2016/
+=========================================================================================
+BLACK made move: 5-B at 11:43:24 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between BLACK(BLACK) and WHITE(WHITE) /started at 11:45:21 Sunday, December 04 2016/
+=========================================================================================
+BLACK made move: 5-B at 11:45:25 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between asd(BLACK) and dsa(WHITE) /started at 11:46:31 Sunday, December 04 2016/
+=========================================================================================
+asd made move: 5-B at 11:46:33 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between BLACK(BLACK) and WHITE(WHITE) /started at 11:47:50 Sunday, December 04 2016/
+=========================================================================================
+BLACK made move: 5-B at 11:47:54 Sunday, December 04 2016, the move was correct.
+WHITE made move: 2-F at 11:48:12 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between BLACK(BLACK) and WHITE(WHITE) /started at 11:53:42 Sunday, December 04 2016/
+=========================================================================================
+BLACK made move: 5-B at 11:53:47 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 11:55:03 Sunday, December 04 2016/
+=========================================================================================
+b made move: 5-B at 11:55:08 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 11:57:58 Sunday, December 04 2016/
+=========================================================================================
+b made move: 5-B at 11:58:04 Sunday, December 04 2016, the move was correct.
+w made move: 4-F at 11:58:15 Sunday, December 04 2016, the move was correct.
+b made move: 6-E at 11:58:31 Sunday, December 04 2016, the move was correct.
+w made move: 3-F at 11:58:54 Sunday, December 04 2016, the move was correct.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 12:00:24 Sunday, December 04 2016/
+=========================================================================================
+b made move: 5-B at 12:00:28 Sunday, December 04 2016, the move was correct.

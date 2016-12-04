@@ -132,63 +132,34 @@ bool makeMove(Board* board, bool blackMove, int columnIndex, int rowIndex) {
 
 	// 4. check lines
 	
-	for(int i = 0; i < counter; i++) {
+	for(int i = 0; i < counter; i++){
 	
-		bool lineWithOnlySameColor = true;
+		int x = neighborsWithOtherColor[i][0], 
+			y = neighborsWithOtherColor[i][1],
+			dX = x - columnIndex, dY = y - rowIndex;
 		
-		int dX = neighborsWithOtherColor[i][0] - columnIndex, 
-								dY = neighborsWithOtherColor[i][1] - rowIndex;
-								
-		if(dY == 0) {
-			int x = neighborsWithOtherColor[i][0] + dX;
-			while(x < BOARD_SIZE && x > 0){
-				if(board->fields[x][rowIndex] == piece) {
-					lineWithOnlySameColor = false;
-					break;
-				}
-				x += dX;
-			}
-			if(!lineWithOnlySameColor) {
-				board->fields[columnIndex][rowIndex] = piece;
-				lineWithOnlySameColor = false;
-				// makeLine(&board, rowIndex, columnIndex, y, x) // TODO
-				printf("DEBUGGING DY=0: COL %d ROW %d\n", x, rowIndex);
-			}
+		int potentialTrophies[7][2];
+		int trophyCounter = 0;
 			
-		} else if (dX == 0) {
-			int y = neighborsWithOtherColor[i][1] + dY;
-			while(y < BOARD_SIZE && y > 0) {
-				if(board->fields[columnIndex][y] == piece) {
-					lineWithOnlySameColor = false;
-					break;
-				}
-				y += dY;
-			}
-			if(!lineWithOnlySameColor) {
-				board->fields[columnIndex][rowIndex] = piece;
-				lineWithOnlySameColor = false;
-				// makeLine(&board, rowIndex, columnIndex, y, x) // TODO
-				printf("DEBUGGING dx = 0: COL %d ROW %d\n", columnIndex, y);
-			}
-		} else {
-			int x = neighborsWithOtherColor[i][0] + dX, 
-					y = neighborsWithOtherColor[i][1] + dY;
-			while((y < BOARD_SIZE && y > 0) && (x < BOARD_SIZE && x > 0)) {
-				if(board->fields[x][y] == piece) {
-					lineWithOnlySameColor = false;
-					break;
-				}
-				y += dY;
-				x += dX;
-			}
-			if(!lineWithOnlySameColor) {
-				board->fields[columnIndex][rowIndex] = piece;
-				lineWithOnlySameColor = false;
-				// makeLine(&board, rowIndex, columnIndex, y, x) // TODO
-				printf("DEBUGGING: COL %d ROW %d\n", x, y);
+		while(y < BOARD_SIZE && y >= 0 && x < BOARD_SIZE && x >= 0 
+				&& board->fields[x][y] != EMPTY) {
+			potentialTrophies[trophyCounter][0] = x;
+			potentialTrophies[trophyCounter++][1] = y;
+			if(board->fields[x][y] == piece) break;
+			x += dX;
+			y += dY;
+		}
+		
+		int lastX = potentialTrophies[trophyCounter - 1][0];
+		int lastY = potentialTrophies[trophyCounter - 1][1];
+		
+		if(board->fields[lastX][lastY] == piece) {
+			for(int i = 0; i < trophyCounter; i++) {
+				printf(" %c%d ", potentialTrophies[i][0] + 65, potentialTrophies[i][1] + 1);
 			}
 		}
-		if(lineWithOnlySameColor) return false;
+		
+		printf("\n"); 		
 	}
 	
 	return true;

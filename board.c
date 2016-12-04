@@ -13,6 +13,13 @@ void initBoard(Board* board){
 	board->fields[4][4]=WHITE;
 	board->fields[3][4]=BLACK;
 	board->fields[4][3]=BLACK;
+	
+	board->fields[4][2]=BLACK;
+	board->fields[2][5]=WHITE;
+	board->fields[3][2]=BLACK;
+	board->fields[3][5]=WHITE;
+	board->fields[2][2]=WHITE;
+	board->fields[2][4]=WHITE;
 }
 
 //Prints the board using traditional ascii-art type graphics 
