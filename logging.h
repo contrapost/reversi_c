@@ -6,5 +6,5 @@
 void startGameLog(char* black, char* white);
 
 void saveMoveToLog(bool blackMove, char* black, char* white,
-													 Move move, bool wrongMove);
+													 Point move, bool wrongMove);
 #endif // _UTIL_H_

@@ -32,7 +32,7 @@ void startGameLog(char* black, char* white) {
 }
 
 void saveMoveToLog(bool blackMove, char* black, char* white, 
-													Move move, bool wrongMove) {
+													Point move, bool wrongMove) {
 							
 	char stringTime[100];
 	setTime(stringTime);

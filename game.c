@@ -32,7 +32,7 @@ int main() {
 	
 	bool isntFinished = true;
 	bool blackMove = true;
-	Move move;
+	Point move;
 	move.x = -1;
 	move.y = -1;
 	
@@ -47,7 +47,7 @@ int main() {
 		
 			getMove(&move);
 		
-			// If it's possible to make a move the pleyer cannot refuse it
+			// If it's possible to make a move the player cannot refuse it
 			while(!makeMove(&currentBoard, &blackMove, move)) {
 				wrongMove = true;
 				printf("Your move isn't valid, try again: ");

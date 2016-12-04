@@ -46,7 +46,7 @@ int getLine (char *prmpt, char *buff, size_t sz) {
     return OK;
 }
 
-void getMove(Move* move) {
+void getMove(Point* move) {
 	
 	char input[30] = "";
     
@@ -80,7 +80,39 @@ void getMove(Move* move) {
     } 
 }
 
-bool makeMove(Board* board, bool* blackMove, Move move) {
+void getNeighborsWIthOtherColor(Point* neighbors, int* numberOfneighbors, 
+									Point point, bool blackMove, Board board) {
+	
+	int counter = 0;								
+	
+	for(int dy = -1; dy <= 1; dy++) {
+		for(int dx = -1; dx <= 1; dx++) {
+			if(dy == 0 && dy == dx) continue;
+			
+			int newX = point.x + dx, newY = point.y + dy;
+			// ignoring positions beyond the edges
+			if(newY < 0 || newY > BOARD_SIZE - 1 
+						|| newX < 0 || newX > BOARD_SIZE - 1) continue; 
+			
+			// check for neighbors' color
+			if((blackMove && board.fields[newX][newY] == WHITE) || 
+				(!blackMove && board.fields[newX][newY] == BLACK)) {
+				neighbors[counter].x = newX;
+				neighbors[counter++].y = newY;
+			}
+		}
+	}
+	
+	*numberOfneighbors = counter;
+	printf("DEBUGGING NEIGHB: ");
+	for(int i = 0; i < counter; i++) {
+		printf(" %c%d ", neighbors[i].x + 65, 
+												neighbors[i].y + 1);
+	}
+	printf("\n");
+}
+
+bool makeMove(Board* board, bool* blackMove, Point move) {
 	
 	Field piece = (*blackMove ? BLACK : WHITE);
 
@@ -92,38 +124,15 @@ bool makeMove(Board* board, bool* blackMove, Move move) {
 	
 	// 2. Check if position is already occupied
 	if(board->fields[move.x][move.y] != EMPTY) return false;
-	
+
 	// 3. check if the field has no occupied neighbors or all neighbors have
 	// same color
-	bool isAlone = true;
-	bool onlySameColorNeighbors = true;
+	
+	getNeighborsWIthOtherColor(neighborsWithOtherColor, &counter, 
+									move, *blackMove, *board);
 		
-	for(int dy = -1; dy <= 1; dy++) {
-		for(int dx = -1; dx <= 1; dx++) {
-		
-			if(dy == 0 && dy == dx) continue; // Already been checked in 1.
-			
-			int newX = move.x + dx, newY = move.y + dy;
-			// ignoring positions beyond the edges
-			if(newY < 0 || newY > BOARD_SIZE - 1 
-						|| newX < 0 || newX > BOARD_SIZE - 1) continue; 
-			
-			// check for existing neighbors
-			if(board->fields[newX][newY] != EMPTY) 
-				isAlone = false;
-			
-			// check for neighbors' color
-			if((*blackMove && board->fields[newX][newY] == WHITE) || 
-				(!*blackMove && board->fields[newX][newY] == BLACK)) {
-				onlySameColorNeighbors = false;
-				neighborsWithOtherColor[counter].x = newX;
-				neighborsWithOtherColor[counter++].y = newY;
-			}
-		}
-	}
-		
-	if(isAlone) return false;
-	if(onlySameColorNeighbors) return false;
+	if(counter == 0) return false;									
+
 
 	// 4. check lines and change color if possible
 	
@@ -152,6 +161,7 @@ bool makeMove(Board* board, bool* blackMove, Move move) {
 		
 		if(board->fields[lastX][lastY] == piece) {
 			board->fields[move.x][move.y] = piece;
+			printf("DEBUGGING Potential trophies: ");
 			for(int i = 0; i < trophyCounter; i++) {
 				board->fields[potentialTrophies[i].x][potentialTrophies[i].y] 
 																		= piece;
@@ -204,7 +214,7 @@ bool possibleToMakeMove(Board board, bool blackMove) {
 	// check if it's possible to make a move
 	
 	for(int i = 0; i < playersFieldsCounter; i++) {
-	//	checkIfLineIsValid(blackMove, playersFields[i].x, playersFields[i].y);
+	//	checkIfLineIsValid(blackMove, playersFields[i]);
 	}
 	
 	return true;
