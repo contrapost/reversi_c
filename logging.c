@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <time.h>
 #include <ctype.h>
+#include "util.h"
 
 void setTime(char* timeString) {
 	time_t t = time(NULL);
@@ -30,8 +31,8 @@ void startGameLog(char* black, char* white) {
 	fclose(log);
 }
 
-void saveMoveToLog(bool blackMove, char* black, char* white, int columnIndex,  
-												int rowIndex, bool wrongMove) {
+void saveMoveToLog(bool blackMove, char* black, char* white, 
+													Move move, bool wrongMove) {
 							
 	char stringTime[100];
 	setTime(stringTime);
@@ -45,15 +46,9 @@ void saveMoveToLog(bool blackMove, char* black, char* white, int columnIndex,
     }
     
     
-    if(blackMove) {
-    	fprintf(log, "%s made move: %d-%c at %s, the move was %s.\n", black, 
-    	rowIndex + 1, columnIndex + 65, stringTime, 
-    										wrongMove ? "wrong" : "correct");
-    } else {
-    	fprintf(log, "%s made move: %d-%c at %s, the move was %s.\n", white, 
-    	rowIndex + 1, columnIndex + 65, stringTime, 
-    										wrongMove ? "wrong" : "correct");
-    }
+   	fprintf(log, "%s made move: %d-%c at %s, the move was %s.\n", 
+   				blackMove ? black : white, move.y + 1, move.x + 65, stringTime, 
+    			wrongMove ? "wrong" : "correct");
 
     fclose(log);
 }

@@ -46,9 +46,9 @@ int getLine (char *prmpt, char *buff, size_t sz) {
     return OK;
 }
 
-void getMove(int* columnIndex, int* rowIndex) {
+void getMove(Move* move) {
 	
-	char move[30] = "";
+	char input[30] = "";
     
     int firstChar = 0, firstNumber = 0;
     
@@ -61,18 +61,18 @@ void getMove(int* columnIndex, int* rowIndex) {
     			"please enter the digit for row and the letter for column: ");
     		firstChar = 0;
     		firstNumber = 0;
-    		for(int i = 0; i < 30; i++) move[i] = ' ';
+    		for(int i = 0; i < 30; i++) input[i] = ' ';
     	}
     	
-    	fgets(move, sizeof(move), stdin);
+    	fgets(input, sizeof(input), stdin);
     
 		for(int i = 0; i < 30; i++) {
-			if(isdigit(move[i])) {
-				*rowIndex = (int)move[i] - 49;
+			if(isdigit(input[i])) {
+				move->y = (int)input[i] - 49;
 				firstNumber++;
 			}
-			if(isalpha(move[i])) {
-				*columnIndex = (int)(tolower(move[i])) - 'a';
+			if(isalpha(input[i])) {
+				move->x = (int)(tolower(input[i])) - 'a';
 				firstChar++;
 			}
 		}
@@ -80,18 +80,18 @@ void getMove(int* columnIndex, int* rowIndex) {
     } 
 }
 
-bool makeMove(Board* board, bool* blackMove, int columnIndex, int rowIndex) {
+bool makeMove(Board* board, bool* blackMove, Move move) {
 	
 	Field piece = (*blackMove ? BLACK : WHITE);
 
-	int neighborsWithOtherColor[BOARD_SIZE][2];
+	Point neighborsWithOtherColor[BOARD_SIZE];
 	int counter = 0;
 
 	// 1. Check if move is outside the board
-	if(rowIndex > BOARD_SIZE - 1 || columnIndex > BOARD_SIZE - 1) return false;
+	if(move.x > BOARD_SIZE - 1 || move.y > BOARD_SIZE - 1) return false;
 	
 	// 2. Check if position is already occupied
-	if(board->fields[columnIndex][rowIndex] != EMPTY) return false;
+	if(board->fields[move.x][move.y] != EMPTY) return false;
 	
 	// 3. check if the field has no occupied neighbors or all neighbors have
 	// same color
@@ -103,7 +103,7 @@ bool makeMove(Board* board, bool* blackMove, int columnIndex, int rowIndex) {
 		
 			if(dy == 0 && dy == dx) continue; // Already been checked in 1.
 			
-			int newX = columnIndex + dx, newY = rowIndex + dy;
+			int newX = move.x + dx, newY = move.y + dy;
 			// ignoring positions beyond the edges
 			if(newY < 0 || newY > BOARD_SIZE - 1 
 						|| newX < 0 || newX > BOARD_SIZE - 1) continue; 
@@ -116,8 +116,8 @@ bool makeMove(Board* board, bool* blackMove, int columnIndex, int rowIndex) {
 			if((*blackMove && board->fields[newX][newY] == WHITE) || 
 				(!*blackMove && board->fields[newX][newY] == BLACK)) {
 				onlySameColorNeighbors = false;
-				neighborsWithOtherColor[counter][0] = newX;
-				neighborsWithOtherColor[counter++][1] = newY;
+				neighborsWithOtherColor[counter].x = newX;
+				neighborsWithOtherColor[counter++].y = newY;
 			}
 		}
 	}
@@ -125,38 +125,38 @@ bool makeMove(Board* board, bool* blackMove, int columnIndex, int rowIndex) {
 	if(isAlone) return false;
 	if(onlySameColorNeighbors) return false;
 
-	// 4. check lines
+	// 4. check lines and change color if possible
 	
 	bool canDrawLine = false;
 	
 	for(int i = 0; i < counter; i++){
 	
-		int x = neighborsWithOtherColor[i][0], 
-			y = neighborsWithOtherColor[i][1],
-			dX = x - columnIndex, dY = y - rowIndex;
+		int x = neighborsWithOtherColor[i].x, 
+			y = neighborsWithOtherColor[i].y,
+			dX = x - move.x, dY = y - move.y;
 		
-		int potentialTrophies[7][2];
+		Point potentialTrophies[BOARD_SIZE - 1];
 		int trophyCounter = 0;
 			
 		while(y < BOARD_SIZE && y >= 0 && x < BOARD_SIZE && x >= 0 
 				&& board->fields[x][y] != EMPTY) {
-			potentialTrophies[trophyCounter][0] = x;
-			potentialTrophies[trophyCounter++][1] = y;
+			potentialTrophies[trophyCounter].x = x;
+			potentialTrophies[trophyCounter++].y = y;
 			if(board->fields[x][y] == piece) break;
 			x += dX;
 			y += dY;
 		}
 		
-		int lastX = potentialTrophies[trophyCounter - 1][0];
-		int lastY = potentialTrophies[trophyCounter - 1][1];
+		int lastX = potentialTrophies[trophyCounter - 1].x;
+		int lastY = potentialTrophies[trophyCounter - 1].y;
 		
 		if(board->fields[lastX][lastY] == piece) {
-			board->fields[columnIndex][rowIndex] = piece;
+			board->fields[move.x][move.y] = piece;
 			for(int i = 0; i < trophyCounter; i++) {
-				board->fields[potentialTrophies[i][0]][potentialTrophies[i][1]] 
+				board->fields[potentialTrophies[i].x][potentialTrophies[i].y] 
 																		= piece;
-				printf(" %c%d ", potentialTrophies[i][0] + 65, 
-												potentialTrophies[i][1] + 1);
+				printf(" %c%d ", potentialTrophies[i].x + 65, 
+												potentialTrophies[i].y + 1);
 				canDrawLine = true;
 			}
 		} 
@@ -170,23 +170,42 @@ bool makeMove(Board* board, bool* blackMove, int columnIndex, int rowIndex) {
 	return true;
 }
 
-bool possibleToProceed(Board board, bool blackMove) {
+bool possibleToMakeMove(Board board, bool blackMove) {
 
-	bool onlySameColor = true;
 	bool noEmpty = true;
+	Point playersFields[BOARD_SIZE * BOARD_SIZE - 1];
+	int playersFieldsCounter = 0;
 	
 	// check if there are no empty fields or pieces with same color
 	for(int y = 0; y < BOARD_SIZE; y++) {
 		for(int x = 0; x < BOARD_SIZE; x++) {
-			if(board.fields[x][y] == EMPTY) noEmpty = false;
-			if(board.fields[x][y] == (blackMove ? BLACK : WHITE)) 
-														onlySameColor = false;
-			
+			if(board.fields[x][y] == EMPTY) {
+				noEmpty = false;
+			} else {
+				if(board.fields[x][y] == (blackMove ? BLACK : WHITE)) {
+					playersFields[playersFieldsCounter].x = x;
+					playersFields[playersFieldsCounter++].y = y;
+				}		
+			}
+					
 		}
 	}
 	
-	if(onlySameColor) return false;
+	// DEBUGGING
+	printf("Players fields: ");
+	for(int i = 0; i < playersFieldsCounter; i++) {
+		printf(" %c%d ", playersFields[i].x + 65, 
+												playersFields[i].y + 1);
+	}
+	printf("\n"); 	
+	
 	if(noEmpty) return false;
+	
+	// check if it's possible to make a move
+	
+	for(int i = 0; i < playersFieldsCounter; i++) {
+	//	checkIfLineIsValid(blackMove, playersFields[i].x, playersFields[i].y);
+	}
 	
 	return true;
 }

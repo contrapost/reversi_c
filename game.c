@@ -32,38 +32,37 @@ int main() {
 	
 	bool isntFinished = true;
 	bool blackMove = true;
-	int rowIndex = -1, columnIndex = -1;
+	Move move;
+	move.x = -1;
+	move.y = -1;
 	
 	while(isntFinished) {
 		
 		printBoard(&currentBoard);
 		
-		if(possibleToProceed(currentBoard, blackMove)) {
+		if(possibleToMakeMove(currentBoard, blackMove)) {
 			printf("Make your move, %s: ", blackMove ? black : white);
 		
 			bool wrongMove = false;
 		
-			getMove(&columnIndex, &rowIndex);
+			getMove(&move);
 		
-			while(!makeMove(&currentBoard, &blackMove, columnIndex, rowIndex)) {
+			// If it's possible to make a move the pleyer cannot refuse it
+			while(!makeMove(&currentBoard, &blackMove, move)) {
 				wrongMove = true;
 				printf("Your move isn't valid, try again: ");
-				saveMoveToLog(blackMove, black, white, 
-											columnIndex, rowIndex, wrongMove);
-				getMove(&columnIndex, &rowIndex);
+				saveMoveToLog(blackMove, black, white, move, wrongMove);
+				getMove(&move);
 				wrongMove = false;
 			}
 		
-			saveMoveToLog(blackMove, black, white, 
-											columnIndex, rowIndex, wrongMove);
+			saveMoveToLog(blackMove, black, white, move, wrongMove);
 		
-			printf("\n%d %d\n", columnIndex, rowIndex);
+			printf("\n%d %d\n", move.x, move.y);
 		} else {
 			isntFinished = false;
 		}
 	}
-	
-	
 	
 	return 0;
 }
