@@ -3,17 +3,25 @@
 #include <stdbool.h>
 #include "util.h"
 
-void getNeighborsWIthOtherColor(Point* neighbors, int* numberOfneighbors, 
+void getNeighborsWithOtherColor(Point* neighbors, int* numberOfneighbors, 
 									Point point, bool blackMove, Board board);
 									
 void getValidLine(Point* validLine, Point neighbor, Board board, 
-									int* lineLength, Point point, Field piece);
+	int* lineLength, Point point, Field piece, bool (*compare)(Field, Field));
+
+bool equalFields(Field f1, Field f2) {
+	return f1 == f2;
+}
+
+bool differentFields(Field f1, Field f2) {
+	return f1 != f2;
+}
 
 
 bool makeMove(Board* board, bool* blackMove, Point move) {
 	
 	Field piece = (*blackMove ? BLACK : WHITE);
-	Point neighborsWithOtherColor[BOARD_SIZE];
+	Point neighborsWithOtherColor[8];
 	int numberOfNeighbors = 0;
 
 	// 1. Check if move is out of the board
@@ -23,7 +31,7 @@ bool makeMove(Board* board, bool* blackMove, Point move) {
 	if(board->fields[move.x][move.y] != EMPTY) return false;
 
 	// 3. check if the field has no neighbors with other color
-	getNeighborsWIthOtherColor(neighborsWithOtherColor, &numberOfNeighbors, 
+	getNeighborsWithOtherColor(neighborsWithOtherColor, &numberOfNeighbors, 
 													move, *blackMove, *board);
 	if(numberOfNeighbors == 0) return false;									
 
@@ -36,7 +44,7 @@ bool makeMove(Board* board, bool* blackMove, Point move) {
 		int lineLength = 0;
 		
 		getValidLine(validLine, neighborsWithOtherColor[i], *board, 
-													&lineLength, move, piece);
+										&lineLength, move, piece, &equalFields);
 													
 		if(lineLength != 0) {
 			canDrawLine = true;
@@ -54,46 +62,61 @@ bool makeMove(Board* board, bool* blackMove, Point move) {
 }
 
 bool possibleToMakeMove(Board board, bool blackMove) {
-
-	bool noEmpty = true;
-	Point playersFields[BOARD_SIZE * BOARD_SIZE - 1];
-	int playersFieldsCounter = 0;
 	
-	// check if there are no empty fields or pieces with same color
+	Field piece = (blackMove ? BLACK : WHITE);
+	
+	Point emptyFields[BOARD_SIZE * BOARD_SIZE - NUMBER_OF_FIELDS_AT_START];
+	int numberOfEmptyFields = 0;
+	
+	// check if there are no empty fields
 	for(int y = 0; y < BOARD_SIZE; y++) {
 		for(int x = 0; x < BOARD_SIZE; x++) {
 			if(board.fields[x][y] == EMPTY) {
-				noEmpty = false;
-			} else {
-				if(board.fields[x][y] == (blackMove ? BLACK : WHITE)) {
-					playersFields[playersFieldsCounter].x = x;
-					playersFields[playersFieldsCounter++].y = y;
-				}		
-			}
-					
+				emptyFields[numberOfEmptyFields].x = x;
+				emptyFields[numberOfEmptyFields++].y = y;
+			} 
 		}
 	}
 	
 	// DEBUGGING
-	printf("Players fields: ");
-	for(int i = 0; i < playersFieldsCounter; i++) {
-		printf(" %c%d ", playersFields[i].x + 65, 
-												playersFields[i].y + 1);
+	printf("Empty fields: ");
+	for(int i = 0; i < numberOfEmptyFields; i++) {
+		printf(" %c%d ", emptyFields[i].x + 65, 
+												emptyFields[i].y + 1);
 	}
 	printf("\n"); 	
 	
-	if(noEmpty) return false;
+	if(numberOfEmptyFields == 0) return false;
 	
 	// check if it's possible to make a move
 	
-	for(int i = 0; i < playersFieldsCounter; i++) {
-	//	checkIfLineIsValid(blackMove, playersFields[i]);
+	bool hasValidLines = false;
+	
+	for(int i = 0; i < numberOfEmptyFields; i++) {
+		Point neighborsWithOtherColor[8];
+		int numberOfNeighbors = 0;
+		
+		getNeighborsWithOtherColor(neighborsWithOtherColor, &numberOfNeighbors, 
+						emptyFields[i], blackMove, board);
+											
+		for(int n = 0; n < numberOfNeighbors; n++) {
+			
+			Point validLine[BOARD_SIZE - 1];
+			int lineLength = 0;
+		
+			getValidLine(validLine, neighborsWithOtherColor[n], board, 
+						&lineLength, emptyFields[i], piece, &equalFields);
+													
+			if(lineLength != 0) hasValidLines = true;
+		}
 	}
 	
-	return true;
+	if(hasValidLines) return true;
+	
+	return false;
 }
 
-void getNeighborsWIthOtherColor(Point* neighbors, int* numberOfneighbors, 
+void getNeighborsWithOtherColor(Point* neighbors, int* numberOfneighbors, 
 									Point point, bool blackMove, Board board) {
 	
 	int counter = 0;								
@@ -126,7 +149,7 @@ void getNeighborsWIthOtherColor(Point* neighbors, int* numberOfneighbors,
 }
 
 void getValidLine(Point* validLine, Point neighbor, Board board, 
-									int* lineLength, Point point, Field piece) {
+	int* lineLength, Point point, Field piece, bool (*compare)(Field, Field)) {
 	int x = neighbor.x, y = neighbor.y, dX = x - point.x, dY = y - point.y;
 		
 	Point potentialTrophies[BOARD_SIZE - 1];
@@ -136,7 +159,7 @@ void getValidLine(Point* validLine, Point neighbor, Board board,
 			&& board.fields[x][y] != EMPTY) {
 		potentialTrophies[trophyCounter].x = x;
 		potentialTrophies[trophyCounter++].y = y;
-		if(board.fields[x][y] == piece) break;
+		if(compare(board.fields[x][y], piece)) break;
 		x += dX;
 		y += dY;
 	}

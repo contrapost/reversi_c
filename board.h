@@ -3,6 +3,7 @@
 
 
 #define BOARD_SIZE 8
+#define NUMBER_OF_FIELDS_AT_START 4
 
 //Defines the three states each field in a reversi board may have.
 //Uses ASCII-characters as values to make it easier to draw the board.
