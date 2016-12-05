@@ -15,9 +15,6 @@ typedef struct Point{
 	int x, y;
 } Point;
 
-int getLine (char* prmpt, char* buff, size_t sz);
-void getName(char* prmpt, char* name, size_t sz);
-void getMove(Point* move);
 bool makeMove(Board* board, bool* blackMove, Point move);
 bool possibleToMakeMove(Board board, bool blackMove);
 

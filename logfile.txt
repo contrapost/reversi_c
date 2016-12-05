@@ -875,3 +875,15 @@ B made move: 1-A at 00:25:18 Monday, December 05 2016, the move was correct.
 Match between b(BLACK) and w(WHITE) /started at 00:30:20 Monday, December 05 2016/
 =========================================================================================
 w made move: 4-C at 00:30:24 Monday, December 05 2016, the move was correct.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 01:04:19 Monday, December 05 2016/
+=========================================================================================
+w made move: 4-C at 01:04:26 Monday, December 05 2016, the move was correct.
+b made move: 3-F at 01:04:39 Monday, December 05 2016, the move was correct.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 01:10:47 Monday, December 05 2016/
+=========================================================================================
+w made move: 4-C at 01:10:51 Monday, December 05 2016, the move was correct.
+b made move: 3-F at 01:11:05 Monday, December 05 2016, the move was correct.
