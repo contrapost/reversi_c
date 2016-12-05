@@ -21,7 +21,7 @@ int main() {
     	getName(namePromptWhite, white, sizeof(white));
     }
     
-    printf("\nReversi match between %s and %s.\n\n", black, white);
+    printf("\nReversi match between %s and %s.", black, white);
 	
 	// Initializing board
 	Board currentBoard;
@@ -32,17 +32,28 @@ int main() {
 	
 	bool isntFinished = true;
 	bool blackMove = true;
+	int blackScore = 0, whiteScore = 0;
 	Point move;
 	move.x = -1;
 	move.y = -1;
 	
 	while(isntFinished) {
+	
+		bool blackCanMove = possibleToMakeMove(currentBoard, blackMove);
+		bool whiteCanMove = possibleToMakeMove(currentBoard, !blackMove);
 		
-		printBoard(&currentBoard);
+		isntFinished = blackCanMove || whiteCanMove;
 		
-		if(possibleToMakeMove(currentBoard, blackMove)) {
-			printf("Make your move, %s: ", blackMove ? black : white);
+		if(isntFinished && 
+			((blackMove && !blackCanMove) || (!blackMove && !whiteCanMove))) 
+					blackMove = !blackMove;
 		
+		if(isntFinished) {
+		
+			printBoard(&currentBoard);
+			
+			printf("\n\nMake your move, %s: ", blackMove ? black : white);
+			
 			bool wrongMove = false;
 		
 			getMove(&move);
@@ -55,13 +66,26 @@ int main() {
 				getMove(&move);
 				wrongMove = false;
 			}
-		
+			
+			
+			
 			saveMoveToLog(blackMove, black, white, move, wrongMove);
-		
-			printf("\n%d %d\n", move.x, move.y);
-		} else {
-			isntFinished = false;
 		}
+	}
+	
+	getScore(&blackScore, &whiteScore, currentBoard);
+	
+	endGameLog(blackScore, whiteScore, black, white);
+	
+	if(blackScore == whiteScore) {
+		printf("\nThe game ended in a draw.");
+	} else {
+		printf("\nThe winner is %s. Final score %d (%s) : %d (%s).\n", 
+			blackScore > whiteScore ? black : white, 
+			blackScore > whiteScore ? blackScore : whiteScore, 
+			blackScore > whiteScore ? black : white, 
+			blackScore > whiteScore ? whiteScore : blackScore,
+			blackScore > whiteScore ? white : black);
 	}
 	
 	return 0;

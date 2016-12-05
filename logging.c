@@ -24,16 +24,18 @@ void startGameLog(char* black, char* white) {
         return;   
     }
 	
-	fprintf(log, "\n=========================================================================================\n");
+	fprintf(log, "%s%s", "\n=========================================", 
+						 "================================================\n");
 	fprintf(log, "Match between %s(BLACK) and %s(WHITE) /started at %s/", 
 							black, white,  stringTime);
-	fprintf(log, "\n=========================================================================================\n");
+	fprintf(log, "%s%s", "\n=========================================", 
+						 "================================================\n");
 	
 	fclose(log);
 }
 
 void saveMoveToLog(bool blackMove, char* black, char* white, 
-													Point move, bool wrongMove) {
+												Point move, bool wrongMove) {
 							
 	char stringTime[100];
 	setTime(stringTime);
@@ -52,4 +54,32 @@ void saveMoveToLog(bool blackMove, char* black, char* white,
     			wrongMove ? "wrong" : "correct");
 
     fclose(log);
+}
+
+void endGameLog(int blackScore, int whiteScore, char* black, char* white) {
+
+	FILE *log = fopen("logfile.txt", "at");
+    if (!log) 
+    	log = fopen("logfile.txt", "wt");
+    if (!log) {
+        printf("can not open logfile.txt for writing.\n");
+        return;   
+    }
+	
+	fprintf(log, "%s%s", "=========================================", 
+						 "================================================\n");
+	if(blackScore == whiteScore) {
+		fprintf(log, "The game ended in a draw.");
+	} else {
+		fprintf(log, "The winner is %s. Final score %d (%s) : %d (%s).\n", 
+			blackScore > whiteScore ? black : white, 
+			blackScore > whiteScore ? blackScore : whiteScore, 
+			blackScore > whiteScore ? black : white, 
+			blackScore > whiteScore ? whiteScore : blackScore,
+			blackScore > whiteScore ? white : black);
+	}
+	fprintf(log, "%s%s", "=========================================", 
+					"================================================\n\n\n");
+	
+	fclose(log);
 }

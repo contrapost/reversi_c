@@ -953,3 +953,163 @@ w made move: 7-D at 17:10:24 Monday, December 05 2016, the move was correct.
 b made move: 8-D at 17:10:30 Monday, December 05 2016, the move was correct.
 w made move: 2-C at 17:10:37 Monday, December 05 2016, the move was correct.
 b made move: 1-C at 17:10:40 Monday, December 05 2016, the move was correct.
+
+=========================================================================================
+Match between B(BLACK) and W(WHITE) /started at 18:22:54 Monday, December 05 2016/
+=========================================================================================
+B made move: 3-C at 18:22:59 Monday, December 05 2016, the move was wrong.
+W made move: 4-C at 18:23:02 Monday, December 05 2016, the move was correct.
+B made move: 3-F at 18:23:07 Monday, December 05 2016, the move was correct.
+W made move: 7-D at 18:23:12 Monday, December 05 2016, the move was correct.
+B made move: 8-D at 18:23:15 Monday, December 05 2016, the move was correct.
+W made move: 2-C at 18:23:18 Monday, December 05 2016, the move was correct.
+B made move: 1-C at 18:23:20 Monday, December 05 2016, the move was correct.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 18:39:48 Monday, December 05 2016/
+=========================================================================================
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 18:40:59 Monday, December 05 2016/
+=========================================================================================
+w made move: 4-C at 18:41:07 Monday, December 05 2016, the move was correct.
+b made move: 3-F at 18:41:12 Monday, December 05 2016, the move was correct.
+w made move: 7-D at 18:41:19 Monday, December 05 2016, the move was correct.
+b made move: 8-D at 18:41:22 Monday, December 05 2016, the move was correct.
+w made move: 2-C at 18:41:26 Monday, December 05 2016, the move was correct.
+b made move: 1-C at 18:41:29 Monday, December 05 2016, the move was correct.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 18:42:40 Monday, December 05 2016/
+=========================================================================================
+w made move: 4-C at 18:42:46 Monday, December 05 2016, the move was correct.
+b made move: 3-F at 18:42:52 Monday, December 05 2016, the move was correct.
+w made move: 7-D at 18:42:59 Monday, December 05 2016, the move was correct.
+b made move: 8-D at 18:43:01 Monday, December 05 2016, the move was correct.
+w made move: 2-C at 18:43:04 Monday, December 05 2016, the move was correct.
+b made move: 1-C at 18:43:06 Monday, December 05 2016, the move was correct.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 18:45:51 Monday, December 05 2016/
+=========================================================================================
+w made move: 4-C at 18:46:02 Monday, December 05 2016, the move was correct.
+b made move: 3-F at 18:46:05 Monday, December 05 2016, the move was correct.
+w made move: 7-D at 18:46:14 Monday, December 05 2016, the move was correct.
+b made move: 8-D at 18:46:16 Monday, December 05 2016, the move was correct.
+w made move: 2-C at 18:46:41 Monday, December 05 2016, the move was correct.
+b made move: 1-C at 18:47:10 Monday, December 05 2016, the move was correct.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 18:57:10 Monday, December 05 2016/
+=========================================================================================
+w made move: 4-C at 18:57:14 Monday, December 05 2016, the move was correct.
+b made move: 3-F at 18:57:18 Monday, December 05 2016, the move was correct.
+w made move: 7-D at 18:57:22 Monday, December 05 2016, the move was correct.
+b made move: 8-D at 18:57:23 Monday, December 05 2016, the move was correct.
+w made move: 2-C at 18:57:25 Monday, December 05 2016, the move was correct.
+b made move: 1-C at 18:57:27 Monday, December 05 2016, the move was correct.
+
+The winner is w. Final score 16 (w) : 0 (b).
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 18:59:00 Monday, December 05 2016/
+=========================================================================================
+w made move: 4-C at 18:59:05 Monday, December 05 2016, the move was correct.
+b made move: 3-F at 18:59:07 Monday, December 05 2016, the move was correct.
+w made move: 7-D at 18:59:10 Monday, December 05 2016, the move was correct.
+b made move: 8-D at 18:59:12 Monday, December 05 2016, the move was correct.
+w made move: 2-C at 18:59:15 Monday, December 05 2016, the move was correct.
+b made move: 1-C at 18:59:17 Monday, December 05 2016, the move was correct.
+=========================================================================================
+
+The winner is w. Final score 16 (w) : 0 (b).
+
+=========================================================================================
+
+
+
+=========================================================================================
+Match between Black(BLACK) and White(WHITE) /started at 19:06:46 Monday, December 05 2016/
+=========================================================================================
+Black made move: 1-A at 19:06:58 Monday, December 05 2016, the move was wrong.
+White made move: 3-D at 19:07:06 Monday, December 05 2016, the move was correct.
+Black made move: 5-C at 19:07:26 Monday, December 05 2016, the move was correct.
+White made move: 6-C at 19:07:35 Monday, December 05 2016, the move was correct.
+Black made move: 3-C at 19:07:44 Monday, December 05 2016, the move was correct.
+White made move: 4-C at 19:07:55 Monday, December 05 2016, the move was correct.
+Black made move: 7-C at 19:08:00 Monday, December 05 2016, the move was correct.
+White made move: 7-B at 19:08:08 Monday, December 05 2016, the move was correct.
+White made move: 8-A at 19:08:16 Monday, December 05 2016, the move was wrong.
+Black made move: 4-F at 19:08:30 Monday, December 05 2016, the move was correct.
+White made move: 2-C at 19:08:58 Monday, December 05 2016, the move was correct.
+Black made move: 1-C at 19:09:02 Monday, December 05 2016, the move was correct.
+White made move: 7-D at 19:09:22 Monday, December 05 2016, the move was correct.
+Black made move: 6-D at 19:09:31 Monday, December 05 2016, the move was correct.
+White made move: 3-F at 19:09:44 Monday, December 05 2016, the move was correct.
+Black made move: 5-F at 19:09:57 Monday, December 05 2016, the move was correct.
+White made move: 2-D at 19:10:14 Monday, December 05 2016, the move was correct.
+Black made move: 1-D at 19:10:17 Monday, December 05 2016, the move was correct.
+White made move: 3-G at 19:10:27 Monday, December 05 2016, the move was correct.
+Black made move: 8-C at 19:10:43 Monday, December 05 2016, the move was correct.
+White made move: 4-B at 19:10:53 Monday, December 05 2016, the move was correct.
+Black made move: 8-A at 19:11:16 Monday, December 05 2016, the move was correct.
+White made move: 5-G at 19:11:33 Monday, December 05 2016, the move was correct.
+Black made move: 2-G at 19:11:44 Monday, December 05 2016, the move was correct.
+White made move: 3-E at 19:12:03 Monday, December 05 2016, the move was correct.
+Black made move: 6-E at 19:12:19 Monday, December 05 2016, the move was correct.
+White made move: 1-E at 19:12:30 Monday, December 05 2016, the move was correct.
+Black made move: 6-H at 19:12:40 Monday, December 05 2016, the move was correct.
+White made move: 5-H at 19:12:54 Monday, December 05 2016, the move was correct.
+Black made move: 3-H at 19:13:04 Monday, December 05 2016, the move was correct.
+White made move: 1-B at 19:13:15 Monday, December 05 2016, the move was correct.
+Black made move: 4-A at 19:13:23 Monday, December 05 2016, the move was correct.
+White made move: 2-E at 19:13:50 Monday, December 05 2016, the move was correct.
+Black made move: 3-B at 19:13:58 Monday, December 05 2016, the move was correct.
+White made move: 4-G at 19:14:25 Monday, December 05 2016, the move was correct.
+Black made move: 4-H at 19:14:30 Monday, December 05 2016, the move was correct.
+White made move: 2-F at 19:14:39 Monday, December 05 2016, the move was correct.
+Black made move: 2-B at 19:14:46 Monday, December 05 2016, the move was correct.
+White made move: 1-G at 19:14:58 Monday, December 05 2016, the move was correct.
+Black made move: 2-H at 19:15:07 Monday, December 05 2016, the move was correct.
+White made move: 1-H at 19:15:20 Monday, December 05 2016, the move was correct.
+Black made move: 6-G at 19:15:35 Monday, December 05 2016, the move was correct.
+White made move: 7-H at 19:15:41 Monday, December 05 2016, the move was correct.
+Black made move: 6-F at 19:15:55 Monday, December 05 2016, the move was correct.
+White made move: 7-F at 19:16:01 Monday, December 05 2016, the move was correct.
+Black made move: 8-F at 19:16:07 Monday, December 05 2016, the move was correct.
+White made move: 7-E at 19:16:36 Monday, December 05 2016, the move was correct.
+Black made move: 7-G at 19:16:52 Monday, December 05 2016, the move was correct.
+White made move: 8-G at 19:16:59 Monday, December 05 2016, the move was correct.
+Black made move: 8-E at 19:17:13 Monday, December 05 2016, the move was correct.
+White made move: 3-A at 19:17:22 Monday, December 05 2016, the move was correct.
+Black made move: 8-H at 19:17:32 Monday, December 05 2016, the move was correct.
+White made move: 1-F at 19:17:46 Monday, December 05 2016, the move was correct.
+Black made move: 2-A at 19:18:01 Monday, December 05 2016, the move was correct.
+White made move: 8-D at 19:18:10 Monday, December 05 2016, the move was correct.
+Black made move: 5-B at 19:18:17 Monday, December 05 2016, the move was correct.
+White made move: 6-B at 19:18:26 Monday, December 05 2016, the move was correct.
+Black made move: 5-A at 19:18:36 Monday, December 05 2016, the move was correct.
+White made move: 8-B at 19:18:44 Monday, December 05 2016, the move was correct.
+Black made move: 6-A at 19:18:54 Monday, December 05 2016, the move was correct.
+Black made move: 1-A at 19:19:14 Monday, December 05 2016, the move was wrong.
+White made move: 7-A at 19:19:19 Monday, December 05 2016, the move was correct.
+Black made move: 1-A at 19:19:27 Monday, December 05 2016, the move was correct.
+=========================================================================================
+=========================================================================================
+The winner is Black. Final score 40 (Black) : 24 (White).
+=========================================================================================
+=========================================================================================
+
+
+
+=========================================================================================
+Match between Black(BLACK) and White(WHITE) /started at 19:23:07 Monday, December 05 2016/
+=========================================================================================
+Black made move: 1-A at 19:23:20 Monday, December 05 2016, the move was wrong.
+Black made move: 1-A at 19:23:22 Monday, December 05 2016, the move was wrong.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 19:24:32 Monday, December 05 2016/
+=========================================================================================
+b made move: 1-A at 19:24:39 Monday, December 05 2016, the move was wrong.
+w made move: 4-C at 19:24:47 Monday, December 05 2016, the move was correct.

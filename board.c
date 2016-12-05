@@ -14,17 +14,17 @@ void initBoard(Board* board){
 	board->fields[3][4]=BLACK;
 	board->fields[4][3]=BLACK;
 	
-	board->fields[4][2]=BLACK;
+/*	board->fields[4][2]=BLACK;
 	board->fields[2][5]=WHITE;
 	board->fields[3][2]=BLACK;
 	board->fields[3][5]=WHITE;
 	board->fields[2][2]=WHITE;
-	board->fields[2][4]=WHITE;
+	board->fields[2][4]=WHITE; */
 }
 
 //Prints the board using traditional ascii-art type graphics 
 void printBoard(const Board* board){
-	printf("    a   b   c   d   e   f   g   h  \n");
+	printf("\n\n    a   b   c   d   e   f   g   h  \n");
 	for(int y=0;y<BOARD_SIZE;y++){
 		printf("  +---+---+---+---+---+---+---+---+\n");
 		printf(" %d",y+1); //Computer counts from 0, the game counts from 1!
