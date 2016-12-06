@@ -31,26 +31,35 @@ int main() {
 	startGameLog(black, white);
 	
 	bool isntFinished = true;
-	bool blackMove = true;
+	bool blackMove = true, blackCanMove = true, whiteCanMove = true;
 	int blackScore = 0, whiteScore = 0;
 	Point move;
 	move.x = -1;
 	move.y = -1;
 	
 	while(isntFinished) {
-	
-		bool blackCanMove = possibleToMakeMove(currentBoard, blackMove);
-		bool whiteCanMove = possibleToMakeMove(currentBoard, !blackMove);
+			
+		bool changeTurn = (blackMove && !blackCanMove && whiteCanMove) ||
+							(!blackMove && blackCanMove && !whiteCanMove);
+		
+		printf("DEB: blackCanMove=%s\n", blackCanMove ? "true" : "false");
+		printf("DEB: whiteCanMove=%s\n", whiteCanMove ? "true" : "false");
+		printf("DEB: changeTurn=%s\n", changeTurn ? "true" : "false");
+						
+	/*	bool changeTurn = (blackMove && !blackCanMove && whiteCanMove) ||
+								!(blackMove && !blackCanMove && whiteCanMove);*/
 		
 		isntFinished = blackCanMove || whiteCanMove;
 		
-		if(isntFinished && 
-			((blackMove && !blackCanMove) || (!blackMove && !whiteCanMove))) 
-					blackMove = !blackMove;
+		if(isntFinished && changeTurn)
+					blackMove = !blackMove; 
 		
 		if(isntFinished) {
 		
 			printBoard(&currentBoard);
+			
+			blackCanMove = possibleToMakeMove(&currentBoard, blackMove);
+			whiteCanMove = possibleToMakeMove(&currentBoard, !blackMove);
 			
 			printf("\n\nMake your move, %s: ", blackMove ? black : white);
 			
@@ -59,7 +68,7 @@ int main() {
 			getMove(&move);
 		
 			// If it's possible to make a move the player cannot refuse it
-			while(!makeMove(&currentBoard, &blackMove, move)) {
+			while(!makeMove(&currentBoard, blackMove, move)) {
 				wrongMove = true;
 				printf("Your move isn't valid, try again: ");
 				saveMoveToLog(blackMove, black, white, move, wrongMove);
@@ -67,11 +76,13 @@ int main() {
 				wrongMove = false;
 			}
 			
-			
-			
 			saveMoveToLog(blackMove, black, white, move, wrongMove);
+			
+			blackMove = !blackMove;
 		}
 	}
+	
+	printBoard(&currentBoard);
 	
 	getScore(&blackScore, &whiteScore, currentBoard);
 	

@@ -15,8 +15,8 @@ typedef struct Point{
 	int x, y;
 } Point;
 
-bool makeMove(Board* board, bool* blackMove, Point move);
-bool possibleToMakeMove(Board board, bool blackMove);
+bool makeMove(Board* board, bool blackMove, Point move);
+bool possibleToMakeMove(Board* board, bool blackMove);
 void getScore(int* blackScore, int* whiteScore, Board board);
 
 #endif // _UTIL_H_
