@@ -30,14 +30,14 @@ int main() {
 	// Starting game
 	startGameLog(black, white);
 	
-	bool isntFinished = true, changeTurn = false;
-	bool blackMove = true, blackCanMove = true, whiteCanMove = true;
+	bool changeTurn = false, blackMove = true, 
+		 blackCanMove = true, whiteCanMove = true;
 	int blackScore = 0, whiteScore = 0;
 	Point move;
 	move.x = -1;
 	move.y = -1;
 	
-	while(isntFinished) {
+	while(blackCanMove || whiteCanMove) {
 		
 		changeTurn = (blackMove && !blackCanMove && whiteCanMove) ||
 							(!blackMove && blackCanMove && !whiteCanMove);
@@ -46,41 +46,38 @@ int main() {
 		printf("DEB: whiteCanMove=%s\n", whiteCanMove ? "true" : "false");
 		printf("DEB: changeTurn=%s\n", changeTurn ? "true" : "false");
 		
-		isntFinished = blackCanMove || whiteCanMove;
-		
-		if(isntFinished && changeTurn) {
+		if(changeTurn) {
 			blackMove = !blackMove; 
+			printf("There is no way to move for %s\n.", 
+													blackMove ? white : black);
 			changeTurn = false;
 		}
 		
-		if(isntFinished) {
+		blackCanMove = possibleToMakeMove(&currentBoard, blackMove);
+		whiteCanMove = possibleToMakeMove(&currentBoard, !blackMove);
 		
-			printBoard(&currentBoard);
-			
-			blackCanMove = possibleToMakeMove(&currentBoard, blackMove);
-			whiteCanMove = possibleToMakeMove(&currentBoard, !blackMove);
-			
-			if(!blackCanMove && !whiteCanMove) break;
-			
-			printf("\n\nMake your move, %s: ", blackMove ? black : white);
-			
-			bool wrongMove = false;
+		if(!blackCanMove && !whiteCanMove) break;
 		
-			getMove(&move);
+		printBoard(&currentBoard);
 		
-			// If it's possible to make a move the player cannot refuse it
-			while(!makeMove(&currentBoard, blackMove, move)) {
-				wrongMove = true;
-				printf("Your move isn't valid, try again: ");
-				saveMoveToLog(blackMove, black, white, move, wrongMove);
-				getMove(&move);
-				wrongMove = false;
-			}
-			
+		printf("\n\nMake your move, %s: ", blackMove ? black : white);
+		
+		bool wrongMove = false;
+	
+		getMove(&move);
+	
+		// If it's possible to make a move the player cannot refuse it
+		while(!makeMove(&currentBoard, blackMove, move)) {
+			wrongMove = true;
+			printf("Your move isn't valid, try again: ");
 			saveMoveToLog(blackMove, black, white, move, wrongMove);
-			
-			blackMove = !blackMove;
+			getMove(&move);
+			wrongMove = false;
 		}
+		
+		saveMoveToLog(blackMove, black, white, move, wrongMove);
+		
+		blackMove = !blackMove;
 	}
 	
 	printBoard(&currentBoard);
