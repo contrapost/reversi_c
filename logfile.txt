@@ -1510,3 +1510,46 @@ The winner is b. Final score 41 (b) : 23 (w).
 =========================================================================================
 
 
+
+=========================================================================================
+Match between b(BLACK) and Computer(WHITE) /started at 22:44:18 Friday, December 09 2016/
+=========================================================================================
+b made move: 5-F at 22:44:29 Friday, December 09 2016, the move was correct.
+Computer made move: 5-F at 22:44:29 Friday, December 09 2016, the move was wrong.
+Computer made move: 4-F at 22:44:45 Friday, December 09 2016, the move was correct.
+b made move: 3-D at 22:44:58 Friday, December 09 2016, the move was correct.
+Computer made move: 3-D at 22:44:58 Friday, December 09 2016, the move was wrong.
+
+=========================================================================================
+Match between b(BLACK) and s(WHITE) /started at 23:34:56 Friday, December 09 2016/
+=========================================================================================
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 23:35:47 Friday, December 09 2016/
+=========================================================================================
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 23:37:37 Friday, December 09 2016/
+=========================================================================================
+
+=========================================================================================
+Match between v(BLACK) and w(WHITE) /started at 23:51:40 Friday, December 09 2016/
+=========================================================================================
+
+=========================================================================================
+Match between b(BLACK) and Computer(WHITE) /started at 23:51:47 Friday, December 09 2016/
+=========================================================================================
+
+=========================================================================================
+Match between v(BLACK) and w(WHITE) /started at 23:52:03 Friday, December 09 2016/
+=========================================================================================
+
+=========================================================================================
+Match between Ivanov(BLACK) and Computer(WHITE) /started at 23:54:14 Friday, December 09 2016/
+=========================================================================================
+Ivanov made move: 5-F at 23:54:25 Friday, December 09 2016, the move was correct.
+Computer made move: 5-F at 23:54:25 Friday, December 09 2016, the move was wrong.
+Computer made move: 4-F at 23:54:35 Friday, December 09 2016, the move was correct.
+Ivanov made move: 6-D at 23:54:47 Friday, December 09 2016, the move was wrong.
+Ivanov made move: 3-D at 23:54:52 Friday, December 09 2016, the move was correct.
+Computer made move: 3-D at 23:54:52 Friday, December 09 2016, the move was wrong.

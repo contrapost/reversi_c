@@ -107,6 +107,41 @@ bool possibleToMakeMove(Board* board, bool blackMove) {
 	return false;
 }
 
+void computerMove(Board* board, Point *move) {
+	Field piece = WHITE;
+	
+	Point emptyFields[BOARD_SIZE * BOARD_SIZE - NUMBER_OF_FIELDS_AT_START];
+	int numberOfEmptyFields = 0;
+	
+	for(int y = 0; y < BOARD_SIZE; y++) {
+		for(int x = 0; x < BOARD_SIZE; x++) {
+			if(board->fields[x][y] == EMPTY) {
+				emptyFields[numberOfEmptyFields].x = x;
+				emptyFields[numberOfEmptyFields++].y = y;
+			} 
+		}
+	}
+	
+	for(int i = 0; i < numberOfEmptyFields; i++) {
+		Point neighborsWithOtherColor[8];
+		int numberOfNeighbors = 0;
+		
+		getNeighborsWithOtherColor(neighborsWithOtherColor, &numberOfNeighbors, 
+						emptyFields[i], false, *board);
+											
+		for(int n = 0; n < numberOfNeighbors; n++) {
+			
+			Point validLine[BOARD_SIZE - 1];
+			int lineLength = 0;
+		
+			getValidLine(validLine, neighborsWithOtherColor[n], board, 
+						&lineLength, emptyFields[i], piece, &equalFields);
+			
+										
+		}
+	}
+}
+
 void getScore(int* blackScore, int* whiteScore, Board board) {
 	for(int y = 0; y < BOARD_SIZE; y++) {
 		for(int x = 0; x < BOARD_SIZE; x++) {
@@ -166,12 +201,12 @@ void getValidLine(Point* validLine, Point neighbor, Board* board,
 	int lastY = potentialTrophies[trophyCounter - 1].y;
 	
 	if(board->fields[lastX][lastY] == piece) {
-		printf("%C Valid line: ", piece);
+//		printf("%C Valid line: ", piece);
 		for(int i = 0; i < trophyCounter; i++) {
 			validLine[i] = potentialTrophies[i];
-			printf(" %d-%c ", validLine[i].y +1, validLine[i].x + 65);
+//			printf(" %d-%c ", validLine[i].y +1, validLine[i].x + 65);
 		}
-		printf("\n");
+//		printf("\n");
 		*lineLength = trophyCounter;
 	} 
 }

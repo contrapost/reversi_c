@@ -6,6 +6,12 @@
 
 int main() {
 
+	// Computer or 2 players
+	bool withComputer = false;
+	char playerChiosePrompt[] = 
+		"Do you want to play with computer or another person (C/P)? ";
+	getPlayerChoise(&withComputer, playerChiosePrompt);
+
 	// Getting players' names
     char black[10], white[10];
     char namePromptBlack[] =
@@ -14,11 +20,17 @@ int main() {
     			"Enter the name of player who will play with WHITE pieces: ";
     
     getName(namePromptBlack, black, sizeof(black));
-    getName(namePromptWhite, white, sizeof(white));
-    													
-    while (strcmp(black, white) == 0) {
-    	printf("Names of the player should be different!");
+    
+    if(!withComputer) {
     	getName(namePromptWhite, white, sizeof(white));
+    													
+		while (strcmp(black, white) == 0) {
+			printf("Names of the player should be different!");
+			getName(namePromptWhite, white, sizeof(white));
+		} 
+    
+    } else {
+    	strcpy(white, "Computer");
     }
     
     printf("\nReversi match between %s and %s.", black, white);
@@ -42,9 +54,9 @@ int main() {
 		changeTurn = (blackMove && !blackCanMove && whiteCanMove) ||
 							(!blackMove && blackCanMove && !whiteCanMove);
 		
-		printf("\nDEB: blackCanMove=%s\n", blackCanMove ? "true" : "false");
+/*		printf("\nDEB: blackCanMove=%s\n", blackCanMove ? "true" : "false");
 		printf("DEB: whiteCanMove=%s\n", whiteCanMove ? "true" : "false");
-		printf("DEB: changeTurn=%s\n", changeTurn ? "true" : "false");
+		printf("DEB: changeTurn=%s\n", changeTurn ? "true" : "false");*/
 		
 		if(changeTurn) {
 			blackMove = !blackMove; 
@@ -64,7 +76,8 @@ int main() {
 		
 		bool wrongMove = false;
 	
-		getMove(&move);
+		if(blackMove) getMove(&move);
+		else computerMove(&currentBoard, &move);
 	
 		// If it's possible to make a move the player cannot refuse it
 		while(!makeMove(&currentBoard, blackMove, move)) {
