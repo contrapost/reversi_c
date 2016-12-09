@@ -30,7 +30,7 @@ int main() {
 	// Starting game
 	startGameLog(black, white);
 	
-	bool isntFinished = true;
+	bool isntFinished = true, changeTurn = false;
 	bool blackMove = true, blackCanMove = true, whiteCanMove = true;
 	int blackScore = 0, whiteScore = 0;
 	Point move;
@@ -38,21 +38,20 @@ int main() {
 	move.y = -1;
 	
 	while(isntFinished) {
-			
-		bool changeTurn = (blackMove && !blackCanMove && whiteCanMove) ||
+		
+		changeTurn = (blackMove && !blackCanMove && whiteCanMove) ||
 							(!blackMove && blackCanMove && !whiteCanMove);
 		
-		printf("DEB: blackCanMove=%s\n", blackCanMove ? "true" : "false");
+		printf("\nDEB: blackCanMove=%s\n", blackCanMove ? "true" : "false");
 		printf("DEB: whiteCanMove=%s\n", whiteCanMove ? "true" : "false");
 		printf("DEB: changeTurn=%s\n", changeTurn ? "true" : "false");
-						
-	/*	bool changeTurn = (blackMove && !blackCanMove && whiteCanMove) ||
-								!(blackMove && !blackCanMove && whiteCanMove);*/
 		
 		isntFinished = blackCanMove || whiteCanMove;
 		
-		if(isntFinished && changeTurn)
-					blackMove = !blackMove; 
+		if(isntFinished && changeTurn) {
+			blackMove = !blackMove; 
+			changeTurn = false;
+		}
 		
 		if(isntFinished) {
 		
@@ -60,6 +59,8 @@ int main() {
 			
 			blackCanMove = possibleToMakeMove(&currentBoard, blackMove);
 			whiteCanMove = possibleToMakeMove(&currentBoard, !blackMove);
+			
+			if(!blackCanMove && !whiteCanMove) break;
 			
 			printf("\n\nMake your move, %s: ", blackMove ? black : white);
 			

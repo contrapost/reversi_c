@@ -856,3 +856,501 @@ b made move: 1-E at 18:35:25 Tuesday, December 06 2016, the move was correct.
 w made move: 2-A at 18:35:30 Tuesday, December 06 2016, the move was correct.
 b made move: 1-C at 18:35:34 Tuesday, December 06 2016, the move was correct.
 b made move: 1-A at 18:35:45 Tuesday, December 06 2016, the move was correct.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 17:32:24 Thursday, December 08 2016/
+=========================================================================================
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 17:33:23 Thursday, December 08 2016/
+=========================================================================================
+b made move: 6-F at 17:33:44 Thursday, December 08 2016, the move was wrong.
+b made move: 6-E at 17:33:45 Thursday, December 08 2016, the move was correct.
+w made move: 6-D at 17:34:02 Thursday, December 08 2016, the move was correct.
+b made move: 4-C at 17:34:23 Thursday, December 08 2016, the move was correct.
+w made move: 3-D at 17:34:47 Thursday, December 08 2016, the move was correct.
+b made move: 6-C at 17:38:58 Thursday, December 08 2016, the move was correct.
+w made move: 7-D at 17:41:35 Thursday, December 08 2016, the move was correct.
+b made move: 5-C at 17:41:52 Thursday, December 08 2016, the move was correct.
+w made move: 6-B at 17:41:57 Thursday, December 08 2016, the move was correct.
+b made move: 8-D at 17:42:00 Thursday, December 08 2016, the move was correct.
+w made move: 3-F at 17:42:05 Thursday, December 08 2016, the move was correct.
+b made move: 3-C at 17:42:06 Thursday, December 08 2016, the move was correct.
+w made move: 7-E at 17:42:19 Thursday, December 08 2016, the move was correct.
+b made move: 7-F at 17:42:20 Thursday, December 08 2016, the move was correct.
+w made move: 8-F at 17:42:27 Thursday, December 08 2016, the move was correct.
+b made move: 2-D at 17:42:28 Thursday, December 08 2016, the move was correct.
+w made move: 1-D at 17:45:09 Thursday, December 08 2016, the move was correct.
+b made move: 6-A at 17:45:11 Thursday, December 08 2016, the move was correct.
+w made move: 7-B at 17:45:14 Thursday, December 08 2016, the move was correct.
+b made move: 7-C at 17:45:16 Thursday, December 08 2016, the move was correct.
+w made move: 7-A at 17:45:18 Thursday, December 08 2016, the move was correct.
+b made move: 8-C at 17:45:22 Thursday, December 08 2016, the move was correct.
+w made move: 8-A at 17:45:23 Thursday, December 08 2016, the move was correct.
+b made move: 8-B at 17:45:25 Thursday, December 08 2016, the move was wrong.
+b made move: 8-E at 17:45:27 Thursday, December 08 2016, the move was correct.
+w made move: 8-B at 17:45:30 Thursday, December 08 2016, the move was correct.
+b made move: 4-F at 17:45:32 Thursday, December 08 2016, the move was correct.
+w made move: 6-F at 17:45:33 Thursday, December 08 2016, the move was correct.
+b made move: 3-E at 17:45:39 Thursday, December 08 2016, the move was correct.
+w made move: 2-E at 17:45:40 Thursday, December 08 2016, the move was correct.
+b made move: 1-F at 17:45:44 Thursday, December 08 2016, the move was correct.
+w made move: 5-F at 17:45:46 Thursday, December 08 2016, the move was correct.
+b made move: 6-G at 17:45:51 Thursday, December 08 2016, the move was correct.
+w made move: 4-B at 17:45:52 Thursday, December 08 2016, the move was correct.
+b made move: 3-A at 17:45:55 Thursday, December 08 2016, the move was correct.
+w made move: 7-H at 17:45:58 Thursday, December 08 2016, the move was correct.
+b made move: 2-F at 17:46:00 Thursday, December 08 2016, the move was correct.
+w made move: 5-G at 17:46:03 Thursday, December 08 2016, the move was correct.
+b made move: 5-H at 17:46:04 Thursday, December 08 2016, the move was correct.
+w made move: 4-G at 17:46:07 Thursday, December 08 2016, the move was correct.
+b made move: 3-G at 17:46:08 Thursday, December 08 2016, the move was correct.
+w made move: 3-H at 17:46:11 Thursday, December 08 2016, the move was correct.
+b made move: 2-C at 17:46:19 Thursday, December 08 2016, the move was correct.
+w made move: 1-G at 17:46:20 Thursday, December 08 2016, the move was correct.
+b made move: 4-H at 17:46:29 Thursday, December 08 2016, the move was correct.
+w made move: 2-B at 17:46:31 Thursday, December 08 2016, the move was correct.
+b made move: 6-H at 17:46:36 Thursday, December 08 2016, the move was correct.
+w made move: 3-B at 17:46:37 Thursday, December 08 2016, the move was correct.
+b made move: 2-G at 17:46:42 Thursday, December 08 2016, the move was correct.
+w made move: 7-G at 17:46:43 Thursday, December 08 2016, the move was correct.
+b made move: 8-G at 17:46:47 Thursday, December 08 2016, the move was correct.
+w made move: 8-H at 17:46:48 Thursday, December 08 2016, the move was correct.
+b made move: 1-H at 17:46:51 Thursday, December 08 2016, the move was correct.
+w made move: 2-H at 17:46:53 Thursday, December 08 2016, the move was correct.
+b made move: 1-B at 17:46:57 Thursday, December 08 2016, the move was correct.
+w made move: 5-A at 17:47:00 Thursday, December 08 2016, the move was correct.
+b made move: 5-B at 17:47:02 Thursday, December 08 2016, the move was correct.
+w made move: 4-A at 17:47:04 Thursday, December 08 2016, the move was correct.
+b made move: 1-E at 17:50:04 Thursday, December 08 2016, the move was correct.
+w made move: 2-A at 17:51:09 Thursday, December 08 2016, the move was correct.
+b made move: 1-C at 17:53:51 Thursday, December 08 2016, the move was correct.
+b made move: 1-A at 17:54:10 Thursday, December 08 2016, the move was correct.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 17:57:06 Thursday, December 08 2016/
+=========================================================================================
+b made move: 6-E at 17:58:14 Thursday, December 08 2016, the move was correct.
+w made move: 6-D at 17:58:19 Thursday, December 08 2016, the move was correct.
+b made move: 4-C at 17:58:24 Thursday, December 08 2016, the move was correct.
+w made move: 3-D at 17:58:27 Thursday, December 08 2016, the move was correct.
+b made move: 6-C at 17:58:28 Thursday, December 08 2016, the move was correct.
+w made move: 7-D at 17:58:38 Thursday, December 08 2016, the move was correct.
+b made move: 5-C at 17:58:39 Thursday, December 08 2016, the move was correct.
+w made move: 6-B at 17:58:44 Thursday, December 08 2016, the move was correct.
+b made move: 8-D at 17:58:45 Thursday, December 08 2016, the move was correct.
+w made move: 3-F at 17:58:50 Thursday, December 08 2016, the move was correct.
+b made move: 3-C at 17:58:50 Thursday, December 08 2016, the move was correct.
+w made move: 7-E at 17:58:55 Thursday, December 08 2016, the move was correct.
+b made move: 7-F at 17:58:57 Thursday, December 08 2016, the move was correct.
+w made move: 8-F at 17:58:59 Thursday, December 08 2016, the move was correct.
+b made move: 2-D at 17:59:00 Thursday, December 08 2016, the move was correct.
+w made move: 1-D at 17:59:03 Thursday, December 08 2016, the move was correct.
+b made move: 6-A at 17:59:04 Thursday, December 08 2016, the move was correct.
+w made move: 7-B at 17:59:06 Thursday, December 08 2016, the move was correct.
+b made move: 7-C at 17:59:07 Thursday, December 08 2016, the move was correct.
+w made move: 7-A at 17:59:08 Thursday, December 08 2016, the move was correct.
+b made move: 8-C at 17:59:14 Thursday, December 08 2016, the move was correct.
+w made move: 8-A at 17:59:14 Thursday, December 08 2016, the move was correct.
+b made move: 8-B at 17:59:16 Thursday, December 08 2016, the move was wrong.
+b made move: 8-E at 17:59:17 Thursday, December 08 2016, the move was correct.
+w made move: 8-A at 17:59:18 Thursday, December 08 2016, the move was wrong.
+w made move: 8-B at 17:59:33 Thursday, December 08 2016, the move was correct.
+b made move: 4-F at 17:59:38 Thursday, December 08 2016, the move was correct.
+w made move: 6-F at 17:59:39 Thursday, December 08 2016, the move was correct.
+b made move: 3-E at 17:59:43 Thursday, December 08 2016, the move was correct.
+w made move: 2-E at 17:59:44 Thursday, December 08 2016, the move was correct.
+b made move: 1-F at 17:59:47 Thursday, December 08 2016, the move was correct.
+w made move: 5-F at 17:59:48 Thursday, December 08 2016, the move was correct.
+b made move: 6-G at 17:59:52 Thursday, December 08 2016, the move was correct.
+w made move: 4-B at 17:59:53 Thursday, December 08 2016, the move was correct.
+b made move: 3-A at 17:59:58 Thursday, December 08 2016, the move was correct.
+w made move: 7-H at 18:00:00 Thursday, December 08 2016, the move was correct.
+b made move: 2-F at 18:00:03 Thursday, December 08 2016, the move was correct.
+w made move: 5-G at 18:00:04 Thursday, December 08 2016, the move was correct.
+b made move: 5-H at 18:00:08 Thursday, December 08 2016, the move was correct.
+w made move: 4-G at 18:00:09 Thursday, December 08 2016, the move was correct.
+b made move: 3-G at 18:00:10 Thursday, December 08 2016, the move was correct.
+w made move: 3-H at 18:00:12 Thursday, December 08 2016, the move was correct.
+b made move: 2-C at 18:00:31 Thursday, December 08 2016, the move was correct.
+w made move: 1-G at 18:00:32 Thursday, December 08 2016, the move was correct.
+b made move: 4-H at 18:00:43 Thursday, December 08 2016, the move was correct.
+w made move: 2-B at 18:00:44 Thursday, December 08 2016, the move was correct.
+b made move: 6-H at 18:00:48 Thursday, December 08 2016, the move was correct.
+w made move: 3-B at 18:00:50 Thursday, December 08 2016, the move was correct.
+b made move: 2-G at 18:00:53 Thursday, December 08 2016, the move was correct.
+w made move: 7-G at 18:00:54 Thursday, December 08 2016, the move was correct.
+b made move: 8-G at 18:00:57 Thursday, December 08 2016, the move was correct.
+w made move: 8-H at 18:00:58 Thursday, December 08 2016, the move was correct.
+b made move: 1-H at 18:01:00 Thursday, December 08 2016, the move was correct.
+w made move: 2-H at 18:01:01 Thursday, December 08 2016, the move was correct.
+b made move: 1-B at 18:01:05 Thursday, December 08 2016, the move was correct.
+w made move: 5-S at 18:01:07 Thursday, December 08 2016, the move was wrong.
+w made move: 5-A at 18:01:10 Thursday, December 08 2016, the move was correct.
+b made move: 5-B at 18:01:15 Thursday, December 08 2016, the move was correct.
+w made move: 4-A at 18:01:16 Thursday, December 08 2016, the move was correct.
+b made move: 1-E at 18:01:19 Thursday, December 08 2016, the move was correct.
+w made move: 2-A at 18:01:26 Thursday, December 08 2016, the move was correct.
+b made move: 1-C at 18:01:43 Thursday, December 08 2016, the move was correct.
+b made move: 1-A at 18:02:55 Thursday, December 08 2016, the move was correct.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 18:11:08 Thursday, December 08 2016/
+=========================================================================================
+b made move: 6-F at 18:11:20 Thursday, December 08 2016, the move was wrong.
+b made move: 6-E at 18:11:22 Thursday, December 08 2016, the move was correct.
+w made move: 6-D at 18:11:38 Thursday, December 08 2016, the move was correct.
+b made move: 4-C at 18:15:42 Thursday, December 08 2016, the move was correct.
+w made move: 3-D at 18:15:50 Thursday, December 08 2016, the move was correct.
+b made move: 6-C at 18:15:51 Thursday, December 08 2016, the move was correct.
+w made move: 7-D at 18:16:01 Thursday, December 08 2016, the move was correct.
+b made move: 5-C at 18:16:02 Thursday, December 08 2016, the move was correct.
+w made move: 6-B at 18:18:07 Thursday, December 08 2016, the move was correct.
+b made move: 8-D at 18:18:12 Thursday, December 08 2016, the move was correct.
+w made move: 3-F at 18:18:14 Thursday, December 08 2016, the move was correct.
+b made move: 3-C at 18:18:17 Thursday, December 08 2016, the move was correct.
+w made move: 7-E at 18:18:22 Thursday, December 08 2016, the move was correct.
+b made move: 7-F at 18:18:23 Thursday, December 08 2016, the move was correct.
+w made move: 7-F at 18:18:26 Thursday, December 08 2016, the move was wrong.
+w made move: 8-F at 18:18:34 Thursday, December 08 2016, the move was correct.
+b made move: 2-D at 18:18:38 Thursday, December 08 2016, the move was correct.
+w made move: 1-D at 18:18:55 Thursday, December 08 2016, the move was correct.
+b made move: 6-A at 18:18:57 Thursday, December 08 2016, the move was correct.
+w made move: 7-B at 18:19:02 Thursday, December 08 2016, the move was correct.
+b made move: 7-C at 18:19:03 Thursday, December 08 2016, the move was correct.
+w made move: 7-A at 18:19:05 Thursday, December 08 2016, the move was correct.
+b made move: 8-C at 18:19:11 Thursday, December 08 2016, the move was correct.
+w made move: 8-A at 18:19:12 Thursday, December 08 2016, the move was correct.
+b made move: 8-B at 18:19:14 Thursday, December 08 2016, the move was wrong.
+b made move: 8-E at 18:19:15 Thursday, December 08 2016, the move was correct.
+w made move: 8-B at 18:19:16 Thursday, December 08 2016, the move was correct.
+b made move: 4-F at 22:04:18 Thursday, December 08 2016, the move was correct.
+w made move: 6-F at 22:04:24 Thursday, December 08 2016, the move was correct.
+b made move: 3-E at 22:04:28 Thursday, December 08 2016, the move was correct.
+w made move: 2-E at 22:04:29 Thursday, December 08 2016, the move was correct.
+b made move: 1-F at 22:04:33 Thursday, December 08 2016, the move was correct.
+w made move: 5-F at 22:04:36 Thursday, December 08 2016, the move was correct.
+b made move: 6-G at 22:04:40 Thursday, December 08 2016, the move was correct.
+w made move: 4-B at 22:04:42 Thursday, December 08 2016, the move was correct.
+b made move: 3-A at 22:04:49 Thursday, December 08 2016, the move was correct.
+w made move: 7-H at 22:04:52 Thursday, December 08 2016, the move was correct.
+b made move: 2-F at 22:04:56 Thursday, December 08 2016, the move was correct.
+w made move: 5-G at 22:05:00 Thursday, December 08 2016, the move was correct.
+b made move: 5-H at 22:05:03 Thursday, December 08 2016, the move was correct.
+w made move: 4-G at 22:05:05 Thursday, December 08 2016, the move was correct.
+b made move: 3-G at 22:05:06 Thursday, December 08 2016, the move was correct.
+w made move: 3-H at 22:05:14 Thursday, December 08 2016, the move was correct.
+b made move: 2-C at 22:05:17 Thursday, December 08 2016, the move was correct.
+w made move: 1-G at 22:05:21 Thursday, December 08 2016, the move was correct.
+b made move: 4-H at 22:05:24 Thursday, December 08 2016, the move was correct.
+w made move: 2-B at 22:05:29 Thursday, December 08 2016, the move was correct.
+b made move: 6-H at 22:05:33 Thursday, December 08 2016, the move was correct.
+w made move: 3-B at 22:05:35 Thursday, December 08 2016, the move was correct.
+b made move: 2-G at 22:05:41 Thursday, December 08 2016, the move was correct.
+w made move: 7-G at 22:05:46 Thursday, December 08 2016, the move was correct.
+b made move: 8-G at 22:05:49 Thursday, December 08 2016, the move was correct.
+w made move: 8-H at 22:05:52 Thursday, December 08 2016, the move was correct.
+b made move: 1-H at 22:05:55 Thursday, December 08 2016, the move was correct.
+w made move: 2-H at 22:05:58 Thursday, December 08 2016, the move was correct.
+b made move: 1-B at 22:06:02 Thursday, December 08 2016, the move was correct.
+w made move: 5-A at 22:06:05 Thursday, December 08 2016, the move was correct.
+b made move: 5-B at 22:06:10 Thursday, December 08 2016, the move was correct.
+w made move: 4-A at 22:06:12 Thursday, December 08 2016, the move was correct.
+b made move: 1-E at 22:06:17 Thursday, December 08 2016, the move was correct.
+w made move: 2-A at 22:06:20 Thursday, December 08 2016, the move was correct.
+b made move: 1-C at 22:06:29 Thursday, December 08 2016, the move was correct.
+w made move: 1-A at 22:06:35 Thursday, December 08 2016, the move was wrong.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 22:36:50 Thursday, December 08 2016/
+=========================================================================================
+b made move: 6-F at 22:38:24 Thursday, December 08 2016, the move was wrong.
+b made move: 6-E at 22:38:25 Thursday, December 08 2016, the move was correct.
+w made move: 6-D at 22:38:29 Thursday, December 08 2016, the move was correct.
+b made move: 4-C at 22:38:33 Thursday, December 08 2016, the move was correct.
+w made move: 3-D at 22:38:36 Thursday, December 08 2016, the move was correct.
+b made move: 3-D at 22:38:49 Thursday, December 08 2016, the move was wrong.
+b made move: 6-C at 22:38:53 Thursday, December 08 2016, the move was correct.
+w made move: 7-D at 22:38:58 Thursday, December 08 2016, the move was correct.
+b made move: 5-C at 22:39:01 Thursday, December 08 2016, the move was correct.
+w made move: 6-B at 22:39:04 Thursday, December 08 2016, the move was correct.
+b made move: 8-D at 22:39:08 Thursday, December 08 2016, the move was correct.
+w made move: 3-F at 22:39:12 Thursday, December 08 2016, the move was correct.
+b made move: 3-C at 22:39:13 Thursday, December 08 2016, the move was correct.
+w made move: 7-E at 22:39:16 Thursday, December 08 2016, the move was correct.
+b made move: 7-F at 22:39:17 Thursday, December 08 2016, the move was correct.
+w made move: 8-F at 22:39:21 Thursday, December 08 2016, the move was correct.
+b made move: 2-D at 22:39:22 Thursday, December 08 2016, the move was correct.
+w made move: 1-D at 22:39:30 Thursday, December 08 2016, the move was correct.
+b made move: 6-A at 22:39:31 Thursday, December 08 2016, the move was correct.
+w made move: 7-B at 22:39:36 Thursday, December 08 2016, the move was correct.
+b made move: 7-C at 22:39:37 Thursday, December 08 2016, the move was correct.
+w made move: 7-A at 22:39:38 Thursday, December 08 2016, the move was correct.
+b made move: 8-C at 22:39:41 Thursday, December 08 2016, the move was correct.
+w made move: 8-A at 22:39:43 Thursday, December 08 2016, the move was correct.
+b made move: 8-B at 22:39:48 Thursday, December 08 2016, the move was wrong.
+b made move: 8-E at 22:39:49 Thursday, December 08 2016, the move was correct.
+w made move: 8-B at 22:39:51 Thursday, December 08 2016, the move was correct.
+b made move: 4-F at 22:39:55 Thursday, December 08 2016, the move was correct.
+w made move: 6-F at 22:39:56 Thursday, December 08 2016, the move was correct.
+b made move: 3-E at 22:40:02 Thursday, December 08 2016, the move was correct.
+w made move: 2-E at 22:40:04 Thursday, December 08 2016, the move was correct.
+b made move: 1-F at 22:40:06 Thursday, December 08 2016, the move was correct.
+w made move: 5-F at 22:40:10 Thursday, December 08 2016, the move was correct.
+b made move: 6-G at 22:40:12 Thursday, December 08 2016, the move was correct.
+w made move: 4-B at 22:40:14 Thursday, December 08 2016, the move was correct.
+b made move: 3-A at 22:40:18 Thursday, December 08 2016, the move was correct.
+w made move: 7-H at 22:40:20 Thursday, December 08 2016, the move was correct.
+b made move: 2-F at 22:40:22 Thursday, December 08 2016, the move was correct.
+w made move: 5-G at 22:40:25 Thursday, December 08 2016, the move was correct.
+b made move: 5-H at 22:40:29 Thursday, December 08 2016, the move was correct.
+w made move: 4-G at 22:40:31 Thursday, December 08 2016, the move was correct.
+b made move: 3-G at 22:40:32 Thursday, December 08 2016, the move was correct.
+w made move: 3-H at 22:40:35 Thursday, December 08 2016, the move was correct.
+b made move: 2-C at 22:40:43 Thursday, December 08 2016, the move was correct.
+w made move: 1-G at 22:40:45 Thursday, December 08 2016, the move was correct.
+b made move: 4-H at 22:40:50 Thursday, December 08 2016, the move was correct.
+w made move: 2-B at 22:40:55 Thursday, December 08 2016, the move was correct.
+b made move: 6-H at 22:41:10 Thursday, December 08 2016, the move was correct.
+w made move: 3-B at 22:41:15 Thursday, December 08 2016, the move was correct.
+b made move: 2-G at 22:41:17 Thursday, December 08 2016, the move was correct.
+w made move: 7-G at 22:41:19 Thursday, December 08 2016, the move was correct.
+b made move: 8-G at 22:41:23 Thursday, December 08 2016, the move was correct.
+w made move: 8-H at 22:41:24 Thursday, December 08 2016, the move was correct.
+b made move: 1-H at 22:41:27 Thursday, December 08 2016, the move was correct.
+w made move: 2-H at 22:41:28 Thursday, December 08 2016, the move was correct.
+b made move: 1-B at 22:41:32 Thursday, December 08 2016, the move was correct.
+w made move: 5-A at 22:41:33 Thursday, December 08 2016, the move was correct.
+b made move: 5-B at 22:41:38 Thursday, December 08 2016, the move was correct.
+w made move: 4-A at 22:41:40 Thursday, December 08 2016, the move was correct.
+b made move: 1-E at 22:41:45 Thursday, December 08 2016, the move was correct.
+w made move: 2-A at 22:41:49 Thursday, December 08 2016, the move was correct.
+w made move: 1-A at 22:43:22 Thursday, December 08 2016, the move was wrong.
+w made move: 1-C at 22:43:25 Thursday, December 08 2016, the move was wrong.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 22:47:05 Thursday, December 08 2016/
+=========================================================================================
+b made move: 6-F at 22:47:09 Thursday, December 08 2016, the move was wrong.
+b made move: 6-E at 22:47:10 Thursday, December 08 2016, the move was correct.
+w made move: 6-D at 22:47:12 Thursday, December 08 2016, the move was correct.
+b made move: 4-C at 22:49:29 Thursday, December 08 2016, the move was correct.
+w made move: 3-D at 22:49:34 Thursday, December 08 2016, the move was correct.
+b made move: 6-C at 22:49:36 Thursday, December 08 2016, the move was correct.
+w made move: 7-D at 22:49:39 Thursday, December 08 2016, the move was correct.
+b made move: 5-C at 22:49:41 Thursday, December 08 2016, the move was correct.
+w made move: 6-B at 22:49:51 Thursday, December 08 2016, the move was correct.
+b made move: 8-D at 22:49:56 Thursday, December 08 2016, the move was correct.
+w made move: 3-F at 22:50:03 Thursday, December 08 2016, the move was correct.
+b made move: 3-C at 22:50:08 Thursday, December 08 2016, the move was correct.
+w made move: 7-E at 22:50:10 Thursday, December 08 2016, the move was correct.
+b made move: 7-F at 22:50:11 Thursday, December 08 2016, the move was correct.
+w made move: 8-F at 22:50:16 Thursday, December 08 2016, the move was correct.
+b made move: 2-D at 22:50:18 Thursday, December 08 2016, the move was correct.
+w made move: 1-D at 22:50:23 Thursday, December 08 2016, the move was correct.
+b made move: 6-A at 22:50:26 Thursday, December 08 2016, the move was correct.
+w made move: 7-B at 22:50:29 Thursday, December 08 2016, the move was correct.
+b made move: 7-C at 22:50:30 Thursday, December 08 2016, the move was correct.
+w made move: 7-A at 22:50:32 Thursday, December 08 2016, the move was correct.
+b made move: 8-C at 22:50:36 Thursday, December 08 2016, the move was correct.
+w made move: 8-A at 22:50:38 Thursday, December 08 2016, the move was correct.
+b made move: 8-B at 22:50:40 Thursday, December 08 2016, the move was wrong.
+b made move: 8-E at 22:50:41 Thursday, December 08 2016, the move was correct.
+w made move: 8-B at 22:50:43 Thursday, December 08 2016, the move was correct.
+b made move: 4-F at 22:50:46 Thursday, December 08 2016, the move was correct.
+w made move: 6-F at 22:50:47 Thursday, December 08 2016, the move was correct.
+b made move: 3-E at 22:50:50 Thursday, December 08 2016, the move was correct.
+w made move: 2-E at 22:50:51 Thursday, December 08 2016, the move was correct.
+b made move: 1-F at 22:51:12 Thursday, December 08 2016, the move was correct.
+w made move: 5-F at 22:51:13 Thursday, December 08 2016, the move was correct.
+b made move: 6-G at 22:51:16 Thursday, December 08 2016, the move was correct.
+w made move: 4-B at 22:51:18 Thursday, December 08 2016, the move was correct.
+b made move: 3-A at 22:51:20 Thursday, December 08 2016, the move was correct.
+w made move: 7-H at 22:51:22 Thursday, December 08 2016, the move was correct.
+b made move: 2-F at 22:51:25 Thursday, December 08 2016, the move was correct.
+w made move: 5-G at 22:51:31 Thursday, December 08 2016, the move was correct.
+b made move: 5-H at 22:51:37 Thursday, December 08 2016, the move was correct.
+w made move: 4-G at 22:51:39 Thursday, December 08 2016, the move was correct.
+b made move: 3-G at 22:51:40 Thursday, December 08 2016, the move was correct.
+w made move: 3-H at 22:51:42 Thursday, December 08 2016, the move was correct.
+b made move: 2-C at 22:51:49 Thursday, December 08 2016, the move was correct.
+w made move: 1-G at 22:51:52 Thursday, December 08 2016, the move was correct.
+b made move: 4-H at 22:51:58 Thursday, December 08 2016, the move was correct.
+w made move: 2-B at 22:51:59 Thursday, December 08 2016, the move was correct.
+b made move: 6-H at 22:52:03 Thursday, December 08 2016, the move was correct.
+w made move: 3-B at 22:52:04 Thursday, December 08 2016, the move was correct.
+b made move: 2-G at 22:52:07 Thursday, December 08 2016, the move was correct.
+w made move: 7-G at 22:52:08 Thursday, December 08 2016, the move was correct.
+b made move: 8-G at 22:52:13 Thursday, December 08 2016, the move was correct.
+w made move: 8-H at 22:52:16 Thursday, December 08 2016, the move was correct.
+b made move: 1-H at 22:52:17 Thursday, December 08 2016, the move was correct.
+w made move: 2-H at 22:52:18 Thursday, December 08 2016, the move was correct.
+b made move: 1-B at 22:52:24 Thursday, December 08 2016, the move was correct.
+w made move: 5-A at 22:52:26 Thursday, December 08 2016, the move was correct.
+b made move: 5-B at 22:52:30 Thursday, December 08 2016, the move was correct.
+w made move: 4-A at 22:52:31 Thursday, December 08 2016, the move was correct.
+b made move: 1-E at 22:52:41 Thursday, December 08 2016, the move was correct.
+w made move: 2-A at 22:53:04 Thursday, December 08 2016, the move was correct.
+b made move: 1-C at 22:53:55 Thursday, December 08 2016, the move was correct.
+w made move: 1-A at 22:54:06 Thursday, December 08 2016, the move was wrong.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 22:56:48 Thursday, December 08 2016/
+=========================================================================================
+b made move: 6-E at 22:56:51 Thursday, December 08 2016, the move was correct.
+w made move: 6-D at 22:56:53 Thursday, December 08 2016, the move was correct.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 22:57:23 Thursday, December 08 2016/
+=========================================================================================
+b made move: 6-F at 22:57:27 Thursday, December 08 2016, the move was wrong.
+b made move: 6-E at 22:57:28 Thursday, December 08 2016, the move was correct.
+w made move: 6-D at 22:57:29 Thursday, December 08 2016, the move was correct.
+b made move: 4-C at 22:57:39 Thursday, December 08 2016, the move was correct.
+w made move: 3-D at 22:57:41 Thursday, December 08 2016, the move was correct.
+b made move: 6-C at 22:57:44 Thursday, December 08 2016, the move was correct.
+w made move: 7-D at 22:57:46 Thursday, December 08 2016, the move was correct.
+b made move: 5-C at 22:57:49 Thursday, December 08 2016, the move was correct.
+w made move: 6-B at 22:57:51 Thursday, December 08 2016, the move was correct.
+b made move: 8-D at 22:57:54 Thursday, December 08 2016, the move was correct.
+w made move: 3-F at 22:58:02 Thursday, December 08 2016, the move was correct.
+b made move: 3-C at 22:58:04 Thursday, December 08 2016, the move was correct.
+w made move: 7-F at 22:58:09 Thursday, December 08 2016, the move was correct.
+b made move: 7-E at 22:58:11 Thursday, December 08 2016, the move was correct.
+w made move: 8-F at 22:58:14 Thursday, December 08 2016, the move was correct.
+b made move: 2-D at 22:58:16 Thursday, December 08 2016, the move was correct.
+w made move: 1-D at 22:58:19 Thursday, December 08 2016, the move was correct.
+b made move: 6-A at 22:58:20 Thursday, December 08 2016, the move was correct.
+w made move: 7-B at 22:58:24 Thursday, December 08 2016, the move was correct.
+b made move: 7-C at 22:58:26 Thursday, December 08 2016, the move was correct.
+w made move: 7-A at 22:58:27 Thursday, December 08 2016, the move was correct.
+b made move: 8-C at 22:58:30 Thursday, December 08 2016, the move was correct.
+w made move: 8-A at 22:58:31 Thursday, December 08 2016, the move was correct.
+b made move: 8-B at 22:58:33 Thursday, December 08 2016, the move was wrong.
+b made move: 8-E at 22:58:34 Thursday, December 08 2016, the move was correct.
+w made move: 8-B at 22:58:36 Thursday, December 08 2016, the move was correct.
+b made move: 4-F at 22:58:39 Thursday, December 08 2016, the move was correct.
+w made move: 6-F at 22:58:40 Thursday, December 08 2016, the move was correct.
+b made move: 3-E at 22:58:44 Thursday, December 08 2016, the move was correct.
+w made move: 2-E at 22:58:45 Thursday, December 08 2016, the move was correct.
+b made move: 1-F at 22:58:48 Thursday, December 08 2016, the move was correct.
+w made move: 5-F at 22:58:49 Thursday, December 08 2016, the move was correct.
+b made move: 6-G at 22:58:51 Thursday, December 08 2016, the move was correct.
+w made move: 4-B at 22:58:54 Thursday, December 08 2016, the move was correct.
+b made move: 3-A at 22:58:57 Thursday, December 08 2016, the move was correct.
+w made move: 7-H at 22:58:59 Thursday, December 08 2016, the move was correct.
+b made move: 2-F at 22:59:03 Thursday, December 08 2016, the move was correct.
+w made move: 5-G at 22:59:05 Thursday, December 08 2016, the move was correct.
+b made move: 5-H at 22:59:08 Thursday, December 08 2016, the move was correct.
+w made move: 4-G at 22:59:10 Thursday, December 08 2016, the move was correct.
+b made move: 3-G at 22:59:12 Thursday, December 08 2016, the move was correct.
+w made move: 3-H at 22:59:14 Thursday, December 08 2016, the move was correct.
+b made move: 2-C at 22:59:18 Thursday, December 08 2016, the move was correct.
+w made move: 1-G at 22:59:20 Thursday, December 08 2016, the move was correct.
+b made move: 4-H at 22:59:23 Thursday, December 08 2016, the move was correct.
+w made move: 2-B at 22:59:26 Thursday, December 08 2016, the move was correct.
+b made move: 6-H at 22:59:33 Thursday, December 08 2016, the move was correct.
+w made move: 3-B at 22:59:37 Thursday, December 08 2016, the move was correct.
+b made move: 2-G at 22:59:39 Thursday, December 08 2016, the move was correct.
+w made move: 7-G at 22:59:41 Thursday, December 08 2016, the move was correct.
+b made move: 8-G at 22:59:42 Thursday, December 08 2016, the move was correct.
+w made move: 8-H at 22:59:43 Thursday, December 08 2016, the move was correct.
+b made move: 1-H at 22:59:48 Thursday, December 08 2016, the move was correct.
+w made move: 2-H at 22:59:51 Thursday, December 08 2016, the move was correct.
+b made move: 1-B at 22:59:55 Thursday, December 08 2016, the move was correct.
+w made move: 5-A at 22:59:58 Thursday, December 08 2016, the move was correct.
+b made move: 5-B at 23:00:01 Thursday, December 08 2016, the move was correct.
+w made move: 4-A at 23:00:04 Thursday, December 08 2016, the move was correct.
+b made move: 1-E at 23:00:08 Thursday, December 08 2016, the move was correct.
+w made move: 2-A at 23:00:13 Thursday, December 08 2016, the move was correct.
+b made move: 1-C at 23:00:27 Thursday, December 08 2016, the move was correct.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 01:46:11 Friday, December 09 2016/
+=========================================================================================
+b made move: 6-F at 01:46:57 Friday, December 09 2016, the move was wrong.
+b made move: 6-E at 01:47:00 Friday, December 09 2016, the move was correct.
+w made move: 6-D at 01:47:02 Friday, December 09 2016, the move was correct.
+b made move: 4-C at 01:47:05 Friday, December 09 2016, the move was correct.
+w made move: 3-D at 01:47:08 Friday, December 09 2016, the move was correct.
+b made move: 6-C at 01:47:12 Friday, December 09 2016, the move was correct.
+w made move: 7-D at 01:47:17 Friday, December 09 2016, the move was correct.
+b made move: 5-C at 01:47:21 Friday, December 09 2016, the move was correct.
+w made move: 6-B at 01:47:23 Friday, December 09 2016, the move was correct.
+b made move: 8-D at 01:47:27 Friday, December 09 2016, the move was correct.
+w made move: 3-F at 01:47:30 Friday, December 09 2016, the move was correct.
+b made move: 3-C at 01:47:32 Friday, December 09 2016, the move was correct.
+w made move: 7-E at 01:47:35 Friday, December 09 2016, the move was correct.
+b made move: 7-F at 01:47:38 Friday, December 09 2016, the move was correct.
+w made move: 9-F at 01:47:43 Friday, December 09 2016, the move was wrong.
+w made move: 2-D at 01:47:45 Friday, December 09 2016, the move was wrong.
+w made move: 8-F at 01:47:49 Friday, December 09 2016, the move was correct.
+b made move: 2-D at 01:47:54 Friday, December 09 2016, the move was correct.
+w made move: 1-D at 01:48:00 Friday, December 09 2016, the move was correct.
+b made move: 6-A at 01:48:02 Friday, December 09 2016, the move was correct.
+w made move: 7-B at 01:48:08 Friday, December 09 2016, the move was correct.
+b made move: 7-C at 01:48:10 Friday, December 09 2016, the move was correct.
+w made move: 7-A at 01:48:12 Friday, December 09 2016, the move was correct.
+b made move: 8-C at 01:48:16 Friday, December 09 2016, the move was correct.
+w made move: 8-A at 01:48:17 Friday, December 09 2016, the move was correct.
+b made move: 8-B at 01:48:20 Friday, December 09 2016, the move was wrong.
+b made move: 8-E at 01:48:24 Friday, December 09 2016, the move was correct.
+w made move: 8-B at 01:48:28 Friday, December 09 2016, the move was correct.
+b made move: 4-F at 01:48:32 Friday, December 09 2016, the move was correct.
+w made move: 6-F at 01:48:34 Friday, December 09 2016, the move was correct.
+b made move: 3-E at 01:48:39 Friday, December 09 2016, the move was correct.
+w made move: 2-E at 01:48:41 Friday, December 09 2016, the move was correct.
+b made move: 1-F at 01:48:43 Friday, December 09 2016, the move was correct.
+w made move: 5-F at 01:48:47 Friday, December 09 2016, the move was correct.
+b made move: 6-G at 01:49:01 Friday, December 09 2016, the move was correct.
+w made move: 3-E at 01:49:06 Friday, December 09 2016, the move was wrong.
+w made move: 4-B at 01:49:17 Friday, December 09 2016, the move was correct.
+b made move: 3-A at 01:49:23 Friday, December 09 2016, the move was correct.
+w made move: 7-H at 01:49:29 Friday, December 09 2016, the move was correct.
+b made move: 2-F at 01:49:34 Friday, December 09 2016, the move was correct.
+w made move: 5-G at 01:49:38 Friday, December 09 2016, the move was correct.
+b made move: 5-H at 01:49:40 Friday, December 09 2016, the move was correct.
+w made move: 4-G at 01:49:43 Friday, December 09 2016, the move was correct.
+b made move: 3-G at 01:49:45 Friday, December 09 2016, the move was correct.
+w made move: 3-H at 01:49:47 Friday, December 09 2016, the move was correct.
+b made move: 2-C at 01:49:52 Friday, December 09 2016, the move was correct.
+w made move: 1-G at 01:49:55 Friday, December 09 2016, the move was correct.
+b made move: 4-H at 01:50:08 Friday, December 09 2016, the move was correct.
+w made move: 2-B at 01:50:12 Friday, December 09 2016, the move was correct.
+b made move: 6-H at 01:50:14 Friday, December 09 2016, the move was correct.
+w made move: 3-B at 01:50:18 Friday, December 09 2016, the move was correct.
+b made move: 2-G at 01:50:19 Friday, December 09 2016, the move was correct.
+w made move: 7-G at 01:50:23 Friday, December 09 2016, the move was correct.
+b made move: 8-G at 01:50:25 Friday, December 09 2016, the move was correct.
+w made move: 8-H at 01:50:28 Friday, December 09 2016, the move was correct.
+b made move: 1-H at 01:50:32 Friday, December 09 2016, the move was correct.
+w made move: 2-H at 01:50:34 Friday, December 09 2016, the move was correct.
+b made move: 1-B at 01:50:39 Friday, December 09 2016, the move was correct.
+w made move: 5-S at 01:50:42 Friday, December 09 2016, the move was wrong.
+w made move: 5-A at 01:50:45 Friday, December 09 2016, the move was correct.
+b made move: 5-B at 01:50:49 Friday, December 09 2016, the move was correct.
+w made move: 4-A at 01:50:51 Friday, December 09 2016, the move was correct.
+b made move: 1-E at 01:50:55 Friday, December 09 2016, the move was correct.
+w made move: 2-A at 01:50:57 Friday, December 09 2016, the move was correct.
+b made move: 1-C at 01:51:47 Friday, December 09 2016, the move was correct.
+b made move: 1-A at 01:51:56 Friday, December 09 2016, the move was correct.
+=========================================================================================
+The winner is w. Final score 35 (w) : 29 (b).
+=========================================================================================
+
+
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 01:54:23 Friday, December 09 2016/
+=========================================================================================
+b made move: 4-C at 01:54:28 Friday, December 09 2016, the move was correct.
+w made move: 3-F at 01:54:36 Friday, December 09 2016, the move was correct.
+b made move: 7-D at 01:54:42 Friday, December 09 2016, the move was correct.
+w made move: 8-D at 01:54:59 Friday, December 09 2016, the move was correct.
+b made move: 2-C at 01:55:07 Friday, December 09 2016, the move was correct.
+w made move: 1-C at 01:55:10 Friday, December 09 2016, the move was correct.
+=========================================================================================
+The winner is w. Final score 16 (w) : 0 (b).
+=========================================================================================
+
+
