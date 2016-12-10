@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include "logging.h"
 #include "input.h"
+#include "ai_util.h"
 
 int main() {
 
@@ -15,7 +16,7 @@ int main() {
 	// Getting players' names
     char black[10], white[10];
     char namePromptForPlayWithComputer[] = 
-    			"You will play with black pieces. Enter your name: ";
+    			"You will play with BLACK pieces. Enter your name: ";
     char namePromptBlack[] =
     			"Enter the name of player who will play with BLACK pieces: ";
     char namePromptWhite[] = 
@@ -78,8 +79,8 @@ int main() {
 		
 		bool wrongMove = false;
 	
-		if(blackMove) getMove(&move);
-		else computerMove(&currentBoard, &move);
+		if(withComputer && !blackMove) computerMove(&currentBoard, &move);
+		else getMove(&move);
 	
 		// If it's possible to make a move the player cannot refuse it
 		while(!makeMove(&currentBoard, blackMove, move)) {

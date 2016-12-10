@@ -7,15 +7,16 @@
 #define TOO_SHORT 1
 #define TOO_LONG 2
 
-typedef struct Move{
-	int x, y;
-} Move;
-
 typedef struct Point{
 	int x, y;
 } Point;
 
-void computerMove(Board* board, Point *move);
+void getNeighborsWithOtherColor(Point* neighbors, int* numberOfneighbors, 
+									Point point, bool blackMove, Board board);
+									
+void getValidLine(Point* validLine, Point neighbor, Board* board, 
+	int* lineLength, Point point, Field piece);
+
 bool makeMove(Board* board, bool blackMove, Point move);
 bool possibleToMakeMove(Board* board, bool blackMove);
 void getScore(int* blackScore, int* whiteScore, Board board);

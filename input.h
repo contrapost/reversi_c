@@ -1,7 +1,7 @@
 #ifndef _INPUT_H_
 #define _INPUT_H_
 
-#include "util.h"
+#include "game_util.h"
 
 void getPlayerChoise(bool *withComputer, char* playerChiosePrompt);
 int getLine (char* prmpt, char* buff, size_t sz);

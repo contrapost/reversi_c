@@ -1576,3 +1576,87 @@ Match between Ivanov(BLACK) and Petrov(WHITE) /started at 00:53:35 Saturday, Dec
 =========================================================================================
 Match between b(BLACK) and Computer(WHITE) /started at 01:29:49 Saturday, December 10 2016/
 =========================================================================================
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 23:52:29 Saturday, December 10 2016/
+=========================================================================================
+b made move: 5-F at 23:52:35 Saturday, December 10 2016, the move was correct.
+w made move: 5-F at 23:52:35 Saturday, December 10 2016, the move was wrong.
+
+=========================================================================================
+Match between b(BLACK) and w(WHITE) /started at 23:54:28 Saturday, December 10 2016/
+=========================================================================================
+b made move: 5-F at 23:54:33 Saturday, December 10 2016, the move was correct.
+w made move: 4-F at 23:54:38 Saturday, December 10 2016, the move was correct.
+b made move: 6-E at 23:54:45 Saturday, December 10 2016, the move was wrong.
+b made move: 3-E at 23:54:52 Saturday, December 10 2016, the move was correct.
+w made move: 6-D at 23:54:59 Saturday, December 10 2016, the move was correct.
+b made move: 5-C at 23:55:06 Saturday, December 10 2016, the move was correct.
+w made move: 3-D at 23:55:15 Saturday, December 10 2016, the move was correct.
+b made move: 4-C at 23:55:26 Saturday, December 10 2016, the move was correct.
+w made move: 4-B at 23:55:31 Saturday, December 10 2016, the move was correct.
+b made move: 6-B at 23:55:41 Saturday, December 10 2016, the move was correct.
+w made move: 6-F at 23:56:24 Saturday, December 10 2016, the move was correct.
+b made move: 4-G at 23:56:38 Saturday, December 10 2016, the move was correct.
+w made move: 4-H at 23:56:43 Saturday, December 10 2016, the move was correct.
+b made move: 3-C at 23:57:02 Saturday, December 10 2016, the move was correct.
+w made move: 2-B at 23:57:11 Saturday, December 10 2016, the move was correct.
+b made move: 5-G at 23:57:24 Saturday, December 10 2016, the move was correct.
+w made move: 3-F at 23:57:37 Saturday, December 10 2016, the move was correct.
+b made move: 1-A at 23:57:46 Saturday, December 10 2016, the move was correct.
+w made move: 5-B at 23:57:57 Saturday, December 10 2016, the move was correct.
+b made move: 3-B at 23:58:03 Saturday, December 10 2016, the move was correct.
+w made move: 5-H at 23:58:20 Saturday, December 10 2016, the move was correct.
+b made move: 3-G at 23:58:28 Saturday, December 10 2016, the move was correct.
+w made move: 2-A at 23:58:50 Saturday, December 10 2016, the move was correct.
+b made move: 7-C at 23:59:03 Saturday, December 10 2016, the move was correct.
+w made move: 7-B at 23:59:16 Saturday, December 10 2016, the move was correct.
+b made move: 5-A at 23:59:30 Saturday, December 10 2016, the move was correct.
+w made move: 3-H at 23:59:39 Saturday, December 10 2016, the move was correct.
+b made move: 2-G at 23:59:54 Saturday, December 10 2016, the move was correct.
+w made move: 1-G at 00:00:05 Sunday, December 11 2016, the move was correct.
+b made move: 3-A at 00:00:13 Sunday, December 11 2016, the move was correct.
+w made move: 4-A at 00:00:19 Sunday, December 11 2016, the move was correct.
+b made move: 1-H at 00:00:41 Sunday, December 11 2016, the move was correct.
+w made move: 1-B at 00:00:58 Sunday, December 11 2016, the move was correct.
+b made move: 1-C at 00:01:13 Sunday, December 11 2016, the move was correct.
+w made move: 2-C at 00:01:17 Sunday, December 11 2016, the move was correct.
+b made move: 6-G at 00:01:27 Sunday, December 11 2016, the move was correct.
+w made move: 6-H at 00:01:31 Sunday, December 11 2016, the move was correct.
+b made move: 2-D at 00:01:40 Sunday, December 11 2016, the move was correct.
+w made move: 2-F at 00:01:54 Sunday, December 11 2016, the move was correct.
+b made move: 2-E at 00:01:59 Sunday, December 11 2016, the move was correct.
+w made move: 3-A at 00:02:10 Sunday, December 11 2016, the move was wrong.
+w made move: 6-A at 00:02:16 Sunday, December 11 2016, the move was correct.
+b made move: 7-F at 00:02:26 Sunday, December 11 2016, the move was correct.
+w made move: 8-B at 00:02:35 Sunday, December 11 2016, the move was correct.
+b made move: 7-A at 00:02:48 Sunday, December 11 2016, the move was correct.
+w made move: 8-F at 00:02:59 Sunday, December 11 2016, the move was correct.
+b made move: 1-F at 00:03:13 Sunday, December 11 2016, the move was correct.
+w made move: 1-E at 00:03:20 Sunday, December 11 2016, the move was correct.
+b made move: 1-D at 00:03:26 Sunday, December 11 2016, the move was correct.
+w made move: 6-C at 00:03:36 Sunday, December 11 2016, the move was correct.
+b made move: 6-E at 00:03:44 Sunday, December 11 2016, the move was correct.
+w made move: 2-H at 00:04:00 Sunday, December 11 2016, the move was correct.
+b made move: 7-D at 00:04:08 Sunday, December 11 2016, the move was correct.
+w made move: 8-C at 00:04:21 Sunday, December 11 2016, the move was correct.
+b made move: 7-E at 00:04:29 Sunday, December 11 2016, the move was correct.
+w made move: 8-E at 00:04:54 Sunday, December 11 2016, the move was correct.
+b made move: 7-G at 00:05:11 Sunday, December 11 2016, the move was correct.
+w made move: 7-H at 00:05:16 Sunday, December 11 2016, the move was correct.
+b made move: 8-G at 00:05:24 Sunday, December 11 2016, the move was correct.
+w made move: 8-H at 00:05:30 Sunday, December 11 2016, the move was correct.
+b made move: 8-D at 00:05:43 Sunday, December 11 2016, the move was correct.
+w made move: 8-A at 00:05:51 Sunday, December 11 2016, the move was correct.
+=========================================================================================
+The winner is b. Final score 41 (b) : 23 (w).
+=========================================================================================
+
+
+
+=========================================================================================
+Match between BE(BLACK) and Computer(WHITE) /started at 00:06:07 Sunday, December 11 2016/
+=========================================================================================
+BE made move: 5-F at 00:06:15 Sunday, December 11 2016, the move was correct.
+Computer made move: 5-F at 00:06:15 Sunday, December 11 2016, the move was wrong.
+Computer made move: 4-F at 00:06:23 Sunday, December 11 2016, the move was correct.
