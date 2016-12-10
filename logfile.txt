@@ -1553,3 +1553,26 @@ Computer made move: 4-F at 23:54:35 Friday, December 09 2016, the move was corre
 Ivanov made move: 6-D at 23:54:47 Friday, December 09 2016, the move was wrong.
 Ivanov made move: 3-D at 23:54:52 Friday, December 09 2016, the move was correct.
 Computer made move: 3-D at 23:54:52 Friday, December 09 2016, the move was wrong.
+
+=========================================================================================
+Match between Petros(BLACK) and Computer(WHITE) /started at 00:46:18 Saturday, December 10 2016/
+=========================================================================================
+Petros made move: 5-F at 00:46:28 Saturday, December 10 2016, the move was correct.
+Computer made move: 5-F at 00:46:28 Saturday, December 10 2016, the move was wrong.
+Computer made move: 5-D at 00:46:37 Saturday, December 10 2016, the move was wrong.
+Computer made move: 4-F at 00:46:41 Saturday, December 10 2016, the move was correct.
+Petros made move: 1-A at 00:47:22 Saturday, December 10 2016, the move was wrong.
+Petros made move: 3-E at 00:47:37 Saturday, December 10 2016, the move was correct.
+Computer made move: 3-E at 00:47:37 Saturday, December 10 2016, the move was wrong.
+
+=========================================================================================
+Match between Ivanov(BLACK) and Computer(WHITE) /started at 00:53:18 Saturday, December 10 2016/
+=========================================================================================
+
+=========================================================================================
+Match between Ivanov(BLACK) and Petrov(WHITE) /started at 00:53:35 Saturday, December 10 2016/
+=========================================================================================
+
+=========================================================================================
+Match between b(BLACK) and Computer(WHITE) /started at 01:29:49 Saturday, December 10 2016/
+=========================================================================================

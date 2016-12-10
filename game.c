@@ -6,7 +6,7 @@
 
 int main() {
 
-	// Computer or 2 players
+	// Check if the player prefers match with omputer or another player.
 	bool withComputer = false;
 	char playerChiosePrompt[] = 
 		"Do you want to play with computer or another person (C/P)? ";
@@ -14,14 +14,15 @@ int main() {
 
 	// Getting players' names
     char black[10], white[10];
+    char namePromptForPlayWithComputer[] = 
+    			"You will play with black pieces. Enter your name: ";
     char namePromptBlack[] =
     			"Enter the name of player who will play with BLACK pieces: ";
     char namePromptWhite[] = 
     			"Enter the name of player who will play with WHITE pieces: ";
     
-    getName(namePromptBlack, black, sizeof(black));
-    
     if(!withComputer) {
+    	getName(namePromptBlack, black, sizeof(black));
     	getName(namePromptWhite, white, sizeof(white));
     													
 		while (strcmp(black, white) == 0) {
@@ -30,6 +31,7 @@ int main() {
 		} 
     
     } else {
+    	getName(namePromptForPlayWithComputer, black, sizeof(black));
     	strcpy(white, "Computer");
     }
     
