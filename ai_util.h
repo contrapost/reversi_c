@@ -3,6 +3,6 @@
 
 #include "game_util.h"
 
-void getComputerMove(Board* board, Point *move);
+void getComputerMove(Board board, Point *move);
 
 #endif // _AI_UTIL_H_
