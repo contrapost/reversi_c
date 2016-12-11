@@ -12,7 +12,7 @@ typedef struct Point{
 } Point;
 
 void getNeighborsWithOtherColor(Point* neighbors, int* numberOfneighbors, 
-									Point point, bool blackMove, Board board);
+									Point point, bool blackMove, Board* board);
 									
 void getValidLine(Point* validLine, Point neighbor, Board* board, 
 	int* lineLength, Point point, Field piece);

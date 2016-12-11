@@ -3,7 +3,6 @@
 #include <stdbool.h>
 #include "game_util.h"
 
-
 bool makeMove(Board* board, bool blackMove, Point move) {
 	
 	Field piece = (blackMove ? BLACK : WHITE);
@@ -18,7 +17,7 @@ bool makeMove(Board* board, bool blackMove, Point move) {
 
 	// 3. check if the field has no neighbors with other color
 	getNeighborsWithOtherColor(neighborsWithOtherColor, &numberOfNeighbors, 
-													move, blackMove, *board);
+													move, blackMove, board);
 	if(numberOfNeighbors == 0) return false;									
 
 
@@ -74,7 +73,7 @@ bool possibleToMakeMove(Board* board, bool blackMove) {
 		int numberOfNeighbors = 0;
 		
 		getNeighborsWithOtherColor(neighborsWithOtherColor, &numberOfNeighbors, 
-						emptyFields[i], blackMove, *board);
+						emptyFields[i], blackMove, board);
 											
 		for(int n = 0; n < numberOfNeighbors; n++) {
 			
@@ -107,7 +106,7 @@ void getScore(int* blackScore, int* whiteScore, Board board) {
 }
 
 void getNeighborsWithOtherColor(Point* neighbors, int* numberOfneighbors, 
-									Point point, bool blackMove, Board board) {
+									Point point, bool blackMove, Board* board) {
 	
 	int counter = 0;								
 	
@@ -121,8 +120,8 @@ void getNeighborsWithOtherColor(Point* neighbors, int* numberOfneighbors,
 						|| newX < 0 || newX > BOARD_SIZE - 1) continue; 
 			
 			// check for neighbors' color
-			if((blackMove && board.fields[newX][newY] == WHITE) || 
-				(!blackMove && board.fields[newX][newY] == BLACK)) {
+			if((blackMove && board->fields[newX][newY] == WHITE) || 
+				(!blackMove && board->fields[newX][newY] == BLACK)) {
 				neighbors[counter].x = newX;
 				neighbors[counter++].y = newY;
 			}

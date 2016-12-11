@@ -3,7 +3,7 @@
 #include "ai_util.h"
 
 void getAllPossibleMoves(Point* moves, int* numberOfMoves, 
-												Board board, bool blackMove) {
+												Board* board, bool blackMove) {
 	
 	Field piece = blackMove ? BLACK : WHITE;
 	int numberOfPossibleMoves = 0;
@@ -14,7 +14,7 @@ void getAllPossibleMoves(Point* moves, int* numberOfMoves,
 	// check if there are no empty fields
 	for(int y = 0; y < BOARD_SIZE; y++) {
 		for(int x = 0; x < BOARD_SIZE; x++) {
-			if(board.fields[x][y] == EMPTY) {
+			if(board->fields[x][y] == EMPTY) {
 				emptyFields[numberOfEmptyFields].x = x;
 				emptyFields[numberOfEmptyFields++].y = y;
 			} 
@@ -38,7 +38,7 @@ void getAllPossibleMoves(Point* moves, int* numberOfMoves,
 			Point validLine[BOARD_SIZE - 1];
 			int lineLength = 0;
 		
-			getValidLine(validLine, neighborsWithOtherColor[n], &board, 
+			getValidLine(validLine, neighborsWithOtherColor[n], board, 
 						&lineLength, emptyFields[i], piece);
 													
 			if(lineLength != 0) moves[numberOfPossibleMoves++] = emptyFields[i];
@@ -88,7 +88,7 @@ void getScoreForMove(Board board, Point move, bool blackMove,
 	*whiteScore = white;
 }
 
-void getComputerMove(Board board, Point *move) {
+void getComputerMove(Board* board, Point *move) {
 	Point possibleMoves[BOARD_SIZE * BOARD_SIZE - NUMBER_OF_FIELDS_AT_START];
 	int numberOfPossibleMoves = 0, blackScore = 0, whiteScore = 0;
 	
@@ -96,7 +96,7 @@ void getComputerMove(Board board, Point *move) {
 	
 	printf("All possible move for COMPUTER");
 	for(int i = 0; i < numberOfPossibleMoves; i++) {
-		getScoreForMove(board, possibleMoves[i], false, 
+		getScoreForMove(*board, possibleMoves[i], false, 
 													&blackScore, &whiteScore);
 		printf(" %d-%c score: %d ", possibleMoves[i].y + 1, possibleMoves[i].x + 65, whiteScore);
 	}
