@@ -79,7 +79,7 @@ int main() {
 		
 		bool wrongMove = false;
 	
-		if(withComputer && !blackMove) computerMove(&currentBoard, &move);
+		if(withComputer && !blackMove) getComputerMove(&currentBoard, &move);
 		else getMove(&move);
 	
 		// If it's possible to make a move the player cannot refuse it
