@@ -106,39 +106,61 @@ void getScoreForMove(Board board, Point move, bool blackMove,
 	*whiteScore = white;
 }
 
+int getMoveValue(Point move) {
+	int values[8][8] = {
+		{20, -3, 11, 8, 8, 11, -3, 20},
+		{-3, -7, -4, 1, 1, -4, -7, -3},
+		{11, -4, 2, 2, 2, 2, -4, 11},
+    	{8, 1, 2, -3, -3, 2, 1, 8},
+    	{8, 1, 2, -3, -3, 2, 1, 8},
+    	{11, -4, 2, 2, 2, 2, -4, 11},
+    	{-3, -7, -4, 1, 1, -4, -7, -3},
+    	{20, -3, 11, 8, 8, 11, -3, 20},
+	};
+	
+	return values[move.y][move.x];
+}
+
 void getMostResultativeMove(Board board, Point* move) {
 	Point possibleMoves[BOARD_SIZE * BOARD_SIZE - NUMBER_OF_FIELDS_AT_START];
-	int numberOfPossibleMoves = 0, bestScore = 0;
+	int numberOfPossibleMoves = 0, bestMoveCoefficient = 0;
 	Point bestMove = { -1, -1 };
 	
 	getAllPossibleMoves(possibleMoves, &numberOfPossibleMoves, &board, false);
+	bestMove = possibleMoves[0];
+	int score = getScoreForPlayer(board, possibleMoves[0], false);
+	int moveValue = getMoveValue(possibleMoves[0]);
+	int bestMoveCoefficient = score + moveValue;
 	
 	for(int i = 0; i < numberOfPossibleMoves; i++) {
-		int score = getScoreForPlayer(board, possibleMoves[i], false);
-		if(score > bestScore) {
-			bestScore = score;
+		score = getScoreForPlayer(board, possibleMoves[i], false);
+		moveValue = getMoveValue(possibleMoves[i]);
+		moveCoefficient = score + moveValue;
+		if(moveCoefficient > bestMoveCoefficient) {
+			bestMoveCoefficient = moveCoefficient;
 			bestMove = possibleMoves[i];
 		}
 	}
 	
 	*move = bestMove;
 	
-//	printf("Best move %d-%c score: %d ", move->y + 1, move->x + 65, bestScore);
+//	printf("Value for move is %d", getMoveValue(*move));
+	printf("Best move %d-%c score: %d ", move->y + 1, move->x + 65, bestMoveCoefficient);
 }
 
 void getComputerMove(Board* board, Point *move) {
 	Point possibleMoves[BOARD_SIZE * BOARD_SIZE - NUMBER_OF_FIELDS_AT_START];
-	int numberOfPossibleMoves = 0, blackScore = 0, whiteScore = 0;
+	int numberOfPossibleMoves = 0/*, blackScore = 0, whiteScore = 0*/;
 	
 	getAllPossibleMoves(possibleMoves, &numberOfPossibleMoves, board, false);
 	
-//	printf("All possible move for COMPUTER");
+/*	printf("All possible move for COMPUTER");
 	for(int i = 0; i < numberOfPossibleMoves; i++) {
 		getScoreForMove(*board, possibleMoves[i], false, 
 													&blackScore, &whiteScore);
-//		printf(" %d-%c score: %d ", possibleMoves[i].y + 1, possibleMoves[i].x + 65, whiteScore);
+		printf(" %d-%c score: %d ", possibleMoves[i].y + 1, possibleMoves[i].x + 65, whiteScore);
 	}
-//	printf("\n");
+	printf("\n"); */
 	
 	getMostResultativeMove(*board, move);
 }
