@@ -2067,3 +2067,45 @@ The winner is b. Final score 43 (b) : 21 (Computer).
 =========================================================================================
 
 
+
+=========================================================================================
+Match between b(BLACK) and Computer(WHITE) /started at 01:44:09 Monday, December 12 2016/
+=========================================================================================
+b made move: 5-F at 01:44:11 Monday, December 12 2016, the move was correct.
+Computer made move: 4-F at 01:44:11 Monday, December 12 2016, the move was correct.
+b made move: 3-E at 01:44:21 Monday, December 12 2016, the move was correct.
+Computer made move: 6-D at 01:44:21 Monday, December 12 2016, the move was correct.
+b made move: 5-C at 01:44:38 Monday, December 12 2016, the move was correct.
+Computer made move: 3-D at 01:44:38 Monday, December 12 2016, the move was correct.
+b made move: 4-G at 01:45:01 Monday, December 12 2016, the move was correct.
+Computer made move: 4-H at 01:45:01 Monday, December 12 2016, the move was correct.
+b made move: 2-C at 01:45:11 Monday, December 12 2016, the move was correct.
+Computer made move: 2-D at 01:45:11 Monday, December 12 2016, the move was correct.
+b made move: 2-F at 01:45:25 Monday, December 12 2016, the move was correct.
+Computer made move: 3-F at 01:45:25 Monday, December 12 2016, the move was correct.
+b made move: 2-E at 01:45:47 Monday, December 12 2016, the move was correct.
+Computer made move: 1-C at 01:45:47 Monday, December 12 2016, the move was correct.
+b made move: 1-D at 01:46:13 Monday, December 12 2016, the move was correct.
+Computer made move: 6-E at 01:46:13 Monday, December 12 2016, the move was correct.
+b made move: 7-E at 01:46:28 Monday, December 12 2016, the move was correct.
+Computer made move: 1-B at 01:46:28 Monday, December 12 2016, the move was correct.
+b made move: 6-F at 01:46:43 Monday, December 12 2016, the move was correct.
+Computer made move: 5-G at 01:46:43 Monday, December 12 2016, the move was correct.
+b made move: 5-H at 01:46:55 Monday, December 12 2016, the move was correct.
+Computer made move: 1-F at 01:46:55 Monday, December 12 2016, the move was correct.
+b made move: 2-G at 01:47:31 Monday, December 12 2016, the move was correct.
+Computer made move: 8-E at 01:47:31 Monday, December 12 2016, the move was correct.
+
+=========================================================================================
+Match between Black(BLACK) and Computer(WHITE) /started at 01:48:52 Monday, December 12 2016/
+=========================================================================================
+Black made move: 5-F at 01:48:57 Monday, December 12 2016, the move was correct.
+Computer made move: 4-F at 01:48:57 Monday, December 12 2016, the move was correct.
+
+=========================================================================================
+Match between Black(BLACK) and Computer(WHITE) /started at 01:55:15 Monday, December 12 2016/
+=========================================================================================
+Black made move: 5-F at 01:55:19 Monday, December 12 2016, the move was correct.
+Computer made move: 4-F at 01:55:19 Monday, December 12 2016, the move was correct.
+Black made move: 3-E at 01:55:27 Monday, December 12 2016, the move was correct.
+Computer made move: 6-D at 01:55:27 Monday, December 12 2016, the move was correct.

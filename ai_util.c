@@ -66,6 +66,24 @@ void getAllPossibleMoves(Point* moves, int* numberOfMoves,
 	}
 }
 
+int getScoreForPlayer(Board board, Point move, bool blackMove) {
+	
+	makeMove(&board, blackMove, move);
+	
+	int score = 0;
+	
+	for(int y = 0; y < BOARD_SIZE; y++) {
+		for(int x = 0; x < BOARD_SIZE; x++) {
+			if((blackMove && board.fields[x][y] == BLACK) || 
+				(!blackMove && board.fields[x][y] == WHITE)) {
+				score++;
+			}
+		}
+	}
+	
+	return score;
+}
+
 void getScoreForMove(Board board, Point move, bool blackMove, 
 											int* blackScore, int* whiteScore) {
 
@@ -88,17 +106,39 @@ void getScoreForMove(Board board, Point move, bool blackMove,
 	*whiteScore = white;
 }
 
+void getMostResultativeMove(Board board, Point* move) {
+	Point possibleMoves[BOARD_SIZE * BOARD_SIZE - NUMBER_OF_FIELDS_AT_START];
+	int numberOfPossibleMoves = 0, bestScore = 0;
+	Point bestMove = { -1, -1 };
+	
+	getAllPossibleMoves(possibleMoves, &numberOfPossibleMoves, &board, false);
+	
+	for(int i = 0; i < numberOfPossibleMoves; i++) {
+		int score = getScoreForPlayer(board, possibleMoves[i], false);
+		if(score > bestScore) {
+			bestScore = score;
+			bestMove = possibleMoves[i];
+		}
+	}
+	
+	*move = bestMove;
+	
+//	printf("Best move %d-%c score: %d ", move->y + 1, move->x + 65, bestScore);
+}
+
 void getComputerMove(Board* board, Point *move) {
 	Point possibleMoves[BOARD_SIZE * BOARD_SIZE - NUMBER_OF_FIELDS_AT_START];
 	int numberOfPossibleMoves = 0, blackScore = 0, whiteScore = 0;
 	
 	getAllPossibleMoves(possibleMoves, &numberOfPossibleMoves, board, false);
 	
-	printf("All possible move for COMPUTER");
+//	printf("All possible move for COMPUTER");
 	for(int i = 0; i < numberOfPossibleMoves; i++) {
 		getScoreForMove(*board, possibleMoves[i], false, 
 													&blackScore, &whiteScore);
-		printf(" %d-%c score: %d ", possibleMoves[i].y + 1, possibleMoves[i].x + 65, whiteScore);
+//		printf(" %d-%c score: %d ", possibleMoves[i].y + 1, possibleMoves[i].x + 65, whiteScore);
 	}
-	printf("\n");
+//	printf("\n");
+	
+	getMostResultativeMove(*board, move);
 }

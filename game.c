@@ -75,12 +75,15 @@ int main() {
 		
 		printBoard(&currentBoard);
 		
-		printf("\n\nMake your move, %s: ", blackMove ? black : white);
-		
 		bool wrongMove = false;
 	
-		if(withComputer && !blackMove) getComputerMove(&currentBoard, &move);
-		else getMove(&move);
+		if(withComputer && !blackMove) {
+			getComputerMove(&currentBoard, &move);
+			printf("\n\nComputer made move %d-%c.", move.y + 1, move.x + 65);
+		} else {
+			printf("\n\nMake your move, %s: ", blackMove ? black : white);
+			getMove(&move);
+		}
 	
 		// If it's possible to make a move the player cannot refuse it
 		while(!makeMove(&currentBoard, blackMove, move)) {
