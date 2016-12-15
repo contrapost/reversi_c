@@ -2,6 +2,7 @@
 
 ### Realization
 The game contains 6 components:
+
 1. "game.c" with main method that controll interactions with users, runs game loop
 and save results in a log file ("logfile.txt")
 2. "board.c" that contains mehtods to print and update the game board.
