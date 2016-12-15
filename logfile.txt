@@ -2676,3 +2676,15 @@ Match between Ivan(BLACK) and Computer(WHITE) /started at 14:52:46 Thursday, Dec
 =========================================================================================
 Ivan made move: 5-F at 14:52:55 Thursday, December 15 2016, the move was correct.
 Computer made move: 4-F at 14:52:56 Thursday, December 15 2016, the move was correct.
+
+=========================================================================================
+Match between b(BLACK) and Computer(WHITE) /started at 16:11:17 Thursday, December 15 2016/
+=========================================================================================
+b made move: 3-D at 16:11:28 Thursday, December 15 2016, the move was correct.
+Computer made move: 3-C at 16:11:28 Thursday, December 15 2016, the move was correct.
+b made move: 4-C at 16:11:35 Thursday, December 15 2016, the move was correct.
+Computer made move: 3-E at 16:11:35 Thursday, December 15 2016, the move was correct.
+b made move: 3-F at 16:11:39 Thursday, December 15 2016, the move was correct.
+Computer made move: 3-G at 16:11:39 Thursday, December 15 2016, the move was correct.
+b made move: 2-G at 16:12:51 Thursday, December 15 2016, the move was correct.
+Computer made move: 1-G at 16:12:51 Thursday, December 15 2016, the move was correct.
