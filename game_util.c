@@ -161,12 +161,9 @@ void getValidLine(Point* validLine, Point neighbor, Board* board,
 	int lastY = potentialTrophies[trophyCounter - 1].y;
 	
 	if(board->fields[lastX][lastY] == piece) {
-//		printf("%C Valid line: ", piece);
 		for(int i = 0; i < trophyCounter; i++) {
 			validLine[i] = potentialTrophies[i];
-//			printf(" %d-%c ", validLine[i].y +1, validLine[i].x + 65);
 		}
-//		printf("\n");
 		*lineLength = trophyCounter;
 	} 
 }

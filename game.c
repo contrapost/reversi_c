@@ -7,7 +7,7 @@
 
 int main() {
 
-	// Check if the player prefers match with omputer or another player.
+	// Check if the player prefers match with computer or another player.
 	bool withComputer = false;
 	char playerChiosePrompt[] = 
 		"Do you want to play with computer or another person (C/P)? ";
@@ -16,11 +16,11 @@ int main() {
 	// Getting players' names
     char black[10], white[10];
     char namePromptForPlayWithComputer[] = 
-    			"You will play with BLACK pieces. Enter your name: ";
+    			"You will play with BLACK(@) pieces. Enter your name: ";
     char namePromptBlack[] =
-    			"Enter the name of player who will play with BLACK pieces: ";
+    			"Enter the name of player who will play with BLACK(@) pieces: ";
     char namePromptWhite[] = 
-    			"Enter the name of player who will play with WHITE pieces: ";
+    			"Enter the name of player who will play with WHITE(.) pieces: ";
     
     if(!withComputer) {
     	getName(namePromptBlack, black, sizeof(black));
@@ -53,18 +53,19 @@ int main() {
 	
 	while(blackCanMove(&currentBoard) || whiteCanMove(&currentBoard)) {
 		
+		// Check if it's necessary to return move (i.e. if one player has to 
+		// move but has no possibility to move the move should be return to 
+		// player that can move.
 		if((blackMove && !blackCanMove(&currentBoard) && 
 									whiteCanMove(&currentBoard)) ||
 					 (!blackMove && blackCanMove(&currentBoard) && 
 					 				!whiteCanMove(&currentBoard))) {
 			blackMove = !blackMove; 
-			printf("%s cannot move.\n", blackMove ? white : black);
+			printf("\n%s cannot move.\n", blackMove ? white : black);
 		}
 		
 		printBoard(&currentBoard);
 		
-		bool wrongMove = false;
-	
 		if(withComputer && !blackMove) {
 			getComputerMove(&currentBoard, &move);
 			printf("\n\nComputer made move %d-%c.", move.y + 1, move.x + 65);
@@ -73,6 +74,7 @@ int main() {
 			getMove(&move);
 		}
 	
+		bool wrongMove = false;
 		// If it's possible to make a move the player cannot refuse it
 		while(!makeMove(&currentBoard, blackMove, move)) {
 			wrongMove = true;
@@ -87,6 +89,7 @@ int main() {
 		blackMove = !blackMove;
 	}
 	
+	// End the game: print final board, results and save results to the log.
 	printBoard(&currentBoard);
 	
 	getScore(&blackScore, &whiteScore, currentBoard);

@@ -1,6 +1,31 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <limits.h>
 #include "ai_util.h"
+
+void getAllPossibleMoves(Point* moves, int* numberOfMoves, 
+												Board* board, bool blackMove);
+												
+Result minimax(Board board, bool player, int depth);
+
+void getMoveWithBestCoefficient(Board board, Point* move);
+
+void getComputerMove(Board* board, Point *move) {
+	Point possibleMoves[BOARD_SIZE * BOARD_SIZE - NUMBER_OF_FIELDS_AT_START];
+	int numberOfPossibleMoves = 0;
+	
+	getAllPossibleMoves(possibleMoves, &numberOfPossibleMoves, board, false);
+	
+	// Program uses minimax algorithm to choose the best move for computer.
+	// It's also possible to use heuristic function to get the best move
+	// based on sum of scores computer will get for a move pluss value of a
+	// field that will be occupied by the move. To change the way of choosing 
+	// best move simply uncomment next line and comment out two folling lines.
+	
+	// getMoveWithBestCoefficient(*board, move);
+	Result result = minimax(*board, false, 3);
+	*move = result.move;
+}
 
 void getAllPossibleMoves(Point* moves, int* numberOfMoves, 
 												Board* board, bool blackMove) {
@@ -26,6 +51,7 @@ void getAllPossibleMoves(Point* moves, int* numberOfMoves,
 		return;
 	}
 	
+	// get all possible moves
 	for(int i = 0; i < numberOfEmptyFields; i++) {
 		Point neighborsWithOtherColor[8];
 		int numberOfNeighbors = 0;
@@ -45,6 +71,7 @@ void getAllPossibleMoves(Point* moves, int* numberOfMoves,
 		}
 	}
 	
+	// remove duplicates from all possible moves
 	if(numberOfPossibleMoves != 0) {
 		int i, j, numberOfMovesWithouDuplicates = 1;
 
@@ -66,7 +93,7 @@ void getAllPossibleMoves(Point* moves, int* numberOfMoves,
 	}
 }
 
-int getScoreForPlayer(Board board, Point move, bool blackMove) {
+int getScoreForMove(Board board, Point move, bool blackMove) {
 	
 	makeMove(&board, blackMove, move);
 	
@@ -84,26 +111,20 @@ int getScoreForPlayer(Board board, Point move, bool blackMove) {
 	return score;
 }
 
-void getScoreForMove(Board board, Point move, bool blackMove, 
-											int* blackScore, int* whiteScore) {
-
-	makeMove(&board, blackMove, move);
+int getScoreForPlayer(Board board, bool blackMove) {
 	
-	int black = 0, white = 0;
+	int score = 0;
 	
 	for(int y = 0; y < BOARD_SIZE; y++) {
 		for(int x = 0; x < BOARD_SIZE; x++) {
-			if(board.fields[x][y] == BLACK) {
-				black++;
-			}
-			if(board.fields[x][y] == WHITE) {
-				white++;
+			if((blackMove && board.fields[x][y] == BLACK) || 
+				(!blackMove && board.fields[x][y] == WHITE)) {
+				score++;
 			}
 		}
 	}
 	
-	*blackScore = black;
-	*whiteScore = white;
+	return score;
 }
 
 int getMoveValue(Point move) {
@@ -121,19 +142,72 @@ int getMoveValue(Point move) {
 	return values[move.y][move.x];
 }
 
-void getMostResultativeMove(Board board, Point* move) {
+// 1. Get all possible moves for computer
+// 2. Make all possible moves and get all possible moves for player
+// 3. For each possible player's move get all computer's move
+// 4. Find the worst move computer can make 
+// 5. Save player's move that trigged this worst computer move
+// 6. Through all player's moves that trig worst computer moves find the one
+// that will give most score to computer. 
+Result minimax(Board board, bool player, int depth) {
+	Point possibleMoves[BOARD_SIZE * BOARD_SIZE - NUMBER_OF_FIELDS_AT_START];
+	int numberOfPossibleMoves = 0;
+	getAllPossibleMoves(possibleMoves, &numberOfPossibleMoves, &board, player);
+	
+	int bestScore = player ? INT_MAX : INT_MIN;
+	int currentScore = 0;
+	Point bestMove = { -1, -1 };
+	
+	// it's impossible to make a move or the program reached the limit of number
+	// of moves in the game to check
+	if(numberOfPossibleMoves == 0 || depth == 0) {
+		bestScore = getScoreForPlayer(board, player);
+	} else { // computer/player can make move(s)
+		for(int i = 0; i < numberOfPossibleMoves; i++) {
+			Board newBoard = board; // create a new board
+									// and make a move on it
+			makeMove(&newBoard, player, possibleMoves[i]); 
+			
+			if(!player) { // computer looks for max moves
+				currentScore = minimax(newBoard, player, depth - 1).score;
+				if(currentScore > bestScore) {
+					bestScore = currentScore;
+					bestMove = possibleMoves[i];
+				}
+			} else { // player looks for min moves
+				currentScore = minimax(newBoard, !player, depth - 1).score;
+				if(currentScore < bestScore) {
+					bestScore = currentScore;
+					bestMove = possibleMoves[i];
+				}
+			}
+		}
+	}
+	
+	Result result;
+	result.score = bestScore;
+	result.move = bestMove;
+	return result;
+}
+
+void getMoveWithBestCoefficient(Board board, Point* move) {
 	Point possibleMoves[BOARD_SIZE * BOARD_SIZE - NUMBER_OF_FIELDS_AT_START];
 	int numberOfPossibleMoves = 0, bestMoveCoefficient = 0;
 	Point bestMove = { -1, -1 };
 	
 	getAllPossibleMoves(possibleMoves, &numberOfPossibleMoves, &board, false);
+	// program can come here only if computer can make a move (it was checked in
+	// main function in game.c) so it's safe to initialize best move, score and
+	// move value using first element of possibleMoves array. 
 	bestMove = possibleMoves[0];
-	int score = getScoreForPlayer(board, possibleMoves[0], false);
+	int score = getScoreForMove(board, possibleMoves[0], false);
 	int moveValue = getMoveValue(possibleMoves[0]);
 	bestMoveCoefficient = score + moveValue;
 	
+	// Check all moves if any other exept the first one to find the one 
+	// with the highest coefficient
 	for(int i = 0; i < numberOfPossibleMoves; i++) {
-		score = getScoreForPlayer(board, possibleMoves[i], false);
+		score = getScoreForMove(board, possibleMoves[i], false);
 		moveValue = getMoveValue(possibleMoves[i]);
 		int moveCoefficient = score + moveValue;
 		if(moveCoefficient > bestMoveCoefficient) {
@@ -143,24 +217,4 @@ void getMostResultativeMove(Board board, Point* move) {
 	}
 	
 	*move = bestMove;
-	
-//	printf("Value for move is %d", getMoveValue(*move));
-	printf("Best move %d-%c score: %d ", move->y + 1, move->x + 65, bestMoveCoefficient);
-}
-
-void getComputerMove(Board* board, Point *move) {
-	Point possibleMoves[BOARD_SIZE * BOARD_SIZE - NUMBER_OF_FIELDS_AT_START];
-	int numberOfPossibleMoves = 0/*, blackScore = 0, whiteScore = 0*/;
-	
-	getAllPossibleMoves(possibleMoves, &numberOfPossibleMoves, board, false);
-	
-/*	printf("All possible move for COMPUTER");
-	for(int i = 0; i < numberOfPossibleMoves; i++) {
-		getScoreForMove(*board, possibleMoves[i], false, 
-													&blackScore, &whiteScore);
-		printf(" %d-%c score: %d ", possibleMoves[i].y + 1, possibleMoves[i].x + 65, whiteScore);
-	}
-	printf("\n"); */
-	
-	getMostResultativeMove(*board, move);
 }
