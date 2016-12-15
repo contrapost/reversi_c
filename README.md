@@ -20,8 +20,10 @@ was deleted or it's a first time the program was started, the program creates a
 log file. 
 6. "ai_util.c" with realization of functions necessary for ai to find a best
 move. There are two different methods that were used: heuristic function and
-minimax algorithm. As default the ai uses minimax algorithm but it's also 
-possible two change default settings by following instructions in the "ai_util.c".
+minimax algorithm. As default the ai uses minimax algorithm with depth first search
+(default depth is 3 but can be increased for more accuracy of move choosing and 
+increasing game difficulty) but it's also  possible two change default settings 
+by following instructions in the "ai_util.c".
 Minimax function returns a Result struct that contains move and scores for this
 move (implementation of the struct can be found in "ai_util.h"
 
