@@ -1,22 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-#include "util.h"
+#include "game_util.h"
 
-void getNeighborsWithOtherColor(Point* neighbors, int* numberOfneighbors, 
-									Point point, bool blackMove, Board board);
-									
-void getValidLine(Point* validLine, Point neighbor, Board* board, 
-	int* lineLength, Point point, Field piece, bool (*compare)(Field, Field));
-
-bool equalFields(Field f1, Field f2) {
-	return f1 == f2;
-}
-
-bool differentFields(Field f1, Field f2) {
-	return f1 != f2;
-}
-
+bool possibleToMakeMove(Board* board, bool blackMove);
 
 bool makeMove(Board* board, bool blackMove, Point move) {
 	
@@ -32,7 +19,7 @@ bool makeMove(Board* board, bool blackMove, Point move) {
 
 	// 3. check if the field has no neighbors with other color
 	getNeighborsWithOtherColor(neighborsWithOtherColor, &numberOfNeighbors, 
-													move, blackMove, *board);
+													move, blackMove, board);
 	if(numberOfNeighbors == 0) return false;									
 
 
@@ -44,7 +31,7 @@ bool makeMove(Board* board, bool blackMove, Point move) {
 		int lineLength = 0;
 		
 		getValidLine(validLine, neighborsWithOtherColor[i], board, 
-										&lineLength, move, piece, &equalFields);
+										&lineLength, move, piece);
 													
 		if(lineLength != 0) {
 			canDrawLine = true;
@@ -58,6 +45,14 @@ bool makeMove(Board* board, bool blackMove, Point move) {
 	if(!canDrawLine) return false; 
 	
 	return true;
+}
+
+bool blackCanMove(Board* board) {
+	return possibleToMakeMove(board, true);
+}
+
+bool whiteCanMove(Board* board) {
+	return possibleToMakeMove(board, false);
 }
 
 bool possibleToMakeMove(Board* board, bool blackMove) {
@@ -88,7 +83,7 @@ bool possibleToMakeMove(Board* board, bool blackMove) {
 		int numberOfNeighbors = 0;
 		
 		getNeighborsWithOtherColor(neighborsWithOtherColor, &numberOfNeighbors, 
-						emptyFields[i], blackMove, *board);
+						emptyFields[i], blackMove, board);
 											
 		for(int n = 0; n < numberOfNeighbors; n++) {
 			
@@ -96,7 +91,7 @@ bool possibleToMakeMove(Board* board, bool blackMove) {
 			int lineLength = 0;
 		
 			getValidLine(validLine, neighborsWithOtherColor[n], board, 
-						&lineLength, emptyFields[i], piece, &equalFields);
+						&lineLength, emptyFields[i], piece);
 													
 			if(lineLength != 0) hasValidLines = true;
 		}
@@ -121,7 +116,7 @@ void getScore(int* blackScore, int* whiteScore, Board board) {
 }
 
 void getNeighborsWithOtherColor(Point* neighbors, int* numberOfneighbors, 
-									Point point, bool blackMove, Board board) {
+									Point point, bool blackMove, Board* board) {
 	
 	int counter = 0;								
 	
@@ -135,8 +130,8 @@ void getNeighborsWithOtherColor(Point* neighbors, int* numberOfneighbors,
 						|| newX < 0 || newX > BOARD_SIZE - 1) continue; 
 			
 			// check for neighbors' color
-			if((blackMove && board.fields[newX][newY] == WHITE) || 
-				(!blackMove && board.fields[newX][newY] == BLACK)) {
+			if((blackMove && board->fields[newX][newY] == WHITE) || 
+				(!blackMove && board->fields[newX][newY] == BLACK)) {
 				neighbors[counter].x = newX;
 				neighbors[counter++].y = newY;
 			}
@@ -147,7 +142,7 @@ void getNeighborsWithOtherColor(Point* neighbors, int* numberOfneighbors,
 }
 
 void getValidLine(Point* validLine, Point neighbor, Board* board, 
-	int* lineLength, Point point, Field piece, bool (*compare)(Field, Field)) {
+									int* lineLength, Point point, Field piece) {
 	int x = neighbor.x, y = neighbor.y, dX = x - point.x, dY = y - point.y;
 		
 	Point potentialTrophies[BOARD_SIZE - 1];
@@ -157,7 +152,7 @@ void getValidLine(Point* validLine, Point neighbor, Board* board,
 			&& board->fields[x][y] != EMPTY) {
 		potentialTrophies[trophyCounter].x = x;
 		potentialTrophies[trophyCounter++].y = y;
-		if(compare(board->fields[x][y], piece)) break;
+		if(board->fields[x][y] == piece) break;
 		x += dX;
 		y += dY;
 	}
@@ -166,12 +161,12 @@ void getValidLine(Point* validLine, Point neighbor, Board* board,
 	int lastY = potentialTrophies[trophyCounter - 1].y;
 	
 	if(board->fields[lastX][lastY] == piece) {
-		printf("%C Valid line: ", piece);
+//		printf("%C Valid line: ", piece);
 		for(int i = 0; i < trophyCounter; i++) {
 			validLine[i] = potentialTrophies[i];
-			printf(" %d-%c ", validLine[i].y +1, validLine[i].x + 65);
+//			printf(" %d-%c ", validLine[i].y +1, validLine[i].x + 65);
 		}
-		printf("\n");
+//		printf("\n");
 		*lineLength = trophyCounter;
 	} 
 }

@@ -1,7 +1,7 @@
 #ifndef _LOGGING_H_
 #define _LOGGING_H_
 
-#include "util.h"
+#include "game_util.h"
 
 void startGameLog(char* black, char* white);
 

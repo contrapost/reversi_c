@@ -3,22 +3,37 @@
 #include <stdbool.h>
 #include "logging.h"
 #include "input.h"
+#include "ai_util.h"
 
 int main() {
 
+	// Check if the player prefers match with omputer or another player.
+	bool withComputer = false;
+	char playerChiosePrompt[] = 
+		"Do you want to play with computer or another person (C/P)? ";
+	getPlayerChoise(&withComputer, playerChiosePrompt);
+
 	// Getting players' names
     char black[10], white[10];
+    char namePromptForPlayWithComputer[] = 
+    			"You will play with BLACK pieces. Enter your name: ";
     char namePromptBlack[] =
     			"Enter the name of player who will play with BLACK pieces: ";
     char namePromptWhite[] = 
     			"Enter the name of player who will play with WHITE pieces: ";
     
-    getName(namePromptBlack, black, sizeof(black));
-    getName(namePromptWhite, white, sizeof(white));
-    													
-    while (strcmp(black, white) == 0) {
-    	printf("Names of the player should be different!");
+    if(!withComputer) {
+    	getName(namePromptBlack, black, sizeof(black));
     	getName(namePromptWhite, white, sizeof(white));
+    													
+		while (strcmp(black, white) == 0) {
+			printf("Names of the player should be different!");
+			getName(namePromptWhite, white, sizeof(white));
+		} 
+    
+    } else {
+    	getName(namePromptForPlayWithComputer, black, sizeof(black));
+    	strcpy(white, "Computer");
     }
     
     printf("\nReversi match between %s and %s.", black, white);
@@ -30,41 +45,33 @@ int main() {
 	// Starting game
 	startGameLog(black, white);
 	
-	bool changeTurn = false, blackMove = true, 
-		 blackCanMove = true, whiteCanMove = true;
+	bool blackMove = true;
 	int blackScore = 0, whiteScore = 0;
 	Point move;
 	move.x = -1;
 	move.y = -1;
 	
-	while(blackCanMove || whiteCanMove) {
+	while(blackCanMove(&currentBoard) || whiteCanMove(&currentBoard)) {
 		
-		changeTurn = (blackMove && !blackCanMove && whiteCanMove) ||
-							(!blackMove && blackCanMove && !whiteCanMove);
-		
-		printf("\nDEB: blackCanMove=%s\n", blackCanMove ? "true" : "false");
-		printf("DEB: whiteCanMove=%s\n", whiteCanMove ? "true" : "false");
-		printf("DEB: changeTurn=%s\n", changeTurn ? "true" : "false");
-		
-		if(changeTurn) {
+		if((blackMove && !blackCanMove(&currentBoard) && 
+									whiteCanMove(&currentBoard)) ||
+					 (!blackMove && blackCanMove(&currentBoard) && 
+					 				!whiteCanMove(&currentBoard))) {
 			blackMove = !blackMove; 
-			printf("There is no way to move for %s\n.", 
-													blackMove ? white : black);
-			changeTurn = false;
+			printf("%s cannot move.\n", blackMove ? white : black);
 		}
-		
-		blackCanMove = possibleToMakeMove(&currentBoard, blackMove);
-		whiteCanMove = possibleToMakeMove(&currentBoard, !blackMove);
-		
-		if(!blackCanMove && !whiteCanMove) break;
 		
 		printBoard(&currentBoard);
 		
-		printf("\n\nMake your move, %s: ", blackMove ? black : white);
-		
 		bool wrongMove = false;
 	
-		getMove(&move);
+		if(withComputer && !blackMove) {
+			getComputerMove(&currentBoard, &move);
+			printf("\n\nComputer made move %d-%c.", move.y + 1, move.x + 65);
+		} else {
+			printf("\n\nMake your move, %s: ", blackMove ? black : white);
+			getMove(&move);
+		}
 	
 		// If it's possible to make a move the player cannot refuse it
 		while(!makeMove(&currentBoard, blackMove, move)) {

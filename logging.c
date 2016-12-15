@@ -2,7 +2,7 @@
 #include <stdbool.h>
 #include <time.h>
 #include <ctype.h>
-#include "util.h"
+#include "game_util.h"
 #include "logging.h"
 
 void setTime(char* timeString) {

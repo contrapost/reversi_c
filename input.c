@@ -4,6 +4,28 @@
 #include <stdbool.h>
 #include "input.h"
 
+void getPlayerChoise(bool *withComputer, char* playerChiosePrompt) {
+	char answer[30];	
+	
+	int result = getLine(playerChiosePrompt, answer, sizeof(answer));
+
+	while(result == TOO_LONG || result == TOO_SHORT || strlen(answer) != 1) {
+		if (result == TOO_SHORT) {
+		    printf ("Your answer is empty, please answer again.\n");
+		}
+
+		if(strlen(answer) != 1 || result == TOO_LONG) {
+			printf("%s,%s", 
+				"Please enter \"C\" if you want to play with computer", 
+				" or \"P\" if you want to play with another player: \n");
+		}
+		result = getLine(playerChiosePrompt, answer, sizeof(answer));
+	}
+	
+	if(answer[0] == 'p' || answer[0] == 'P') *withComputer = false;
+	else *withComputer = true;
+}
+
 void getName(char *prmpt, char *name, size_t sz) {
 
 	int result = getLine(prmpt, name, sz);
