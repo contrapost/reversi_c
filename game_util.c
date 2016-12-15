@@ -45,6 +45,9 @@ bool makeMove(Board* board, bool blackMove, Point move) {
 	return true;
 }
 
+bool blackCanMove();
+bool whiteCanMove();
+
 bool possibleToMakeMove(Board* board, bool blackMove) {
 	
 	Field piece = (blackMove ? BLACK : WHITE);

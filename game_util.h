@@ -21,4 +21,7 @@ bool makeMove(Board* board, bool blackMove, Point move);
 bool possibleToMakeMove(Board* board, bool blackMove);
 void getScore(int* blackScore, int* whiteScore, Board board);
 
+bool blackCanMove();
+bool whiteCanMove();
+
 #endif // _UTIL_H_

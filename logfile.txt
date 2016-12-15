@@ -2184,3 +2184,134 @@ Black made move: 8-E at 02:30:24 Monday, December 12 2016, the move was correct.
 Computer made move: 2-H at 02:30:24 Monday, December 12 2016, the move was correct.
 Black made move: 1-H at 02:30:40 Monday, December 12 2016, the move was correct.
 Computer made move: 0-@ at 02:30:40 Monday, December 12 2016, the move was wrong.
+
+=========================================================================================
+Match between b(BLACK) and Computer(WHITE) /started at 00:47:41 Thursday, December 15 2016/
+=========================================================================================
+b made move: 5-F at 00:47:49 Thursday, December 15 2016, the move was correct.
+Computer made move: 4-F at 00:47:49 Thursday, December 15 2016, the move was correct.
+b made move: 3-E at 00:47:53 Thursday, December 15 2016, the move was correct.
+Computer made move: 6-D at 00:47:53 Thursday, December 15 2016, the move was correct.
+b made move: 5-C at 00:47:56 Thursday, December 15 2016, the move was correct.
+Computer made move: 3-D at 00:47:56 Thursday, December 15 2016, the move was correct.
+b made move: 3-C at 00:47:59 Thursday, December 15 2016, the move was correct.
+Computer made move: 2-D at 00:47:59 Thursday, December 15 2016, the move was correct.
+b made move: 1-E at 00:48:02 Thursday, December 15 2016, the move was correct.
+Computer made move: 1-C at 00:48:02 Thursday, December 15 2016, the move was correct.
+b made move: 3-F at 00:48:04 Thursday, December 15 2016, the move was correct.
+Computer made move: 5-G at 00:48:04 Thursday, December 15 2016, the move was correct.
+b made move: 7-D at 00:48:07 Thursday, December 15 2016, the move was correct.
+Computer made move: 8-D at 00:48:07 Thursday, December 15 2016, the move was correct.
+b made move: 5-H at 00:48:10 Thursday, December 15 2016, the move was correct.
+Computer made move: 6-H at 00:48:10 Thursday, December 15 2016, the move was correct.
+b made move: 2-E at 00:48:13 Thursday, December 15 2016, the move was correct.
+Computer made move: 1-F at 00:48:13 Thursday, December 15 2016, the move was correct.
+b made move: 1-G at 00:48:14 Thursday, December 15 2016, the move was correct.
+Computer made move: 4-H at 00:48:14 Thursday, December 15 2016, the move was correct.
+b made move: 4-G at 00:48:17 Thursday, December 15 2016, the move was correct.
+Computer made move: 5-B at 00:48:17 Thursday, December 15 2016, the move was correct.
+b made move: 1-D at 00:48:21 Thursday, December 15 2016, the move was correct.
+Computer made move: 1-H at 00:48:21 Thursday, December 15 2016, the move was correct.
+b made move: 2-C at 00:48:23 Thursday, December 15 2016, the move was correct.
+Computer made move: 3-H at 00:48:23 Thursday, December 15 2016, the move was correct.
+b made move: 7-C at 00:48:26 Thursday, December 15 2016, the move was correct.
+Computer made move: 4-C at 00:48:26 Thursday, December 15 2016, the move was correct.
+b made move: 5-A at 00:48:29 Thursday, December 15 2016, the move was correct.
+Computer made move: 6-A at 00:48:29 Thursday, December 15 2016, the move was correct.
+b made move: 7-A at 00:48:32 Thursday, December 15 2016, the move was correct.
+Computer made move: 6-E at 00:48:32 Thursday, December 15 2016, the move was correct.
+b made move: 3-B at 00:48:35 Thursday, December 15 2016, the move was correct.
+Computer made move: 4-A at 00:48:35 Thursday, December 15 2016, the move was correct.
+b made move: 3-A at 00:48:38 Thursday, December 15 2016, the move was correct.
+Computer made move: 6-C at 00:48:38 Thursday, December 15 2016, the move was correct.
+b made move: 4-B at 00:48:42 Thursday, December 15 2016, the move was correct.
+Computer made move: 8-C at 00:48:42 Thursday, December 15 2016, the move was correct.
+b made move: 7-E at 00:48:45 Thursday, December 15 2016, the move was correct.
+Computer made move: 8-E at 00:48:45 Thursday, December 15 2016, the move was correct.
+b made move: 2-B at 00:48:55 Thursday, December 15 2016, the move was correct.
+Computer made move: 1-A at 00:48:55 Thursday, December 15 2016, the move was correct.
+b made move: 2-A at 00:48:57 Thursday, December 15 2016, the move was correct.
+Computer made move: 8-A at 00:48:57 Thursday, December 15 2016, the move was correct.
+b made move: 6-B at 00:49:01 Thursday, December 15 2016, the move was correct.
+Computer made move: 1-B at 00:49:01 Thursday, December 15 2016, the move was correct.
+b made move: 8-F at 00:49:04 Thursday, December 15 2016, the move was correct.
+Computer made move: 6-F at 00:49:04 Thursday, December 15 2016, the move was correct.
+b made move: 8-B at 00:49:08 Thursday, December 15 2016, the move was correct.
+Computer made move: 8-G at 00:49:08 Thursday, December 15 2016, the move was correct.
+b made move: 7-F at 00:49:12 Thursday, December 15 2016, the move was correct.
+Computer made move: 6-G at 00:49:12 Thursday, December 15 2016, the move was correct.
+b made move: 2-F at 00:49:17 Thursday, December 15 2016, the move was correct.
+Computer made move: 3-G at 00:49:17 Thursday, December 15 2016, the move was correct.
+b made move: 2-G at 00:49:21 Thursday, December 15 2016, the move was correct.
+Computer made move: 2-H at 00:49:21 Thursday, December 15 2016, the move was correct.
+b made move: 7-B at 00:49:28 Thursday, December 15 2016, the move was correct.
+Computer made move: 2-H at 00:49:28 Thursday, December 15 2016, the move was wrong.
+
+=========================================================================================
+Match between v(BLACK) and Computer(WHITE) /started at 00:53:48 Thursday, December 15 2016/
+=========================================================================================
+v made move: 5-F at 00:53:57 Thursday, December 15 2016, the move was correct.
+Computer made move: 4-F at 00:53:57 Thursday, December 15 2016, the move was correct.
+v made move: 3-E at 00:54:01 Thursday, December 15 2016, the move was correct.
+Computer made move: 6-D at 00:54:01 Thursday, December 15 2016, the move was correct.
+v made move: 5-C at 00:54:04 Thursday, December 15 2016, the move was correct.
+Computer made move: 3-D at 00:54:04 Thursday, December 15 2016, the move was correct.
+v made move: 3-C at 00:54:07 Thursday, December 15 2016, the move was correct.
+Computer made move: 2-D at 00:54:07 Thursday, December 15 2016, the move was correct.
+v made move: 1-E at 00:54:10 Thursday, December 15 2016, the move was correct.
+Computer made move: 1-C at 00:54:10 Thursday, December 15 2016, the move was correct.
+v made move: 3-F at 00:54:13 Thursday, December 15 2016, the move was correct.
+Computer made move: 5-G at 00:54:13 Thursday, December 15 2016, the move was correct.
+v made move: 7-D at 00:54:18 Thursday, December 15 2016, the move was correct.
+Computer made move: 8-D at 00:54:18 Thursday, December 15 2016, the move was correct.
+v made move: 5-H at 00:54:22 Thursday, December 15 2016, the move was correct.
+Computer made move: 6-H at 00:54:22 Thursday, December 15 2016, the move was correct.
+v made move: 2-E at 00:54:24 Thursday, December 15 2016, the move was correct.
+Computer made move: 1-F at 00:54:24 Thursday, December 15 2016, the move was correct.
+v made move: 1-G at 00:54:27 Thursday, December 15 2016, the move was correct.
+Computer made move: 4-H at 00:54:27 Thursday, December 15 2016, the move was correct.
+v made move: 4-G at 00:54:32 Thursday, December 15 2016, the move was correct.
+Computer made move: 5-B at 00:54:32 Thursday, December 15 2016, the move was correct.
+v made move: 1-D at 00:54:37 Thursday, December 15 2016, the move was correct.
+Computer made move: 1-H at 00:54:37 Thursday, December 15 2016, the move was correct.
+v made move: 2-C at 00:54:40 Thursday, December 15 2016, the move was correct.
+Computer made move: 3-H at 00:54:40 Thursday, December 15 2016, the move was correct.
+v made move: 7-C at 00:54:43 Thursday, December 15 2016, the move was correct.
+Computer made move: 4-C at 00:54:43 Thursday, December 15 2016, the move was correct.
+v made move: 5-A at 00:54:44 Thursday, December 15 2016, the move was correct.
+Computer made move: 6-A at 00:54:44 Thursday, December 15 2016, the move was correct.
+v made move: 7-A at 00:54:47 Thursday, December 15 2016, the move was correct.
+Computer made move: 6-E at 00:54:47 Thursday, December 15 2016, the move was correct.
+v made move: 3-B at 00:54:49 Thursday, December 15 2016, the move was correct.
+Computer made move: 4-A at 00:54:49 Thursday, December 15 2016, the move was correct.
+v made move: 3-A at 00:54:51 Thursday, December 15 2016, the move was correct.
+Computer made move: 6-C at 00:54:51 Thursday, December 15 2016, the move was correct.
+v made move: 4-B at 00:54:54 Thursday, December 15 2016, the move was correct.
+Computer made move: 8-C at 00:54:54 Thursday, December 15 2016, the move was correct.
+v made move: 7-E at 00:54:57 Thursday, December 15 2016, the move was correct.
+Computer made move: 8-E at 00:54:57 Thursday, December 15 2016, the move was correct.
+v made move: 2-B at 00:55:03 Thursday, December 15 2016, the move was correct.
+Computer made move: 1-A at 00:55:03 Thursday, December 15 2016, the move was correct.
+v made move: 2-A at 00:55:05 Thursday, December 15 2016, the move was correct.
+Computer made move: 8-A at 00:55:05 Thursday, December 15 2016, the move was correct.
+v made move: 6-B at 00:55:10 Thursday, December 15 2016, the move was correct.
+Computer made move: 1-B at 00:55:10 Thursday, December 15 2016, the move was correct.
+v made move: 8-F at 00:55:12 Thursday, December 15 2016, the move was correct.
+Computer made move: 6-F at 00:55:12 Thursday, December 15 2016, the move was correct.
+v made move: 8-B at 00:55:16 Thursday, December 15 2016, the move was correct.
+Computer made move: 8-G at 00:55:16 Thursday, December 15 2016, the move was correct.
+v made move: 7-F at 00:55:19 Thursday, December 15 2016, the move was correct.
+Computer made move: 6-G at 00:55:19 Thursday, December 15 2016, the move was correct.
+v made move: 2-F at 00:55:21 Thursday, December 15 2016, the move was correct.
+Computer made move: 3-G at 00:55:21 Thursday, December 15 2016, the move was correct.
+v made move: 2-G at 00:55:24 Thursday, December 15 2016, the move was correct.
+Computer made move: 2-H at 00:55:24 Thursday, December 15 2016, the move was correct.
+v made move: 7-B at 00:55:26 Thursday, December 15 2016, the move was correct.
+v made move: 7-G at 00:55:57 Thursday, December 15 2016, the move was correct.
+Computer made move: 8-H at 00:55:57 Thursday, December 15 2016, the move was correct.
+v made move: 7-H at 00:56:04 Thursday, December 15 2016, the move was correct.
+=========================================================================================
+The winner is Computer. Final score 44 (Computer) : 20 (v).
+=========================================================================================
+
+

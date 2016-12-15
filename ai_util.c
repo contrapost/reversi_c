@@ -130,12 +130,12 @@ void getMostResultativeMove(Board board, Point* move) {
 	bestMove = possibleMoves[0];
 	int score = getScoreForPlayer(board, possibleMoves[0], false);
 	int moveValue = getMoveValue(possibleMoves[0]);
-	int bestMoveCoefficient = score + moveValue;
+	bestMoveCoefficient = score + moveValue;
 	
 	for(int i = 0; i < numberOfPossibleMoves; i++) {
 		score = getScoreForPlayer(board, possibleMoves[i], false);
 		moveValue = getMoveValue(possibleMoves[i]);
-		moveCoefficient = score + moveValue;
+		int moveCoefficient = score + moveValue;
 		if(moveCoefficient > bestMoveCoefficient) {
 			bestMoveCoefficient = moveCoefficient;
 			bestMove = possibleMoves[i];

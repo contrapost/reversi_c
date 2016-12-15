@@ -45,21 +45,19 @@ int main() {
 	// Starting game
 	startGameLog(black, white);
 	
-	bool changeTurn = false, blackMove = true, 
-		 blackCanMove = true, whiteCanMove = true;
+	bool changeTurn = false, blackMove = true;
 	int blackScore = 0, whiteScore = 0;
 	Point move;
 	move.x = -1;
 	move.y = -1;
 	
-	while(blackCanMove || whiteCanMove) {
+	while(possibleToMakeMove(&currentBoard, true) || 
+									possibleToMakeMove(&currentBoard, false)) {
 		
-		changeTurn = (blackMove && !blackCanMove && whiteCanMove) ||
-							(!blackMove && blackCanMove && !whiteCanMove);
-		
-/*		printf("\nDEB: blackCanMove=%s\n", blackCanMove ? "true" : "false");
-		printf("DEB: whiteCanMove=%s\n", whiteCanMove ? "true" : "false");
-		printf("DEB: changeTurn=%s\n", changeTurn ? "true" : "false");*/
+		changeTurn = (blackMove && !possibleToMakeMove(&currentBoard, true) && 
+									possibleToMakeMove(&currentBoard, false)) ||
+					 (!blackMove && possibleToMakeMove(&currentBoard, true) && 
+					 				!possibleToMakeMove(&currentBoard, false));
 		
 		if(changeTurn) {
 			blackMove = !blackMove; 
@@ -68,10 +66,6 @@ int main() {
 			changeTurn = false;
 		}
 		
-		blackCanMove = possibleToMakeMove(&currentBoard, blackMove);
-		whiteCanMove = possibleToMakeMove(&currentBoard, !blackMove);
-		
-		if(!blackCanMove && !whiteCanMove) break;
 		
 		printBoard(&currentBoard);
 		
