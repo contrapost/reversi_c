@@ -3,6 +3,8 @@
 #include <stdbool.h>
 #include "game_util.h"
 
+bool possibleToMakeMove(Board* board, bool blackMove);
+
 bool makeMove(Board* board, bool blackMove, Point move) {
 	
 	Field piece = (blackMove ? BLACK : WHITE);
@@ -45,8 +47,13 @@ bool makeMove(Board* board, bool blackMove, Point move) {
 	return true;
 }
 
-bool blackCanMove();
-bool whiteCanMove();
+bool blackCanMove(Board* board) {
+	return possibleToMakeMove(board, true);
+}
+
+bool whiteCanMove(Board* board) {
+	return possibleToMakeMove(board, false);
+}
 
 bool possibleToMakeMove(Board* board, bool blackMove) {
 	

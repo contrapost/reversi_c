@@ -16,12 +16,12 @@ void getNeighborsWithOtherColor(Point* neighbors, int* numberOfneighbors,
 									
 void getValidLine(Point* validLine, Point neighbor, Board* board, 
 	int* lineLength, Point point, Field piece);
+	
+bool blackCanMove(Board* board);
+bool whiteCanMove(Board* board);
 
 bool makeMove(Board* board, bool blackMove, Point move);
-bool possibleToMakeMove(Board* board, bool blackMove);
-void getScore(int* blackScore, int* whiteScore, Board board);
 
-bool blackCanMove();
-bool whiteCanMove();
+void getScore(int* blackScore, int* whiteScore, Board board);
 
 #endif // _UTIL_H_
