@@ -2688,3 +2688,113 @@ b made move: 3-F at 16:11:39 Thursday, December 15 2016, the move was correct.
 Computer made move: 3-G at 16:11:39 Thursday, December 15 2016, the move was correct.
 b made move: 2-G at 16:12:51 Thursday, December 15 2016, the move was correct.
 Computer made move: 1-G at 16:12:51 Thursday, December 15 2016, the move was correct.
+
+=========================================================================================
+Match between Black(BLACK) and Computer(WHITE) /started at 22:37:38 Friday, December 16 2016/
+=========================================================================================
+Black made move: 5-F at 22:37:43 Friday, December 16 2016, the move was correct.
+Computer made move: 4-F at 22:37:43 Friday, December 16 2016, the move was correct.
+Black made move: 3-E at 22:37:59 Friday, December 16 2016, the move was correct.
+Computer made move: 6-D at 22:37:59 Friday, December 16 2016, the move was correct.
+
+=========================================================================================
+Match between Vasja(BLACK) and Computer(WHITE) /started at 23:29:38 Friday, December 16 2016/
+=========================================================================================
+Vasja made move: 5-F at 23:32:32 Friday, December 16 2016, the move was correct.
+Computer made move: 4-F at 23:32:32 Friday, December 16 2016, the move was correct.
+Vasja made move: 3-E at 23:32:39 Friday, December 16 2016, the move was correct.
+Computer made move: 6-D at 23:32:40 Friday, December 16 2016, the move was correct.
+Vasja made move: 5-C at 23:33:10 Friday, December 16 2016, the move was correct.
+Computer made move: 2-D at 23:33:10 Friday, December 16 2016, the move was correct.
+Vasja made move: 2-F at 23:33:25 Friday, December 16 2016, the move was correct.
+Computer made move: 4-B at 23:33:25 Friday, December 16 2016, the move was correct.
+Vasja made move: 6-B at 23:35:05 Friday, December 16 2016, the move was correct.
+Computer made move: 4-C at 23:35:05 Friday, December 16 2016, the move was correct.
+Vasja made move: 1-C at 23:35:21 Friday, December 16 2016, the move was correct.
+Computer made move: 1-G at 23:35:21 Friday, December 16 2016, the move was correct.
+Vasja made move: 2-E at 23:35:29 Friday, December 16 2016, the move was correct.
+Computer made move: 2-C at 23:35:30 Friday, December 16 2016, the move was correct.
+Vasja made move: 4-A at 02:45:15 Saturday, December 17 2016, the move was correct.
+Computer made move: 6-E at 02:45:15 Saturday, December 17 2016, the move was correct.
+Vasja made move: 4-G at 02:45:30 Saturday, December 17 2016, the move was correct.
+Computer made move: 3-A at 02:45:30 Saturday, December 17 2016, the move was correct.
+Vasja made move: 1-E at 02:45:43 Saturday, December 17 2016, the move was correct.
+Computer made move: 3-B at 02:45:43 Saturday, December 17 2016, the move was correct.
+Vasja made move: 2-B at 02:45:54 Saturday, December 17 2016, the move was correct.
+Computer made move: 2-A at 02:45:55 Saturday, December 17 2016, the move was correct.
+Vasja made move: 7-C at 02:46:05 Saturday, December 17 2016, the move was correct.
+Computer made move: 4-H at 02:46:05 Saturday, December 17 2016, the move was correct.
+Vasja made move: 5-B at 02:46:22 Saturday, December 17 2016, the move was correct.
+Computer made move: 6-F at 02:46:22 Saturday, December 17 2016, the move was correct.
+Vasja made move: 7-E at 02:46:44 Saturday, December 17 2016, the move was correct.
+Computer made move: 8-E at 02:46:45 Saturday, December 17 2016, the move was correct.
+Vasja made move: 1-B at 02:47:04 Saturday, December 17 2016, the move was correct.
+Computer made move: 3-C at 02:47:04 Saturday, December 17 2016, the move was correct.
+Vasja made move: 7-G at 02:47:33 Saturday, December 17 2016, the move was correct.
+Computer made move: 8-B at 02:47:33 Saturday, December 17 2016, the move was correct.
+Vasja made move: 6-C at 02:47:58 Saturday, December 17 2016, the move was correct.
+Computer made move: 1-A at 02:47:58 Saturday, December 17 2016, the move was correct.
+Vasja made move: 3-D at 02:48:18 Saturday, December 17 2016, the move was correct.
+Computer made move: 1-D at 02:48:19 Saturday, December 17 2016, the move was correct.
+Vasja made move: 5-G at 02:48:29 Saturday, December 17 2016, the move was correct.
+Computer made move: 5-A at 02:48:29 Saturday, December 17 2016, the move was correct.
+Vasja made move: 3-G at 02:48:43 Saturday, December 17 2016, the move was correct.
+Computer made move: 7-D at 02:48:43 Saturday, December 17 2016, the move was correct.
+Vasja made move: 6-A at 02:49:02 Saturday, December 17 2016, the move was correct.
+Computer made move: 2-G at 02:49:02 Saturday, December 17 2016, the move was correct.
+Vasja made move: 8-D at 02:49:27 Saturday, December 17 2016, the move was correct.
+Computer made move: 6-G at 02:49:27 Saturday, December 17 2016, the move was correct.
+Vasja made move: 6-H at 02:49:52 Saturday, December 17 2016, the move was correct.
+Computer made move: 8-C at 02:49:52 Saturday, December 17 2016, the move was correct.
+Vasja made move: 7-B at 02:50:04 Saturday, December 17 2016, the move was correct.
+Computer made move: 7-A at 02:50:04 Saturday, December 17 2016, the move was correct.
+Vasja made move: 1-F at 02:50:33 Saturday, December 17 2016, the move was correct.
+Computer made move: 3-F at 02:50:33 Saturday, December 17 2016, the move was correct.
+Vasja made move: 3-H at 02:50:50 Saturday, December 17 2016, the move was correct.
+Computer made move: 2-H at 02:50:50 Saturday, December 17 2016, the move was correct.
+Vasja made move: 1-H at 02:51:15 Saturday, December 17 2016, the move was correct.
+Computer made move: 5-H at 02:51:15 Saturday, December 17 2016, the move was correct.
+Computer made move: 7-F at 02:51:15 Saturday, December 17 2016, the move was correct.
+Vasja made move: 8-F at 02:51:41 Saturday, December 17 2016, the move was correct.
+Computer made move: 8-H at 02:51:41 Saturday, December 17 2016, the move was correct.
+Vasja made move: 7-H at 02:52:00 Saturday, December 17 2016, the move was correct.
+Computer made move: 8-G at 02:52:00 Saturday, December 17 2016, the move was correct.
+Vasja made move: 8-A at 02:52:14 Saturday, December 17 2016, the move was correct.
+=========================================================================================
+The winner is Computer. Final score 42 (Computer) : 22 (Vasja).
+=========================================================================================
+
+
+
+=========================================================================================
+Match between B(BLACK) and Computer(WHITE) /started at 17:08:05 Wednesday, December 21 2016/
+=========================================================================================
+B made move: 5-F at 17:08:09 Wednesday, December 21 2016, the move was correct.
+
+=========================================================================================
+Match between b(BLACK) and Computer(WHITE) /started at 17:09:19 Wednesday, December 21 2016/
+=========================================================================================
+b made move: 5-F at 17:09:22 Wednesday, December 21 2016, the move was correct.
+Computer made move: 4-F at 17:09:24 Wednesday, December 21 2016, the move was correct.
+b made move: 3-E at 17:09:30 Wednesday, December 21 2016, the move was correct.
+Computer made move: 6-D at 17:09:32 Wednesday, December 21 2016, the move was correct.
+b made move: 5-C at 17:09:40 Wednesday, December 21 2016, the move was correct.
+Computer made move: 2-D at 17:09:42 Wednesday, December 21 2016, the move was correct.
+b made move: 2-F at 17:09:48 Wednesday, December 21 2016, the move was correct.
+Computer made move: 4-B at 17:09:50 Wednesday, December 21 2016, the move was correct.
+b made move: 5-G at 17:09:58 Wednesday, December 21 2016, the move was correct.
+Computer made move: 1-G at 17:10:00 Wednesday, December 21 2016, the move was correct.
+
+=========================================================================================
+Match between b(BLACK) and Computer(WHITE) /started at 17:37:14 Wednesday, December 21 2016/
+=========================================================================================
+b made move: 5-F at 17:37:17 Wednesday, December 21 2016, the move was correct.
+Computer made move: 4-F at 17:37:17 Wednesday, December 21 2016, the move was correct.
+b made move: 3-E at 17:37:30 Wednesday, December 21 2016, the move was correct.
+Computer made move: 6-D at 17:37:30 Wednesday, December 21 2016, the move was correct.
+
+=========================================================================================
+Match between B(BLACK) and Computer(WHITE) /started at 17:42:34 Wednesday, December 21 2016/
+=========================================================================================
+B made move: 5-F at 17:42:38 Wednesday, December 21 2016, the move was correct.
+Computer made move: 4-F at 17:42:40 Wednesday, December 21 2016, the move was correct.

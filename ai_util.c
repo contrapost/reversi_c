@@ -24,6 +24,7 @@ void getComputerMove(Board* board, Point *move) {
 	
 	// getMoveWithBestCoefficient(*board, move);
 	Result result = minimax(*board, false, 3);
+
 	*move = result.move;
 }
 

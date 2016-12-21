@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <unistd.h>
 #include "logging.h"
 #include "input.h"
 #include "ai_util.h"
@@ -9,6 +10,8 @@ int main() {
 
 	// Check if the player prefers match with computer or another player.
 	bool withComputer = false;
+	bool computerAnswersWithDelay = true;
+	int delay = 2;
 	char playerChiosePrompt[] = 
 		"Do you want to play with computer or another person (C/P)? ";
 	getPlayerChoise(&withComputer, playerChiosePrompt);
@@ -67,6 +70,10 @@ int main() {
 		printBoard(&currentBoard);
 		
 		if(withComputer && !blackMove) {
+			if(computerAnswersWithDelay) {
+				printf("\nComputer is thinking...");
+				sleep(delay);
+			}
 			getComputerMove(&currentBoard, &move);
 			printf("\n\nComputer made move %d-%c.", move.y + 1, move.x + 65);
 		} else {
@@ -106,6 +113,10 @@ int main() {
 			blackScore > whiteScore ? whiteScore : blackScore,
 			blackScore > whiteScore ? white : black);
 	}
+	
+	// For executing a compiled file on Windows
+	printf("Press some button to close the window");
+	getchar();
 	
 	return 0;
 }
