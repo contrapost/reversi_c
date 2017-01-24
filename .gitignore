@@ -2,6 +2,7 @@
 
 *
 !Makefile
+!mac_reversi
 !/**/
 !*.*
 *.o
