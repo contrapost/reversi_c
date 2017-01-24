@@ -72,6 +72,7 @@ int main() {
 		if(withComputer && !blackMove) {
 			if(computerAnswersWithDelay) {
 				printf("\nComputer is thinking...");
+				fflush(stdout);
 				sleep(delay);
 			}
 			getComputerMove(&currentBoard, &move);

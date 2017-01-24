@@ -2798,3 +2798,35 @@ Match between B(BLACK) and Computer(WHITE) /started at 17:42:34 Wednesday, Decem
 =========================================================================================
 B made move: 5-F at 17:42:38 Wednesday, December 21 2016, the move was correct.
 Computer made move: 4-F at 17:42:40 Wednesday, December 21 2016, the move was correct.
+
+=========================================================================================
+Match between CmpMan(BLACK) and Computer(WHITE) /started at 21:32:36 Tuesday, January 24 2017/
+=========================================================================================
+CmpMan made move: 5-F at 21:32:42 Tuesday, January 24 2017, the move was correct.
+Computer made move: 4-F at 21:32:44 Tuesday, January 24 2017, the move was correct.
+
+=========================================================================================
+Match between Plack(BLACK) and Computer(WHITE) /started at 21:37:14 Tuesday, January 24 2017/
+=========================================================================================
+Plack made move: 6-E at 21:37:25 Tuesday, January 24 2017, the move was correct.
+Computer made move: 4-F at 21:37:27 Tuesday, January 24 2017, the move was correct.
+
+=========================================================================================
+Match between P9lack(BLACK) and Computer(WHITE) /started at 21:38:01 Tuesday, January 24 2017/
+=========================================================================================
+P9lack made move: 6-E at 21:38:04 Tuesday, January 24 2017, the move was correct.
+Computer made move: 4-F at 21:38:04 Tuesday, January 24 2017, the move was correct.
+P9lack made move: 3-F at 21:38:20 Tuesday, January 24 2017, the move was correct.
+Computer made move: 2-F at 21:38:20 Tuesday, January 24 2017, the move was correct.
+
+=========================================================================================
+Match between 9lack(BLACK) and Computer(WHITE) /started at 21:39:18 Tuesday, January 24 2017/
+=========================================================================================
+9lack made move: 3-D at 21:39:25 Tuesday, January 24 2017, the move was correct.
+Computer made move: 3-C at 21:39:27 Tuesday, January 24 2017, the move was correct.
+
+=========================================================================================
+Match between 9lack(BLACK) and Computer(WHITE) /started at 21:43:59 Tuesday, January 24 2017/
+=========================================================================================
+9lack made move: 5-F at 21:44:05 Tuesday, January 24 2017, the move was correct.
+Computer made move: 4-F at 21:44:07 Tuesday, January 24 2017, the move was correct.
