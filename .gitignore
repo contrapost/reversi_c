@@ -2,8 +2,6 @@
 
 *
 !Makefile
-!mac_reversi
-!ubuntu_reversi
 !/**/
 !*.*
 *.o
